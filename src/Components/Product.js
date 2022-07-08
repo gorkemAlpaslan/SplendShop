@@ -9,12 +9,12 @@ const Product = (props) => {
         </div>
         <div class="description fixed-elements">
           <div class="product-brand-description two-line-text">
-            <span class="brand">Kulaklık</span>
-            <span class="name">arctis 3 pro süpsadasdasdsaasdasds</span>
+            <span class="brand">ITEM HEAD</span>
+            <span class="name">ITEM</span>
           </div>
           <div class="price-container">
             <div class="prices">
-              <div class="price-box discountedv2">"59" "tl"</div>
+              <div class="price-box discountedv2">$24</div>
             </div>
           </div>
           <div></div>
