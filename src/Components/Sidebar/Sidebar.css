@@ -1,0 +1,13 @@
+.Sidebar-Inner-Wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.unwrap {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+  width: 100%;
+  overflow: hidden;
+}

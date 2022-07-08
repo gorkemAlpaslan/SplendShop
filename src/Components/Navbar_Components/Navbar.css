@@ -1,0 +1,43 @@
+p {
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+.Navbar-Wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Navbar-Icon-Wrapper {
+  color: rgb(255, 255, 255);
+  padding: 1rem;
+  font-size: 3rem;
+  font-family: "Brush Script MT", cursive;
+}
+
+.Navbar-Profile-Bar-Wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Navbar-Profile-Bar {
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  color: rgb(255, 255, 255);
+  padding: 0px 8px;
+  display: flex;
+  margin-right: 1rem;
+  font-size: 18px;
+  align-items: center;
+}
+
+.Navbar-Profile-Bar:hover {
+  box-shadow: 4px 4px 6px 0 rgba(133, 133, 133, 0.3),
+    -4px -4px 6px 0 rgba(65, 65, 65, 0.2);
+  background-color: rgb(255, 255, 255);
+}

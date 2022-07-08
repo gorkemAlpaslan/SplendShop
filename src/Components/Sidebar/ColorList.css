@@ -1,0 +1,42 @@
+.Color-List-Wrapper {
+  overflow: hidden;
+}
+
+.Colors {
+  width: 20px;
+  height: 20px;
+  margin: 10px 8px;
+  border-radius: 99px;
+  cursor: pointer;
+}
+
+.Red-color {
+  background-color: red;
+}
+.Orange-color {
+  background-color: orange;
+}
+.Yellow-color {
+  background-color: yellow;
+}
+.Green-color {
+  background-color: green;
+}
+.Blue-color {
+  background-color: blue;
+}
+.Purple-color {
+  background-color: purple;
+}
+
+.Color-List {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.Selected-Color {
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
