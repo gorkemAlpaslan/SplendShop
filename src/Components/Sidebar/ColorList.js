@@ -2,17 +2,20 @@ import "./ColorList.css";
 import { useState } from "react";
 
 const ColorList = (props) => {
-  const ColorSelected = [];
+  const [isActive, setIsActive] = useState(true);
 
   const colorTaker = (event) => {
     console.log(event.target.dataset.user);
+    setIsActive((current) => !current);
   };
 
   return (
     <div className="Color-List-Wrapper">
       <div className="Color-List">
         <div
-          className="Red-color Colors"
+          className={
+            isActive ? "Red-color Colors" : "Red-color Colors Selected-Color"
+          }
           data-user="red"
           onClick={colorTaker}
         ></div>
