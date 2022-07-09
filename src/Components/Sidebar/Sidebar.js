@@ -1,75 +1,51 @@
 import "./Sidebar.css";
 import ColorList from "./ColorList";
+import React, { useState } from "react";
+import Select from "react-select";
 
 const Sidebar = (props) => {
+  const [filter, Setfilter] = useState({});
+
+  const colorFilter = (colors) => {
+    Setfilter({ color: colors });
+    console.log(filter);
+  };
+
+  const options = [
+    { value: "chocolate", label: "Chocolate" },
+    { value: "strawberry", label: "Strawberry" },
+    { value: "vanilla", label: "Vanilla" },
+  ];
+
   return (
     <div className="Sidebar-Inner-Wrapper">
-      <td class="unwrap">
-        <h5>Gender:</h5>
-        <select
-          class="form-select form-select-sm"
-          aria-label=".form-select-sm example"
-        >
-          <option>Gender</option>
-          <option>Male</option>
-          <option>Female</option>
-          <option>Unisex</option>
-        </select>
-      </td>
-      <td class="unwrap">
-        <h5>Gender:</h5>
-        <select
-          class="form-select form-select-sm"
-          aria-label=".form-select-sm example"
-        >
-          <option>Gender</option>
-          <option>Male</option>
-          <option>Female</option>
-          <option>Unisex</option>
-        </select>
-      </td>{" "}
-      <td class="unwrap">
-        <h5>Gender:</h5>
-        <select
-          class="form-select form-select-sm"
-          aria-label=".form-select-sm example"
-        >
-          <option>Gender</option>
-          <option>Male</option>
-          <option>Female</option>
-          <option>Unisex</option>
-        </select>
-      </td>{" "}
-      <td class="unwrap">
-        <h5>Gender:</h5>
-        <select
-          class="form-select form-select-sm"
-          aria-label=".form-select-sm example"
-        >
-          <option>Gender</option>
-          <option>Male</option>
-          <option>Female</option>
-          <option>Unisex</option>
-        </select>
-      </td>{" "}
-      <td class="unwrap">
-        <h5>Gender:</h5>
-        <select
-          class="form-select form-select-sm"
-          aria-label=".form-select-sm example"
-        >
-          <option>Gender</option>
-          <option>Male</option>
-          <option>Female</option>
-          <option>Unisex</option>
-        </select>
-      </td>{" "}
+      <div className="unwrap">
+        <Select options={options} />
+      </div>
+      <div className="aggregation-seperator"></div>
+      <div className="unwrap">
+        <Select options={options} />
+      </div>
+      <div className="aggregation-seperator"></div>
+      <div className="unwrap">
+        <Select options={options} />
+      </div>
+      <div className="aggregation-seperator"></div>
+      <div className="unwrap">
+        <Select options={options} />
+      </div>
+      <div className="aggregation-seperator"></div>
+      <div className="unwrap">
+        <Select options={options} />
+      </div>
+      <div className="aggregation-seperator"></div>
       <td class="unwrap">
         <h5>Gender:</h5>
         <div>
-          <ColorList></ColorList>
+          <ColorList ColorTaker={colorFilter}></ColorList>
         </div>
       </td>
+      <div className="aggregation-seperator"></div>
     </div>
   );
 };
