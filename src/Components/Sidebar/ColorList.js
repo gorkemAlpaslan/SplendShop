@@ -9,7 +9,9 @@ const ColorList = (props) => {
   const [BlueisActive, setBlueisActive] = useState(true);
   const [PurpleisActive, setPurpleisActive] = useState(true);
 
-  const [ColorList, SetColorList] = useState([]);
+  const ColorList = [
+    { red: 0, orange: 0, yellow: 0, green: 0, blue: 0, purple: 0 },
+  ];
 
   const colorTaker = (event) => {
     if (event.target.dataset.user === "red") {

@@ -11,36 +11,65 @@ const Sidebar = (props) => {
     console.log(filter);
   };
 
-  const options = [
-    { value: "chocolate", label: "Chocolate" },
-    { value: "strawberry", label: "Strawberry" },
-    { value: "vanilla", label: "Vanilla" },
+  const Genders = [
+    { value: "all", label: "Any" },
+    { value: "male", label: "Male" },
+    { value: "female", label: "Female" },
+    { value: "unisex", label: "Unisex" },
+  ];
+
+  const Category = [
+    { value: "all", label: "Any" },
+    { value: "male", label: "Male" },
+    { value: "female", label: "Female" },
+    { value: "unisex", label: "Unisex" },
+  ];
+
+  const Size = [
+    { value: "all", label: "Any" },
+    { value: "male", label: "Male" },
+    { value: "female", label: "Female" },
+    { value: "unisex", label: "Unisex" },
+  ];
+
+  const ProductRating = [
+    { value: "all", label: "Any" },
+    { value: "male", label: "Male" },
+    { value: "female", label: "Female" },
+    { value: "unisex", label: "Unisex" },
+  ];
+
+  const Price = [
+    { value: "all", label: "Any" },
+    { value: "male", label: "Male" },
+    { value: "female", label: "Female" },
+    { value: "unisex", label: "Unisex" },
   ];
 
   return (
     <div className="Sidebar-Inner-Wrapper">
       <div className="unwrap">
-        <Select options={options} />
+        <Select options={Genders} />
       </div>
       <div className="aggregation-seperator"></div>
       <div className="unwrap">
-        <Select options={options} />
+        <Select options={Category} />
       </div>
       <div className="aggregation-seperator"></div>
       <div className="unwrap">
-        <Select options={options} />
+        <Select options={Size} />
       </div>
       <div className="aggregation-seperator"></div>
       <div className="unwrap">
-        <Select options={options} />
+        <Select options={ProductRating} />
       </div>
       <div className="aggregation-seperator"></div>
       <div className="unwrap">
-        <Select options={options} />
+        <Select options={Price} />
       </div>
       <div className="aggregation-seperator"></div>
       <td class="unwrap">
-        <h5>Gender:</h5>
+        <h5>Color</h5>
         <div>
           <ColorList ColorTaker={colorFilter}></ColorList>
         </div>
