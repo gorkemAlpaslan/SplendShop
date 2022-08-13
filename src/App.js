@@ -129,23 +129,6 @@ function App() {
       colors: ["green", "black", "crimson", "teal"],
       count: 1,
     },
-    {
-      id: "7",
-      title: "Nike Shoes number 7",
-      minisrc: ["https://i.hizliresim.com/caj75df.png"],
-      src: [
-        "https://i.hizliresim.com/8z82k0b.png",
-        "https://i.hizliresim.com/cvujqhs.png",
-        "https://i.hizliresim.com/fa73djt.png",
-        "https://i.hizliresim.com/mnnmf4c.png",
-      ],
-      description: "description for item number 7",
-      content:
-        "Welcome to our channel Dev AT. Here you can learn web designing, UI/UX designing, html css tutorials, css animations and css effects, javascript and jquery tutorials and related so on.",
-      price: 43,
-      colors: ["green", "black", "crimson", "teal"],
-      count: 1,
-    },
   ];
 
   const Items = [];
