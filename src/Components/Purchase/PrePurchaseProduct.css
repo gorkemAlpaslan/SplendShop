@@ -1,0 +1,33 @@
+.Product_Purchase_Wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.Product_Purchase_Card {
+  width: 100%;
+  background-color: bisque;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.Product_Purchase_Card_Info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Product_Purchase_Card_Button {
+  width: 20px;
+  height: 20px;
+  border-radius: 22px;
+}
+
+.Product_Purchase_Image {
+  margin: 10px;
+}

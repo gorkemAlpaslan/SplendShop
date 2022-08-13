@@ -1,20 +1,21 @@
 import "./Product.css";
-import image from "./image.png";
+import { Alert } from "bootstrap";
+import { render } from "@testing-library/react";
 const Product = (props) => {
   return (
-    <div class="boutique-product">
-      <a href="#">
-        <div class="image-container">
-          <img class="p-card-img" src={image}></img>
+    <div className="boutique-product">
+      <a href={`ProductPage/${props.refNum}`}>
+        <div className="image-container">
+          <img className="p-card-img" src={props.image}></img>
         </div>
-        <div class="description fixed-elements">
-          <div class="product-brand-description two-line-text">
-            <span class="brand">ITEM HEAD</span>
-            <span class="name">ITEM</span>
+        <div className="description fixed-elements">
+          <div className="product-brand-description two-line-text">
+            <span className="brand">{props.title}</span>
+            <div>{props.description}</div>
           </div>
-          <div class="price-container">
-            <div class="prices">
-              <div class="price-box discountedv2">$24</div>
+          <div className="price-container">
+            <div className="prices">
+              <div className="price-box discountedv2">${props.price}</div>
             </div>
           </div>
           <div></div>
@@ -22,19 +23,6 @@ const Product = (props) => {
       </a>
       <div></div>
     </div>
-
-    // <a href="#" className="Product-Card-Item">
-    //   <div class="image-container">
-    //     <img src={image} className="Product-Image"></img>
-    //   </div>
-    //   <div className="Product-Description-Wrapper">
-    //     <div className="Product-Description">
-    //       <span className="Product-Description-Head">Kulaklık</span>
-    //       <span className="Product-Description-Exp">sdfgdfsgdsfgdsfgd</span>
-    //     </div>
-    //     <div className="Price"> 256</div>
-    //   </div>
-    // </a>
   );
 };
 

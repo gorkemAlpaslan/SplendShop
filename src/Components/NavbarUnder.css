@@ -1,7 +1,10 @@
 .Navbar-Under-Wrapper {
   display: flex;
-  color: blue;
-  margin: 2rem;
+  margin: 1rem;
+  border-radius: 16px;
+  justify-content: space-around;
+
+  background-color: #2f8f9d;
 }
 
 .Navbar-Under-Item {
@@ -15,7 +18,7 @@
   -o-transition: all 0.4s ease-in-out;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
-  color: rgba(5, 219, 41, 0.486);
+  color: #ffffff;
   padding: 8px 8px;
   display: flex;
   margin: 0.6rem;
@@ -24,6 +27,6 @@
 }
 
 .Navbar-Under-Item:hover {
-  box-shadow: 4px 4px 6px 0 rgba(5, 219, 41, 0.3),
-    -4px -4px 6px 0 rgba(5, 219, 41, 0.486);
+  color: black;
+  background-color: #ffffff;
 }

@@ -1,5 +1,5 @@
 import "./ColorList.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const ColorList = (props) => {
   const [RedisActive, setRedisActive] = useState(true);
@@ -9,24 +9,28 @@ const ColorList = (props) => {
   const [BlueisActive, setBlueisActive] = useState(true);
   const [PurpleisActive, setPurpleisActive] = useState(true);
 
-  const ColorList = [
-    { red: 0, orange: 0, yellow: 0, green: 0, blue: 0, purple: 0 },
-  ];
+  const [ColorList, SetColorList] = useState([]);
 
-  const colorTaker = (event) => {
-    if (event.target.dataset.user === "red") {
+  const ColorTaker = (event) => {
+    let color = event.target.dataset.user;
+    if (color === "red") {
       setRedisActive((current) => !current);
-    } else if (event.target.dataset.user === "orange") {
+    } else if (color === "orange") {
       setOrangeisActive((current) => !current);
-    } else if (event.target.dataset.user === "yellow") {
+    } else if (color === "yellow") {
       setYellowisActive((current) => !current);
-    } else if (event.target.dataset.user === "green") {
+    } else if (color === "green") {
       setGreenisActive((current) => !current);
-    } else if (event.target.dataset.user === "blue") {
+    } else if (color === "blue") {
       setBlueisActive((current) => !current);
-    } else if (event.target.dataset.user === "purple") {
+    } else if (color === "purple") {
       setPurpleisActive((current) => !current);
     }
+    SetColorList((ColorList) => [...ColorList, event.target.dataset.user]);
+  };
+
+  const ColorData = () => {
+    props.ColorTaker(ColorList);
   };
 
   return (
@@ -37,7 +41,7 @@ const ColorList = (props) => {
             RedisActive ? "Red-color Colors" : "Red-color Colors Selected-Color"
           }
           data-user="red"
-          onClick={colorTaker}
+          onClick={ColorTaker}
         ></div>
         <div
           className={
@@ -46,7 +50,7 @@ const ColorList = (props) => {
               : "Orange-color Colors Selected-Color"
           }
           data-user="orange"
-          onClick={colorTaker}
+          onClick={ColorTaker}
         ></div>
         <div
           className={
@@ -55,7 +59,7 @@ const ColorList = (props) => {
               : "Yellow-color Colors Selected-Color"
           }
           data-user="yellow"
-          onClick={colorTaker}
+          onClick={ColorTaker}
         ></div>
         <div
           className={
@@ -64,7 +68,7 @@ const ColorList = (props) => {
               : "Green-color Colors Selected-Color"
           }
           data-user="green"
-          onClick={colorTaker}
+          onClick={ColorTaker}
         ></div>
         <div
           className={
@@ -73,7 +77,7 @@ const ColorList = (props) => {
               : "Blue-color Colors Selected-Color"
           }
           data-user="blue"
-          onClick={colorTaker}
+          onClick={ColorTaker}
         ></div>
         <div
           className={
@@ -82,8 +86,11 @@ const ColorList = (props) => {
               : "Purple-color Colors Selected-Color"
           }
           data-user="purple"
-          onClick={colorTaker}
+          onClick={ColorTaker}
         ></div>
+        <button onClick={ColorData} className="FML">
+          Save
+        </button>
       </div>
     </div>
   );

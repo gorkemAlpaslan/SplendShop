@@ -1,5 +1,6 @@
 import "./InputForm.css";
 import { GrSearch } from "react-icons/gr";
+import SearchButton from "./SearchButton.png";
 
 const InputForm = (props) => {
   return (
@@ -12,7 +13,7 @@ const InputForm = (props) => {
           className="search-input"
         ></input>
         <a href="#" class="search-btn">
-          <GrSearch></GrSearch>
+          <img src={SearchButton} className="Search_Button"></img>
         </a>
       </div>
     </div>

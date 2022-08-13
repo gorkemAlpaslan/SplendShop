@@ -37,7 +37,7 @@ const Navbar = (props) => {
             <p>Favorites</p>
           </a>
           <a
-            href="#"
+            href="/Purchase"
             className="Navbar-Purchases-Bar-Profile Navbar-Profile-Bar"
           >
             <AiOutlineShoppingCart></AiOutlineShoppingCart>

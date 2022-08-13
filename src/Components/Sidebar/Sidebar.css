@@ -7,14 +7,10 @@
 .unwrap {
   justify-content: center;
   margin: 20px 20px;
+  border-bottom: 1px solid #2f8f9d;
+  padding-bottom: 40px;
 }
 
-.aggregation-seperator {
-  width: 100%;
-  height: 1px;
-  background: rgba(5, 219, 41, 0.486);
-  border: solid 1px #ececec;
-  border-top: 15px;
-  border-bottom: 15px;
-  display: block;
+.select-top {
+  padding-top: 20px;
 }

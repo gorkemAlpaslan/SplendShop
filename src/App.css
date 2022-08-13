@@ -1,3 +1,7 @@
+html {
+  overflow-y: scroll;
+}
+
 * {
   font-family: "Montserrat", sans-serif;
 }
@@ -8,10 +12,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
-    rgba(0, 120, 0, 0.23) 0px 6px 6px;
-
-  background-color: rgba(5, 219, 41, 0.486);
+  box-shadow: #3bacb6a4 0px 2px 8px;
+  background-color: #2f8f9d;
 }
 
 .Navbar-Under,
@@ -23,7 +25,7 @@
 
 .Navbar-Under-Card,
 .Navbar {
-  width: 1400px;
+  width: 1600px;
 }
 
 .Items-List {
@@ -31,17 +33,22 @@
   display: flex;
   flex-wrap: wrap;
   margin-left: 40px;
+  box-shadow: #2f8e9dde 0px 1px 0px, #2f8e9dde 0px 0px 8px;
+  padding: 20px;
 }
 
 .Login-Wrapper {
   margin-top: 120px;
-  box-shadow: rgba(5, 219, 41, 0.486) 0px 10px 15px -3px,
-    rgba(5, 219, 41, 0.486) 0px 4px 6px -2px;
+  box-shadow: #2f8e9dde 0px 10px 15px -3px, #2f8e9dd8 0px 4px 6px -2px;
 }
 
 .Sidebar-Wrapper {
-  box-shadow: rgba(5, 219, 41, 0.486) 0px 3px 6px,
-    rgba(5, 219, 41, 0.486) 0px 3px 6px;
+  box-shadow: #2f8e9dde 0px 1px 0px, #2f8e9dde 0px 0px 8px;
   width: 280px;
-  margin-left: 30px;
+}
+
+.Purchase-Wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
 }

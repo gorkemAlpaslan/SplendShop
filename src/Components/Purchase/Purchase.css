@@ -1,0 +1,43 @@
+.Purchase_Page {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  justify-content: center;
+}
+
+.Purchase_Page_Wrapper {
+  background-color: aqua;
+  width: 50%;
+  height: auto;
+}
+
+.Purchase_Items {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 90%;
+  padding: 0px 20px;
+}
+
+.Pre_Purchase_Wrapper {
+  width: 100%;
+  height: auto;
+  background-color: aquamarine;
+  /* overflow: scroll; */
+}
+
+.Purchase_Favs {
+  width: 80%;
+  height: 20%;
+  background-color: brown;
+}
+
+.Payment_Wrapper {
+  width: 20%;
+  height: 500px;
+  background-color: antiquewhite;
+  margin: 0px 10px;
+  position: sticky;
+  top: 20px;
+  align-self: flex-start;
+}

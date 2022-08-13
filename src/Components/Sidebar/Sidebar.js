@@ -4,11 +4,10 @@ import React, { useState } from "react";
 import Select from "react-select";
 
 const Sidebar = (props) => {
-  const [filter, Setfilter] = useState({});
+  const [FilterList, SetFilterList] = useState();
 
-  const colorFilter = (colors) => {
-    Setfilter({ color: colors });
-    console.log(filter);
+  const ColorHandler = (colors) => {
+    console.log(colors);
   };
 
   const Genders = [
@@ -48,33 +47,22 @@ const Sidebar = (props) => {
 
   return (
     <div className="Sidebar-Inner-Wrapper">
-      <div className="unwrap">
+      <div className="unwrap select-top">
         <Select options={Genders} />
       </div>
-      <div className="aggregation-seperator"></div>
+
       <div className="unwrap">
         <Select options={Category} />
       </div>
-      <div className="aggregation-seperator"></div>
       <div className="unwrap">
         <Select options={Size} />
       </div>
-      <div className="aggregation-seperator"></div>
       <div className="unwrap">
         <Select options={ProductRating} />
       </div>
-      <div className="aggregation-seperator"></div>
       <div className="unwrap">
         <Select options={Price} />
       </div>
-      <div className="aggregation-seperator"></div>
-      <td class="unwrap">
-        <h5>Color</h5>
-        <div>
-          <ColorList ColorTaker={colorFilter}></ColorList>
-        </div>
-      </td>
-      <div className="aggregation-seperator"></div>
     </div>
   );
 };

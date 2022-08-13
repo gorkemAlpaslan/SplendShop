@@ -23,7 +23,6 @@ p {
 .Navbar-Profile-Bar {
   text-align: center;
   border: none;
-  background-size: 300% 100%;
   border-radius: 50px;
   -o-transition: all 0.4s ease-in-out;
   -webkit-transition: all 0.4s ease-in-out;
@@ -32,12 +31,10 @@ p {
   padding: 0px 8px;
   display: flex;
   margin-right: 1rem;
-  font-size: 18px;
+  font-size: 15px;
   align-items: center;
 }
 
 .Navbar-Profile-Bar:hover {
-  box-shadow: 4px 4px 6px 0 rgba(133, 133, 133, 0.3),
-    -4px -4px 6px 0 rgba(65, 65, 65, 0.2);
   background-color: rgb(255, 255, 255);
 }

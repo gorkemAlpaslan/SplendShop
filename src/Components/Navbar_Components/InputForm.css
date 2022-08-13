@@ -1,5 +1,5 @@
 .search-container {
-  background: #f3f3f3;
+  background: #82dbd8;
   border-radius: 22px;
   padding: 8px 8px;
   display: flex;
@@ -11,11 +11,19 @@
     -4px -4px 6px 0 rgba(53, 53, 53, 0.2);
 }
 
+.search-input::placeholder {
+  color: white;
+}
+
 .search-btn {
   padding-top: 3.5px;
 }
 
 .search-container:hover > .search-input {
+  width: 400px;
+}
+
+.search-input:focus {
   width: 400px;
 }
 
@@ -27,24 +35,13 @@
   font-weight: 500;
   font-size: 16px;
   transition: 0.8s;
-  color: rgba(5, 219, 41, 0.486);
+  color: rgb(255, 255, 255);
 }
 
-@keyframes hoverShake {
-  0% {
-    transform: skew(0deg, 0deg);
-  }
-  25% {
-    transform: skew(5deg, 5deg);
-  }
-  75% {
-    transform: skew(-5deg, -5deg);
-  }
-  100% {
-    transform: skew(0deg, 0deg);
-  }
-}
-
-.search-container:hover {
-  animation: hoverShake 0.15s linear 3;
+.Search_Button {
+  width: 21px;
+  height: 21px;
+  margin-left: -4px;
+  margin-top: -3px;
+  margin-bottom: -3px;
 }
