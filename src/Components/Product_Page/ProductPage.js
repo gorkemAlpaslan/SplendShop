@@ -31,6 +31,32 @@ class ProductPage extends React.Component {
     const productDetailsArray = [];
     productDetailsArray.push(ProductDetails);
 
+    const uniqueIdForProduct = productDetailsArray[0].title;
+    const localStorageProductIds = [productDetailsArray[0].title];
+
+    const addToCary = () => {
+      localStorage.setItem(
+        uniqueIdForProduct,
+        JSON.stringify(productDetailsArray[0])
+      );
+
+      if (!localStorage.getItem("purchaseProducts")) {
+        localStorage.setItem(
+          "purchaseProducts",
+          JSON.stringify(localStorageProductIds)
+        );
+      } else {
+        let purchaseProducts = JSON.parse(
+          localStorage.getItem("purchaseProducts")
+        );
+        purchaseProducts.push(uniqueIdForProduct);
+        localStorage.setItem(
+          "purchaseProducts",
+          JSON.stringify(purchaseProducts)
+        );
+      }
+    };
+
     return (
       <div className="Product_Page_Card">
         {productDetailsArray.map((item) => (
@@ -52,7 +78,9 @@ class ProductPage extends React.Component {
                 tab={this.handleTab}
                 myRef={this.myRef}
               ></DetailsThumb>
-              <button className="card">Add To Card</button>
+              <button className="card" onClick={addToCary}>
+                Add To Card
+              </button>
             </div>
           </div>
         ))}

@@ -5,14 +5,14 @@ import SearchButton from "./SearchButton.png";
 const InputForm = (props) => {
   return (
     <div>
-      <div class="search-container">
+      <div className="search-container">
         <input
           type="text"
           name="search"
           placeholder="Search..."
           className="search-input"
         ></input>
-        <a href="#" class="search-btn">
+        <a href="#" className="search-btn">
           <img src={SearchButton} className="Search_Button"></img>
         </a>
       </div>
@@ -21,10 +21,3 @@ const InputForm = (props) => {
 };
 
 export default InputForm;
-
-// return (
-//   <div>
-//     <input className="Search-Input"></input>
-//     <button className="Search-Button">button</button>
-//   </div>
-// );

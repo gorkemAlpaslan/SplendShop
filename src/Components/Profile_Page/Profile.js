@@ -4,13 +4,13 @@ import "./Profile.css";
 const Profile = (props) => {
   return (
     <div className="Profile-Page-Wrapper">
-      <div class="signin">
+      <div className="signin">
         <div action="#" method="post" autocomplete="off">
-          <div class="group head">
+          <div className="group head">
             <h2>Welcome Back</h2>
             <p>Sign In To Continue</p>
           </div>
-          <div class="group login-elements">
+          <div className="group login-elements">
             <div for="username-field">Email or Username</div>
             <input
               type="text"
@@ -19,7 +19,7 @@ const Profile = (props) => {
               required
             ></input>
           </div>
-          <div class="group  login-elements">
+          <div className="group  login-elements">
             <div for="password-field">Password</div>
             <input
               type="password"
@@ -29,19 +29,19 @@ const Profile = (props) => {
             ></input>
             <span
               toggle="#password-field"
-              class="fa fa-fw fa-eye field-icon toggle-password"
+              className="fa fa-fw fa-eye field-icon toggle-password"
             ></span>
           </div>
 
-          <div class="group">
+          <div className="group">
             <button type="submit">
               <span>Login</span>
             </button>
           </div>
-          <div class="group forgot-pass-link">
+          <div className="group forgot-pass-link">
             <a href="#">Forget Password?</a>
           </div>
-          <div class="group sign-up-link">
+          <div className="group sign-up-link">
             <p>
               New User? <a href="#">Signup</a>
             </p>

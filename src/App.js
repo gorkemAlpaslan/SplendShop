@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Navbar from "./Components/Navbar_Components/Navbar";
 import "./App.css";
 import Product from "./Components/Product";
@@ -131,28 +131,6 @@ function App() {
     },
   ];
 
-  const Items = [];
-  const ProductPages = [];
-
-  for (let Item of ItemsList) {
-    Items.push(
-      <Product
-        title={Item.title}
-        price={Item.price}
-        description={Item.description}
-        key={Item.id}
-        image={Item.minisrc}
-        refNum={Item.id}
-      ></Product>
-    );
-    ProductPages.push(
-      <Route path={`/ProductPage/${Item.id}`}>
-        <ProductPage ProductDetails={Item}></ProductPage>
-      </Route>
-    );
-    console.log(Items);
-  }
-
   return (
     <div className="Card">
       <div className="Page-Navbar-Wrapper">
@@ -177,15 +155,32 @@ function App() {
           <div className="Sidebar-Wrapper">
             <Sidebar></Sidebar>
           </div>
-          <div className="Items-List">{Items}</div>
+          <div className="Items-List">
+            {ItemsList.map((Item) => (
+              <Product
+                title={Item.title}
+                price={Item.price}
+                description={Item.description}
+                key={Item.id}
+                image={Item.minisrc}
+                refNum={Item.id}
+              ></Product>
+            ))}
+          </div>
         </div>
       </Route>
       <Route path="/Purchase">
         <div className="Purchase-Wrapper">
-          <Purchase></Purchase>
+          <Purchase />
         </div>
       </Route>
-      <div>{ProductPages}</div>
+      <div>
+        {ItemsList.map((Item) => (
+          <Route path={`/ProductPage/${Item.id}`}>
+            <ProductPage ProductDetails={Item}></ProductPage>
+          </Route>
+        ))}
+      </div>
     </div>
   );
 }

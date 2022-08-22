@@ -2,13 +2,15 @@
   display: flex;
   flex-direction: row;
   width: 90%;
-  justify-content: center;
+  justify-content: space-evenly;
+  padding: 20px 0px;
 }
 
 .Purchase_Page_Wrapper {
-  background-color: aqua;
   width: 50%;
   height: auto;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
 .Purchase_Items {
@@ -22,8 +24,6 @@
 .Pre_Purchase_Wrapper {
   width: 100%;
   height: auto;
-  background-color: aquamarine;
-  /* overflow: scroll; */
 }
 
 .Purchase_Favs {
@@ -35,7 +35,8 @@
 .Payment_Wrapper {
   width: 20%;
   height: 500px;
-  background-color: antiquewhite;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   margin: 0px 10px;
   position: sticky;
   top: 20px;
