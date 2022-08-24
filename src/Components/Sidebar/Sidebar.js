@@ -1,5 +1,4 @@
 import "./Sidebar.css";
-import ColorList from "./ColorList";
 import React, { useState } from "react";
 import Select from "react-select";
 
