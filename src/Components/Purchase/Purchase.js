@@ -3,22 +3,22 @@ import "./Purchase.css";
 import "./PrePurchaseProduct";
 import PrePurchaseProduct from "./PrePurchaseProduct";
 
-let PurchasedItemsList = [];
-let PuchasedItems = JSON.parse(localStorage.getItem("purchaseProducts"));
-for (let PurchasedItem of PuchasedItems) {
+let PurchasedItemsListOfObj = [];
+let PuchasedItemsArray = JSON.parse(localStorage.getItem("purchaseProducts"));
+for (let PurchasedItem of PuchasedItemsArray) {
   let Item = JSON.parse(localStorage.getItem(PurchasedItem));
-  PurchasedItemsList.push(Item);
+  PurchasedItemsListOfObj.push(Item);
 }
 
 // counts the same Items in the Array of obj
-const countDict = PurchasedItemsList.reduce((acc, curr) => {
+const countDict = PurchasedItemsListOfObj.reduce((acc, curr) => {
   const { title } = curr;
   if (acc[title]) ++acc[title];
   else acc[title] = 1;
   return acc;
 }, {});
 
-const result = PurchasedItemsList.map((obj) => {
+const result = PurchasedItemsListOfObj.map((obj) => {
   obj["count"] = countDict[obj.title];
   localStorage.setItem(obj.title, JSON.stringify(obj));
   return obj;
@@ -29,21 +29,27 @@ const unique = [...new Map(result.map((m) => [m.id, m])).values()];
 const Purchase = (props) => {
   const [PurchasedItems, SetPurchasedItems] = useState(unique);
 
+  // whenever this func called, it decreses each items count to 1
   const PurchaseCancle = (PItem) => {
+    let NewPurchaseItemTitles = PuchasedItemsArray;
     let NewPurchaseItems = [];
-    let NewPurchaseItemTitles = [];
+    for (let i = 0; i < NewPurchaseItemTitles.length; i++) {
+      const index = NewPurchaseItemTitles.indexOf(PItem);
+      if (index > -1) {
+        NewPurchaseItemTitles.splice(index, 1);
+      }
+      localStorage.setItem(
+        "purchaseProducts",
+        JSON.stringify(NewPurchaseItemTitles)
+      );
+    }
     for (let Item of PurchasedItems) {
       if (PItem === Item.title) {
         continue;
       } else {
-        NewPurchaseItemTitles.push(Item.title);
         NewPurchaseItems.push(Item);
       }
     }
-    localStorage.setItem(
-      "purchaseProducts",
-      JSON.stringify(NewPurchaseItemTitles)
-    );
     SetPurchasedItems(NewPurchaseItems);
   };
 
@@ -57,16 +63,17 @@ const Purchase = (props) => {
       return obj;
     });
 
-    let NewPurchaseItemTitles = PuchasedItems;
+    let NewPurchaseItemTitles = PuchasedItemsArray;
     NewPurchaseItemTitles.push(title);
     localStorage.setItem(
       "purchaseProducts",
       JSON.stringify(NewPurchaseItemTitles)
     );
-
     SetPurchasedItems(newState);
   };
 
+  // when product count becomes 0 or less, it should update instantly in the page
+  //instade it updates when user reload the page
   const SubCount = (title) => {
     const newState = PurchasedItems.map((obj) => {
       if (obj.title === title) {
@@ -76,7 +83,7 @@ const Purchase = (props) => {
       }
       return obj;
     });
-    let NewPurchaseItemTitles = PuchasedItems;
+    let NewPurchaseItemTitles = PuchasedItemsArray;
     const index = NewPurchaseItemTitles.indexOf(title);
     if (index > -1) {
       NewPurchaseItemTitles.splice(index, 1);
