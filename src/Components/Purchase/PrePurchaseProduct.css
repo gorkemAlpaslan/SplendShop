@@ -5,29 +5,86 @@
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
     rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-  border-radius: 16px;
+  border-radius: 4px;
   padding: 10px;
   margin: 10px;
+
+  position: relative;
 }
 
 .Product_Purchase_Card {
-  height: 100px;
   width: 100%;
   display: flex;
+  flex-direction: row;
   justify-content: flex-start;
 }
 
+.Product_Purchase_Image {
+  height: 100px;
+
+  margin: 0px 10px;
+}
+
 .Product_Purchase_Card_Info {
+  width: 80%;
+  margin-left: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+}
+
+.Product_Purchase_Card_Name {
+  font-size: large;
+  font-weight: bold;
+}
+
+.Purchase_Item_Count {
+  display: flex;
+  width: 120px;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+}
+
+.Count_Button {
+  padding: 10px;
+  background-color: #2f8f9d;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.Count_Button:hover {
+  box-shadow: rgba(0, 0, 0, 0.644) 0px 1px 3px 0px,
+    rgba(59, 104, 150, 0.692) 0px 0px 0px 1px;
+
+  background-color: #84dae960;
+}
+
+.Count {
+  padding: 10px 12px;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  font-size: medium;
+  font-weight: 600;
+}
+
+.Product_Purchase_Card_Price {
+  font-size: 25px;
+  font-weight: 700;
+  align-self: flex-end;
 }
 
 .Product_Purchase_Card_Button {
+  padding: 4px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  border-radius: 6px;
 }
-
-.Product_Purchase_Image {
+.Product_Purchase_Card_Button:hover {
+  background-color: rgba(211, 36, 36, 0.63);
   box-shadow: rgba(0, 0, 0, 0.11) 0px 1px 3px 0px,
     rgba(27, 31, 35, 0.288) 0px 0px 0px 1px;
-  margin: 10px;
 }
