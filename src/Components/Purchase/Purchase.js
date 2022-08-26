@@ -29,7 +29,6 @@ const unique = [...new Map(result.map((m) => [m.id, m])).values()];
 const Purchase = (props) => {
   const [PurchasedItems, SetPurchasedItems] = useState(unique);
 
-  // whenever this func called, it decreses each items count to 1
   const PurchaseCancle = (PItem) => {
     let NewPurchaseItemTitles = PuchasedItemsArray;
     let NewPurchaseItems = [];
@@ -72,8 +71,6 @@ const Purchase = (props) => {
     SetPurchasedItems(newState);
   };
 
-  // when product count becomes 0 or less, it should update instantly in the page
-  //instade it updates when user reload the page
   const SubCount = (title) => {
     const newState = PurchasedItems.map((obj) => {
       if (obj.title === title) {
