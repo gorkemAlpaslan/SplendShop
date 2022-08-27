@@ -6,6 +6,7 @@ import PrePayment from "./PrePayment";
 
 // Notes for myself:
 // Fıx the issues that couse user can't load the products page without any localstorage data
+//fix the issue that when item deleted from the purchases, localstorage still keeps the data as count of 1 (i need to delete the data or set teh count to 0 not 1)
 
 let PurchasedItemsListOfObj = [];
 let PuchasedItemsArray = JSON.parse(localStorage.getItem("purchaseProducts"));
