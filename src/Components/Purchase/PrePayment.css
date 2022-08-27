@@ -1,0 +1,60 @@
+.Payment_Page_Wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.Payment_Summary_Title {
+  margin: 10px;
+}
+
+.Product_Total_Prices {
+  font-size: medium;
+  margin: 0px 14px;
+  margin-bottom: 20px;
+  padding: 8px;
+  box-shadow: #3bacb6a4 0px 3px;
+}
+
+.Each_Item_Wraper {
+  margin: 30px 0px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: #3bacb6a4 0px 1px;
+}
+
+.Total_Price_Wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Total {
+  margin: 0px 22px;
+  font-size: larger;
+  font-weight: 700;
+}
+
+.Total_Price {
+  margin-right: 20px;
+}
+
+.Payment_Button {
+  align-self: flex-end;
+  margin: 20px;
+  width: 100px;
+  height: 40px;
+  border-radius: 333px;
+
+  background-color: #3bacb6;
+  border: none;
+  color: white;
+  font-size: 20px;
+}
+
+.Payment_Button:hover {
+  background-color: #3bacb6cc;
+  font-weight: 750;
+  border: 3px solid rgb(0, 0, 0);
+
+  color: black;
+}

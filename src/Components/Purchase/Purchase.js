@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Purchase.css";
 import "./PrePurchaseProduct";
 import PrePurchaseProduct from "./PrePurchaseProduct";
+import PrePayment from "./PrePayment";
 
 let PurchasedItemsListOfObj = [];
 let PuchasedItemsArray = JSON.parse(localStorage.getItem("purchaseProducts"));
@@ -71,9 +72,11 @@ const Purchase = (props) => {
     SetPurchasedItems(newState);
   };
 
+  // when product count becomes 0 or less, it should update instantly in the page
+  //instade it updates when user reload the page
   const SubCount = (title) => {
     const newState = PurchasedItems.map((obj) => {
-      if (obj.title === title) {
+      if (obj.title === title && obj.count > 0) {
         let PItem = { ...obj, count: obj.count - 1 };
         localStorage.setItem(obj.title, JSON.stringify(obj));
         return PItem;
@@ -117,7 +120,9 @@ const Purchase = (props) => {
           <div className="Purchase_Favs"></div>
         </div>
       </div>
-      <div className="Payment_Wrapper"></div>
+      <div className="Payment_Wrapper">
+        <PrePayment ProductList={PurchasedItems}></PrePayment>
+      </div>
     </div>
   );
 };

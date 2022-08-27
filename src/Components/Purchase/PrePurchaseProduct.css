@@ -48,18 +48,23 @@
 
 .Count_Button {
   padding: 10px;
-  background-color: #2f8f9d;
-  border-radius: 10px;
+  border-radius: 6px;
   cursor: pointer;
 }
 
 .Count_Button:hover {
   box-shadow: rgba(0, 0, 0, 0.644) 0px 1px 3px 0px,
-    rgba(59, 104, 150, 0.692) 0px 0px 0px 1px;
-
-  background-color: #84dae960;
+    rgba(240, 240, 240, 0.692) 0px 0px 0px 1px;
 }
 
+.Button_Add {
+  background-color: green;
+  color: wheat;
+}
+.Button_Cut {
+  color: wheat;
+  background-color: red;
+}
 .Count {
   padding: 10px 12px;
   border-radius: 30px;
