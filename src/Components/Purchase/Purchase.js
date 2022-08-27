@@ -4,6 +4,9 @@ import "./PrePurchaseProduct";
 import PrePurchaseProduct from "./PrePurchaseProduct";
 import PrePayment from "./PrePayment";
 
+// Notes for myself:
+// Fıx the issues that couse user can't load the products page without any localstorage data
+
 let PurchasedItemsListOfObj = [];
 let PuchasedItemsArray = JSON.parse(localStorage.getItem("purchaseProducts"));
 for (let PurchasedItem of PuchasedItemsArray) {
@@ -11,7 +14,6 @@ for (let PurchasedItem of PuchasedItemsArray) {
   PurchasedItemsListOfObj.push(Item);
 }
 
-// counts the same Items in the Array of obj
 const countDict = PurchasedItemsListOfObj.reduce((acc, curr) => {
   const { title } = curr;
   if (acc[title]) ++acc[title];
@@ -72,8 +74,8 @@ const Purchase = (props) => {
     SetPurchasedItems(newState);
   };
 
-  // when product count becomes 0 or less, it should update instantly in the page
-  //instade it updates when user reload the page
+  // Notes for myself:
+  // - fix the count 0 problem
   const SubCount = (title) => {
     const newState = PurchasedItems.map((obj) => {
       if (obj.title === title && obj.count > 0) {
