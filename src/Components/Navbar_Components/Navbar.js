@@ -11,6 +11,10 @@ const Navbar = (props) => {
     props.profilePageLoad();
   };
 
+  const SearchedItem = (event) => {
+    props.SearchedItem(event);
+  };
+
   return (
     <div className="Navbar-Main-Wrapper">
       <div className="Navbar-Wrapper">
@@ -18,7 +22,7 @@ const Navbar = (props) => {
           SplendShop
         </a>
         <div className="Navbar-Search-Bar-Wrapper ">
-          <InputForm></InputForm>
+          <InputForm SearchedItem={SearchedItem}></InputForm>
         </div>
         <div className="Navbar-Profile-Bar-Wrapper">
           <a

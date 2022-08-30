@@ -9,7 +9,14 @@ import PrePayment from "./PrePayment";
 //fix the issue that when item deleted from the purchases, localstorage still keeps the data as count of 1 (i need to delete the data or set teh count to 0 not 1)
 
 let PurchasedItemsListOfObj = [];
+
 let PuchasedItemsArray = JSON.parse(localStorage.getItem("purchaseProducts"));
+if (PuchasedItemsArray) {
+  JSON.parse(localStorage.getItem("purchaseProducts"));
+} else {
+  PuchasedItemsArray = [];
+}
+
 for (let PurchasedItem of PuchasedItemsArray) {
   let Item = JSON.parse(localStorage.getItem(PurchasedItem));
   PurchasedItemsListOfObj.push(Item);
@@ -46,13 +53,16 @@ const Purchase = (props) => {
         JSON.stringify(NewPurchaseItemTitles)
       );
     }
+
     for (let Item of PurchasedItems) {
       if (PItem === Item.title) {
+        localStorage.removeItem(Item.title);
         continue;
       } else {
         NewPurchaseItems.push(Item);
       }
     }
+
     SetPurchasedItems(NewPurchaseItems);
   };
 
@@ -81,7 +91,11 @@ const Purchase = (props) => {
     const newState = PurchasedItems.map((obj) => {
       if (obj.title === title && obj.count > 0) {
         let PItem = { ...obj, count: obj.count - 1 };
-        localStorage.setItem(obj.title, JSON.stringify(obj));
+        if (PItem.count === 0) {
+          localStorage.removeItem(PItem.title);
+        } else {
+          localStorage.setItem(obj.title, JSON.stringify(PItem));
+        }
         return PItem;
       }
       return obj;

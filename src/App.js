@@ -131,11 +131,29 @@ function App() {
     },
   ];
 
+  const [ItemListFiltered, SetItemListFiltered] = useState(ItemsList);
+
+  const SearchedItem = (Searched) => {
+    SetItemListFiltered(ItemsList);
+    const FilteredItemsList = [];
+    for (let Item of ItemsList) {
+      if (Item.title.toLowerCase().includes(Searched.toLowerCase())) {
+        FilteredItemsList.push(Item);
+      } else if (Searched === "") {
+        continue;
+      }
+    }
+    SetItemListFiltered(FilteredItemsList);
+  };
+
   return (
     <div className="Card">
       <div className="Page-Navbar-Wrapper">
         <div className="Navbar">
-          <Navbar profilePageLoad={profilePageLoader}></Navbar>
+          <Navbar
+            profilePageLoad={profilePageLoader}
+            SearchedItem={SearchedItem}
+          ></Navbar>
         </div>
       </div>
       <Route path="/profile">
@@ -156,7 +174,7 @@ function App() {
             <Sidebar></Sidebar>
           </div>
           <div className="Items-List">
-            {ItemsList.map((Item) => (
+            {ItemListFiltered.map((Item) => (
               <Product
                 title={Item.title}
                 price={Item.price}
