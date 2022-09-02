@@ -2,8 +2,8 @@
   max-width: 1200px;
   width: 100%;
   margin: 100px auto;
-  box-shadow: #2f8e9d57 0px 2px 4px, #2f8e9da2 0px 7px 13px -3px,
-    #2f8e9d7c 0px -3px 0px inset;
+  box-shadow: #eb1d36 0px 2px 4px, #eb1d36 0px 7px 13px -3px,
+    #eb1d36 0px -3px 0px inset;
 }
 
 .details {
@@ -85,11 +85,11 @@
 
 .thumb img.active {
   opacity: 1;
-  box-shadow: #2f8f9d 0px 0px 0px 3px;
+  box-shadow: #eb1d36 0px 0px 0px 3px;
 }
 
 .box .card {
-  background-color: #2f8f9d;
+  background-color: #eb1d36;
   color: white;
   outline: none;
   border: none;
@@ -100,11 +100,11 @@
 
 .card {
   font-size: 18px;
-  box-shadow: #2f8e9d75 0px 0px 0px 1px, #2f8f9d 0px 0px 0px 1px inset;
+  box-shadow: #eb1d36 0px 0px 0px 1px, #eb1d36 0px 0px 0px 1px inset;
 }
 
 .card:hover {
-  color: #2f8f9d;
+  color: #eb1d36;
   background-color: white;
 }
 

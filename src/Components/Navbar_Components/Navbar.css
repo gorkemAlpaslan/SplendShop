@@ -9,10 +9,16 @@ p {
 }
 
 .Navbar-Icon-Wrapper {
-  color: rgb(255, 255, 255);
+  color: #eb1d36;
   padding: 1rem;
   font-size: 3rem;
   font-family: "Brush Script MT", cursive;
+}
+
+.Navbar-Icon-Wrapper:hover {
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
 }
 
 .Navbar-Profile-Bar-Wrapper {
@@ -23,18 +29,23 @@ p {
 .Navbar-Profile-Bar {
   text-align: center;
   border: none;
-  border-radius: 50px;
+  box-shadow: #cfd2cf 0px 1px 4px 0px;
   -o-transition: all 0.4s ease-in-out;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
-  color: rgb(255, 255, 255);
+  color: #eb1d36;
   padding: 0px 8px;
   display: flex;
   margin-right: 1rem;
   font-size: 15px;
   align-items: center;
+  opacity: 0.8;
+  border-radius: 50%;
 }
 
 .Navbar-Profile-Bar:hover {
-  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  box-shadow: 1px 1px #eb1d36, 2px 2px #eb1d36, 3px 3px #fa9494;
+  -webkit-transform: translateX(-3px);
+  transform: translateX(-3px);
 }

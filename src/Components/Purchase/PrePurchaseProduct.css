@@ -47,8 +47,8 @@
 }
 
 .Count_Button {
-  padding: 10px;
-  border-radius: 6px;
+  padding: 8px;
+  border-radius: 22px;
   cursor: pointer;
 }
 
@@ -60,11 +60,26 @@
 .Button_Add {
   background-color: green;
   color: wheat;
+  transition: all 0.5s ease-in-out;
 }
+
+.Button_Add:hover {
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+}
+
 .Button_Cut {
   color: wheat;
-  background-color: red;
+  background-color: #eb1d36;
+  transition: all 0.5s ease-in-out;
 }
+.Button_Cut:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
 .Count {
   padding: 10px 12px;
   border-radius: 30px;
@@ -81,15 +96,19 @@
 }
 
 .Product_Purchase_Card_Button {
-  padding: 4px;
+  padding: 2px;
   position: absolute;
   top: 10px;
   right: 10px;
+  border-radius: 999px;
   cursor: pointer;
-  border-radius: 6px;
+  transition: all 1s ease-in-out;
 }
 .Product_Purchase_Card_Button:hover {
-  background-color: rgba(211, 36, 36, 0.63);
-  box-shadow: rgba(0, 0, 0, 0.11) 0px 1px 3px 0px,
-    rgba(27, 31, 35, 0.288) 0px 0px 0px 1px;
+  opacity: 0.5;
+  border-radius: 50%;
+  background-color: #eb1d36;
+  -webkit-transform: rotateZ(-270deg);
+  -ms-transform: rotateZ(-270deg);
+  transform: rotateZ(-270deg);
 }

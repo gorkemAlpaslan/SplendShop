@@ -1,5 +1,5 @@
 .search-container {
-  background: #82dbd8;
+  background: #eb1d36;
   border-radius: 22px;
   padding: 8px 8px;
   display: flex;
@@ -35,7 +35,7 @@
   font-weight: 500;
   font-size: 16px;
   transition: 0.8s;
-  color: rgb(255, 255, 255);
+  color: white;
 }
 
 .Search_Button {

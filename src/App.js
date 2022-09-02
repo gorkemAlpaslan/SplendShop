@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Navbar from "./Components/Navbar_Components/Navbar";
 import "./App.css";
 import Product from "./Components/Product";
-import NavbarUnder from "./Components/NavbarUnder";
+import NavbarUnder from "./Components/Navbar_Components/NavbarUnder";
 import Profile from "./Components/Profile_Page/Profile";
 import { Route } from "react-router-dom";
 import Sidebar from "./Components/Sidebar/Sidebar";
@@ -129,6 +129,94 @@ function App() {
       colors: ["green", "black", "crimson", "teal"],
       count: 1,
     },
+    {
+      id: "7",
+      title: "Nike Legend Essential 2",
+      minisrc: [
+        "https://cdn.dsmcdn.com/ty126/product/media/images/20210610/21/98683101/125546722/3/3_org_zoom.jpg",
+      ],
+      src: [
+        "https://cdn.dsmcdn.com/ty126/product/media/images/20210610/21/98683101/125546722/3/3_org_zoom.jpg",
+        "https://cdn.dsmcdn.com/ty127/product/media/images/20210610/21/98683101/125546722/1/1_org_zoom.jpg",
+        "https://cdn.dsmcdn.com/ty128/product/media/images/20210610/21/98683101/125546722/4/4_org_zoom.jpg",
+        "https://cdn.dsmcdn.com/ty127/product/media/images/20210610/21/98683101/125546722/2/2_org_zoom.jpg",
+      ],
+      description: "Nike Legend Essential 2",
+      content: "Nike Legend Essential 2",
+      price: 43,
+      colors: ["green", "black", "crimson", "teal"],
+      count: 1,
+    },
+    {
+      id: "8",
+      title: "Nike Unisex Spor Ayakkabı Court Borough",
+      minisrc: [
+        "https://cdn.dsmcdn.com/ty4/product/media/images/20200602/9/2086646/72555906/4/4_org_zoom.jpg",
+      ],
+      src: [
+        "https://cdn.dsmcdn.com/ty4/product/media/images/20200602/9/2086646/72555906/4/4_org_zoom.jpg",
+        "https://cdn.dsmcdn.com/ty4/product/media/images/20200602/9/2086646/72555906/3/3_org_zoom.jpg",
+        "https://cdn.dsmcdn.com/ty4/product/media/images/20200602/9/2086646/72555906/2/2_org_zoom.jpg",
+        "https://cdn.dsmcdn.com/ty4/product/media/images/20200602/9/2086646/72555906/1/1_org_zoom.jpg",
+      ],
+      description: "Nike Unisex Spor Ayakkabı",
+      content: "Nike Unisex Spor Ayakkabı",
+      price: 99,
+      colors: ["green", "black", "crimson", "teal"],
+      count: 1,
+    },
+    {
+      id: "9",
+      title: "JBL T500BT",
+      minisrc: [
+        "https://cdn.dsmcdn.com/ty327/product/media/images/20220209/14/47510212/16168822/3/3_org_zoom.jpg",
+      ],
+      src: [
+        "https://cdn.dsmcdn.com/ty327/product/media/images/20220209/14/47510212/16168822/3/3_org_zoom.jpg",
+        "https://cdn.dsmcdn.com/ty329/product/media/images/20220209/14/47510212/16168822/2/2_org_zoom.jpg",
+        "https://cdn.dsmcdn.com/ty329/product/media/images/20220209/14/47510212/16168822/1/1_org_zoom.jpg",
+        "https://cdn.dsmcdn.com/ty328/product/media/images/20220209/14/47510212/16168822/4/4_org_zoom.jpg",
+      ],
+      description: "T500BT",
+      content: "T500BT",
+      price: 149,
+      colors: ["green", "black", "crimson", "teal"],
+      count: 1,
+    },
+    {
+      id: "10",
+      title: "Technodia T500 Akıllı Saat",
+      minisrc: [
+        "https://cdn.dsmcdn.com/ty263/product/media/images/20211205/20/5242366/328469465/2/2_org_zoom.jpg",
+      ],
+      src: [
+        "https://cdn.dsmcdn.com/ty263/product/media/images/20211205/20/5242366/328469465/2/2_org_zoom.jpg",
+        "https://cdn.dsmcdn.com/ty261/product/media/images/20211205/20/5242366/328469465/3/3_org_zoom.jpg",
+      ],
+      description: "Akıllı Saat",
+      content: "Technodia",
+      price: 40.5,
+      colors: ["green", "black", "crimson", "teal"],
+      count: 1,
+    },
+    {
+      id: "11",
+      title: "Nike Air Jordan 1",
+      minisrc: [
+        "https://cdn.dsmcdn.com/ty255/product/media/images/20211127/19/176317/323944429/2/2_org_zoom.jpg",
+      ],
+      src: [
+        "https://cdn.dsmcdn.com/ty255/product/media/images/20211127/19/176317/323944429/2/2_org_zoom.jpg",
+        "https://cdn.dsmcdn.com/ty257/product/media/images/20211127/19/176317/323944429/1/1_org_zoom.jpg",
+        "https://cdn.dsmcdn.com/ty256/product/media/images/20211127/19/176317/323944429/3/3_org_zoom.jpg",
+        "https://cdn.dsmcdn.com/ty256/product/media/images/20211127/19/176317/323944429/4/4_org_zoom.jpg",
+      ],
+      description: "Air Jordan",
+      content: "Spor Ayakkabı",
+      price: 140,
+      colors: ["green", "black", "crimson", "teal"],
+      count: 1,
+    },
   ];
 
   const [ItemListFiltered, SetItemListFiltered] = useState(ItemsList);
@@ -154,6 +242,7 @@ function App() {
             profilePageLoad={profilePageLoader}
             SearchedItem={SearchedItem}
           ></Navbar>
+          <NavbarUnder></NavbarUnder>
         </div>
       </div>
       <Route path="/profile">
@@ -164,11 +253,6 @@ function App() {
         </div>
       </Route>
       <Route path={["/homepage"]}>
-        <div className="Navbar-Under">
-          <div className="Navbar-Under-Card">
-            <NavbarUnder></NavbarUnder>
-          </div>
-        </div>
         <div className="Body-Wraper">
           <div className="Sidebar-Wrapper">
             <Sidebar></Sidebar>

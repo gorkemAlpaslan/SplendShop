@@ -12,18 +12,17 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: #3bacb6a4 0px 2px 8px;
-  background-color: #2f8f9d;
+  box-shadow: #eb1d36 0px 1px 1px;
+  background-color: white;
 }
 
-.Navbar-Under,
 .Body-Wraper {
+  margin-top: 16px;
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
-.Navbar-Under-Card,
 .Navbar {
   width: 1600px;
 }
@@ -33,17 +32,17 @@ html {
   display: flex;
   flex-wrap: wrap;
   margin-left: 40px;
-  box-shadow: #2f8e9dde 0px 1px 0px, #2f8e9dde 0px 0px 8px;
+  box-shadow: #eb1d36 0px 0px 2px;
   padding: 20px;
 }
 
 .Login-Wrapper {
   margin-top: 120px;
-  box-shadow: #2f8e9dde 0px 10px 15px -3px, #2f8e9dd8 0px 4px 6px -2px;
+  box-shadow: #eb1d36 0px 0px 2px;
 }
 
 .Sidebar-Wrapper {
-  box-shadow: #2f8e9dde 0px 1px 0px, #2f8e9dde 0px 0px 8px;
+  box-shadow: #eb1d36 0px 0px 2px;
   width: 280px;
 }
 

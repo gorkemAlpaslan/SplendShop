@@ -23,13 +23,13 @@
   outline: none;
   font-size: 13px;
   padding: 0px 10px 0px 10px;
-  border-bottom: 1px solid #2f8f9d;
+  border-bottom: 1px solid #eb1d36;
   font-family: "Poppins", sans-serif;
   transition: 0.5s;
 }
 
 .group input:hover {
-  border-bottom: 1px solid #2f8f9d;
+  border-bottom: 1px solid #eb1d36;
 }
 
 .group button {
@@ -37,7 +37,7 @@
   height: 45px;
   outline: none;
   border: none;
-  background-color: #2f8f9d;
+  background-color: #eb1d36;
   color: #fff;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
@@ -55,14 +55,10 @@
 
 a {
   text-decoration: none;
-  color: #2f8f9d;
+  color: #eb1d36;
   font-weight: 400;
   cursor: pointer;
   transition: 0.5s;
-}
-
-a:hover {
-  color: #000000;
 }
 
 label {
@@ -72,7 +68,7 @@ label {
 
 .head p {
   margin-top: -20px;
-  color: #2f8f9d;
+  color: #eb1d36;
   font-weight: 400;
   padding-bottom: 20px;
 }

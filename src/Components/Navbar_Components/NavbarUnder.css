@@ -1,0 +1,27 @@
+.Nav-Items {
+  display: flex;
+  border-radius: 16px;
+  justify-content: space-around;
+}
+
+.Navbar-Under-Item {
+  list-style: none;
+  font-size: 16px;
+  text-align: center;
+  justify-content: space-between;
+  border: none;
+  transition: all 0.4s ease-in-out;
+  color: black;
+  padding: 8px 8px;
+  font-size: 14px;
+  cursor: pointer;
+  border-bottom: 4px solid white;
+}
+
+.Navbar-Under-Item:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  border-bottom: 4px solid #eb1d36;
+  color: #eb1d36;
+}

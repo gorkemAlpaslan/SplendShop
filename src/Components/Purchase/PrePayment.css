@@ -13,14 +13,14 @@
   margin: 0px 14px;
   margin-bottom: 20px;
   padding: 8px;
-  box-shadow: #3bacb6a4 0px 3px;
+  box-shadow: #eb1d36 0px 3px;
 }
 
 .Each_Item_Wraper {
   margin: 30px 0px;
   display: flex;
   justify-content: space-between;
-  box-shadow: #3bacb6a4 0px 1px;
+  box-shadow: #eb1d36 0px 1px;
 }
 
 .Total_Price_Wrapper {
@@ -45,16 +45,16 @@
   height: 40px;
   border-radius: 333px;
 
-  background-color: #3bacb6;
+  background-color: #eb1d36;
   border: none;
   color: white;
   font-size: 20px;
+  transition: all 0.5s ease-in-out;
 }
 
 .Payment_Button:hover {
-  background-color: #3bacb6cc;
-  font-weight: 750;
-  border: 3px solid rgb(0, 0, 0);
-
-  color: black;
+  background-color: #eb1d36;
+  box-shadow: 1px 1px #fa9494, 2px 2px #fa9494, 3px 3px #fa9494;
+  -webkit-transform: translateX(-3px);
+  transform: translateX(-3px);
 }
