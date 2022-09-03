@@ -23,7 +23,7 @@ const NavbarUnder = (props) => {
           ],
         },
         {
-          head: "falan",
+          head: "Shoes",
           sublink: [
             { name: "T-shirt", link: "/" },
             { name: "Casual shirt", link: "/" },
@@ -37,7 +37,7 @@ const NavbarUnder = (props) => {
           ],
         },
         {
-          head: "filan",
+          head: "Accessories",
           sublink: [
             { name: "T-shirt", link: "/" },
             { name: "Casual shirt", link: "/" },
@@ -73,7 +73,7 @@ const NavbarUnder = (props) => {
           ],
         },
         {
-          head: "falan",
+          head: "Shoes",
           sublink: [
             { name: "T-shirt", link: "/" },
             { name: "Casual shirt", link: "/" },
@@ -131,7 +131,7 @@ const NavbarUnder = (props) => {
           ],
         },
         {
-          head: "falan",
+          head: "Shoes",
           sublink: [
             { name: "T-shirt", link: "/" },
             { name: "Casual shirt", link: "/" },
@@ -145,7 +145,7 @@ const NavbarUnder = (props) => {
           ],
         },
         {
-          head: "filan",
+          head: "Accessories",
           sublink: [
             { name: "T-shirt", link: "/" },
             { name: "Casual shirt", link: "/" },
@@ -181,7 +181,7 @@ const NavbarUnder = (props) => {
           ],
         },
         {
-          head: "falan",
+          head: "TopWear",
           sublink: [
             { name: "T-shirt", link: "/" },
             { name: "Casual shirt", link: "/" },
