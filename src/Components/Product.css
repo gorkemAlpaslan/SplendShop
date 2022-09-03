@@ -1,20 +1,24 @@
 .boutique-product {
   position: relative;
   width: 260px;
-  margin: 10px 15px;
-  transition: box-shadow, border-radius 0.2s linear;
+  margin: 20px 20px;
+  transition: all 0.4s linear;
   cursor: pointer;
   overflow: hidden;
   box-sizing: border-box;
   display: block;
   padding-top: 20px;
-  box-shadow: rgb(204, 219, 232) 0px 2px 4px 0px,
-    rgb(204, 219, 232) 0px 2px 16px 0px;
+  opacity: 0.9;
+  box-shadow: #cfd2cf 0px 1px 3px 0px, #cfd2cf 0px 0px 0px 1px;
+  border-radius: 10px;
 }
 
 .boutique-product:hover {
-  box-shadow: rgba(204, 219, 232, 0.534) 3px 3px 6px 0px inset,
-    rgba(255, 255, 255, 0.178) -3px -3px 6px 1px inset;
+  box-shadow: #cfd2cf 0px 2px 4px 0px, #cfd2cf 0px 0px 0px 3px;
+  opacity: 1;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .boutique-product:active {
@@ -37,6 +41,9 @@
   border: 1px solid #f5f4f4;
   transition: transform 0.5s ease;
   vertical-align: middle;
+  border-radius: 22px;
+  padding: 10px;
+  background-color: white;
 }
 
 .description,
@@ -50,14 +57,13 @@
 
 .product-brand-description,
 .two-line-text {
-  height: 36px;
+  height: 48px;
   overflow: hidden;
 }
 
 .brand {
   margin-right: 4px;
   font-size: 14px;
-  font-family: source_sans_prosemibold, serif;
   color: #333;
 }
 .name {

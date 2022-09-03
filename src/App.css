@@ -3,7 +3,8 @@ html {
 }
 
 * {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Tw Cen MT";
+  font-weight: 800;
 }
 
 .Page-Navbar-Wrapper {
@@ -12,12 +13,13 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: #eb1d36 0px 1px 1px;
-  background-color: white;
+  box-shadow: #cfd2cf 0px 1px 3px 0px, #cfd2cf 0px 0px 0px 1px;
+
+  background-color: #f5eddce7;
 }
 
 .Body-Wraper {
-  margin-top: 16px;
+  margin-top: 24px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -32,17 +34,20 @@ html {
   display: flex;
   flex-wrap: wrap;
   margin-left: 40px;
-  box-shadow: #eb1d36 0px 0px 2px;
+  border-radius: 22px;
   padding: 20px;
 }
 
 .Login-Wrapper {
   margin-top: 120px;
-  box-shadow: #eb1d36 0px 0px 2px;
+  box-shadow: #eb1d36 0px 4px 12px;
+  border-radius: 22px;
 }
 
 .Sidebar-Wrapper {
-  box-shadow: #eb1d36 0px 0px 2px;
+  box-shadow: #cfd2cf 0px 2px 4px 0px, #cfd2cf 0px 0px 0px 2px;
+
+  border-radius: 22px;
   width: 280px;
 }
 

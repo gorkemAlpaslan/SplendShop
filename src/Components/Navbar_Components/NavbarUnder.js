@@ -5,62 +5,218 @@ const NavbarUnder = (props) => {
   const NavbarUnderItems = [
     {
       id: 1,
-      title: "WOMAN",
-      dropwdownContent: ["test1", "test2", "test3", "test4"],
+      name: "WOMAN",
+      subMenu: true,
+      subLinks: [
+        {
+          head: "TopWear",
+          sublink: [
+            { name: "T-shirt", link: "/" },
+            { name: "Casual shirt", link: "/" },
+            { name: "Formal shirt", link: "/" },
+            { name: "T-shirt", link: "/" },
+            { name: "Casual shirt", link: "/" },
+            { name: "Formal shirt", link: "/" },
+            { name: "T-shirt", link: "/" },
+            { name: "Casual shirt", link: "/" },
+            { name: "Formal shirt", link: "/" },
+          ],
+        },
+        {
+          head: "falan",
+          sublink: [
+            { name: "T-shirt", link: "/" },
+            { name: "Casual shirt", link: "/" },
+            { name: "Formal shirt", link: "/" },
+            { name: "T-shirt", link: "/" },
+            { name: "Casual shirt", link: "/" },
+            { name: "Formal shirt", link: "/" },
+            { name: "T-shirt", link: "/" },
+            { name: "Casual shirt", link: "/" },
+            { name: "Formal shirt", link: "/" },
+          ],
+        },
+        {
+          head: "filan",
+          sublink: [
+            { name: "T-shirt", link: "/" },
+            { name: "Casual shirt", link: "/" },
+            { name: "Formal shirt", link: "/" },
+            { name: "T-shirt", link: "/" },
+            { name: "Casual shirt", link: "/" },
+            { name: "Formal shirt", link: "/" },
+            { name: "T-shirt", link: "/" },
+            { name: "Casual shirt", link: "/" },
+            { name: "Formal shirt", link: "/" },
+          ],
+        },
+      ],
       cName: "Navbar-Under-Item",
     },
     {
       id: 2,
-      title: "MALE",
-      dropwdownContent: ["test5", "test6", "test7", "test8"],
+      name: "MALE",
+      subMenu: true,
+      subLinks: [
+        {
+          head: "TopWear",
+          sublink: [
+            { name: "T-shirt", link: "/" },
+            { name: "Casual shirt", link: "/" },
+            { name: "Formal shirt", link: "/" },
+            { name: "T-shirt", link: "/" },
+            { name: "Casual shirt", link: "/" },
+            { name: "Formal shirt", link: "/" },
+            { name: "T-shirt", link: "/" },
+            { name: "Casual shirt", link: "/" },
+            { name: "Formal shirt", link: "/" },
+          ],
+        },
+        {
+          head: "falan",
+          sublink: [
+            { name: "T-shirt", link: "/" },
+            { name: "Casual shirt", link: "/" },
+            { name: "Formal shirt", link: "/" },
+            { name: "T-shirt", link: "/" },
+            { name: "Casual shirt", link: "/" },
+            { name: "Formal shirt", link: "/" },
+            { name: "T-shirt", link: "/" },
+            { name: "Casual shirt", link: "/" },
+            { name: "Formal shirt", link: "/" },
+          ],
+        },
+      ],
       cName: "Navbar-Under-Item",
     },
     {
       id: 3,
-      title: "CHILD",
-      dropwdownContent: ["test9", "test10", "test11", "test12"],
+      name: "CHILD",
+      subMenu: true,
+      subLinks: [
+        {
+          head: "TopWear",
+          sublink: [
+            { name: "T-shirt", link: "/" },
+            { name: "Casual shirt", link: "/" },
+            { name: "Formal shirt", link: "/" },
+            { name: "T-shirt", link: "/" },
+            { name: "Casual shirt", link: "/" },
+            { name: "Formal shirt", link: "/" },
+            { name: "T-shirt", link: "/" },
+            { name: "Casual shirt", link: "/" },
+            { name: "Formal shirt", link: "/" },
+          ],
+        },
+      ],
       cName: "Navbar-Under-Item",
     },
     {
-      id: 4,
-      title: "HOME & FURNITURE",
-      dropwdownContent: ["test13", "test14", "test15", "test16"],
+      id: 1,
+      name: "WOMAN",
+      subMenu: true,
+      subLinks: [
+        {
+          head: "TopWear",
+          sublink: [
+            { name: "T-shirt", link: "/" },
+            { name: "Casual shirt", link: "/" },
+            { name: "Formal shirt", link: "/" },
+            { name: "T-shirt", link: "/" },
+            { name: "Casual shirt", link: "/" },
+            { name: "Formal shirt", link: "/" },
+            { name: "T-shirt", link: "/" },
+            { name: "Casual shirt", link: "/" },
+            { name: "Formal shirt", link: "/" },
+          ],
+        },
+        {
+          head: "falan",
+          sublink: [
+            { name: "T-shirt", link: "/" },
+            { name: "Casual shirt", link: "/" },
+            { name: "Formal shirt", link: "/" },
+            { name: "T-shirt", link: "/" },
+            { name: "Casual shirt", link: "/" },
+            { name: "Formal shirt", link: "/" },
+            { name: "T-shirt", link: "/" },
+            { name: "Casual shirt", link: "/" },
+            { name: "Formal shirt", link: "/" },
+          ],
+        },
+        {
+          head: "filan",
+          sublink: [
+            { name: "T-shirt", link: "/" },
+            { name: "Casual shirt", link: "/" },
+            { name: "Formal shirt", link: "/" },
+            { name: "T-shirt", link: "/" },
+            { name: "Casual shirt", link: "/" },
+            { name: "Formal shirt", link: "/" },
+            { name: "T-shirt", link: "/" },
+            { name: "Casual shirt", link: "/" },
+            { name: "Formal shirt", link: "/" },
+          ],
+        },
+      ],
       cName: "Navbar-Under-Item",
     },
     {
-      id: 5,
-      title: "SUPERMARKET",
-      dropwdownContent: ["test17", "test18", "test19", "test20"],
+      id: 2,
+      name: "MALE",
+      subMenu: true,
+      subLinks: [
+        {
+          head: "TopWear",
+          sublink: [
+            { name: "T-shirt", link: "/" },
+            { name: "Casual shirt", link: "/" },
+            { name: "Formal shirt", link: "/" },
+            { name: "T-shirt", link: "/" },
+            { name: "Casual shirt", link: "/" },
+            { name: "Formal shirt", link: "/" },
+            { name: "T-shirt", link: "/" },
+            { name: "Casual shirt", link: "/" },
+            { name: "Formal shirt", link: "/" },
+          ],
+        },
+        {
+          head: "falan",
+          sublink: [
+            { name: "T-shirt", link: "/" },
+            { name: "Casual shirt", link: "/" },
+            { name: "Formal shirt", link: "/" },
+            { name: "T-shirt", link: "/" },
+            { name: "Casual shirt", link: "/" },
+            { name: "Formal shirt", link: "/" },
+            { name: "T-shirt", link: "/" },
+            { name: "Casual shirt", link: "/" },
+            { name: "Formal shirt", link: "/" },
+          ],
+        },
+      ],
       cName: "Navbar-Under-Item",
     },
     {
-      id: 6,
-      title: "COSMETIC",
-      dropwdownContent: ["test21", "test22", "test23", "test24"],
-      cName: "Navbar-Under-Item",
-    },
-    {
-      id: 7,
-      title: "SHOE BAG",
-      dropwdownContent: ["test25", "test26", "test27", "test28"],
-      cName: "Navbar-Under-Item",
-    },
-    {
-      id: 8,
-      title: "WATCH & ACCESSORIES",
-      dropwdownContent: ["test29", "test30", "test31", "test32"],
-      cName: "Navbar-Under-Item",
-    },
-    {
-      id: 9,
-      title: "ELECTRONIC",
-      dropwdownContent: ["test33", "test34", "test35", "test36"],
-      cName: "Navbar-Under-Item",
-    },
-    {
-      id: 10,
-      title: "SPORTS & OUTDOOR",
-      dropwdownContent: ["test37", "test38", "test39", "test40"],
+      id: 3,
+      name: "CHILD",
+      subMenu: true,
+      subLinks: [
+        {
+          head: "TopWear",
+          sublink: [
+            { name: "T-shirt", link: "/" },
+            { name: "Casual shirt", link: "/" },
+            { name: "Formal shirt", link: "/" },
+            { name: "T-shirt", link: "/" },
+            { name: "Casual shirt", link: "/" },
+            { name: "Formal shirt", link: "/" },
+            { name: "T-shirt", link: "/" },
+            { name: "Casual shirt", link: "/" },
+            { name: "Formal shirt", link: "/" },
+          ],
+        },
+      ],
       cName: "Navbar-Under-Item",
     },
   ];
@@ -69,9 +225,31 @@ const NavbarUnder = (props) => {
     <ul className="Nav-Items">
       {NavbarUnderItems.map((item) => {
         return (
-          <li href="#" className={item.cName}>
-            {item.title}
-          </li>
+          <div class="Dropwdown-Wrapper">
+            <li href="#" className={item.cName}>
+              <p>{item.name}</p>
+              <div className="Dropdown-Menu">
+                <div className="Triangle-Top"></div>
+                <div className="Top-Hover-Holder"></div>
+                <div className="Dropdown-Menu-Child">
+                  {item.subLinks.map((mysublinks) => {
+                    return (
+                      <div className="Sublink-Card">
+                        <div className="Sublink-Head">{mysublinks.head}</div>
+                        {mysublinks.sublink.map((slink) => {
+                          return (
+                            <li className="slink-each">
+                              <div href={slink.link}>{slink.name}</div>
+                            </li>
+                          );
+                        })}
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </li>
+          </div>
         );
       })}
     </ul>

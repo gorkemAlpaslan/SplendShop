@@ -1,27 +1,87 @@
 .Nav-Items {
   display: flex;
-  border-radius: 16px;
   justify-content: space-around;
 }
 
 .Navbar-Under-Item {
   list-style: none;
   font-size: 16px;
-  text-align: center;
-  justify-content: space-between;
-  border: none;
-  transition: all 0.4s ease-in-out;
   color: black;
-  padding: 8px 8px;
-  font-size: 14px;
+  padding: 1px 20px;
+  transition: all 0.4s ease-in-out;
+  position: relative;
   cursor: pointer;
-  border-bottom: 4px solid white;
+  z-index: 10000000000;
 }
 
 .Navbar-Under-Item:hover {
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
-  border-bottom: 4px solid #eb1d36;
+  color: #eb1d36;
+}
+
+.Dropdown-Menu {
+  display: none;
+  position: absolute;
+  top: 80px;
+  left: 0px;
+  z-index: 100;
+  box-shadow: #cfd2cfef 0px 2px 8px 0px;
+}
+
+.Triangle-Top {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  left: 24px;
+  margin-top: -8px;
+  background-color: #f5eddce7;
+  transform: rotate(45deg);
+}
+
+.Top-Hover-Holder {
+  position: absolute;
+  top: -50px;
+  width: 100px;
+  height: 100px;
+}
+
+.Navbar-Under-Item:hover > .Dropdown-Menu {
+  display: block;
+}
+
+.Dropwdown-Wrapper:hover + .Dropdown-Menu {
+  display: block;
+}
+
+.Dropdown-Menu-Child {
+  background-color: #f5eddce7;
+  padding: 10px;
+  display: flex;
+  align-items: baseline;
+  cursor: default;
+}
+
+.Sublink-Card {
+  color: black;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.Sublink-Head {
+  text-decoration: underline;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px 80px;
+}
+
+.slink-each {
+  cursor: pointer;
+  border-radius: 30px;
+  margin: 2px 10px;
+  padding: 6px 6px;
+}
+
+.slink-each:hover {
   color: #eb1d36;
 }

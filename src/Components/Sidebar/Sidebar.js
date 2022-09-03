@@ -49,7 +49,6 @@ const Sidebar = (props) => {
       <div className="unwrap select-top">
         <Select options={Genders} />
       </div>
-
       <div className="unwrap">
         <Select options={Category} />
       </div>
