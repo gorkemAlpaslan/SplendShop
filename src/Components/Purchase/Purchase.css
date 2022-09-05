@@ -3,7 +3,7 @@
   flex-direction: row;
   width: 90%;
   justify-content: space-evenly;
-  padding: 20px 0px;
+  margin: 30px;
 }
 
 .Purchase_Page_Wrapper {

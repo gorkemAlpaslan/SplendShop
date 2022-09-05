@@ -1,6 +1,5 @@
 .search-container {
-  background: #eb1d36;
-
+  background-image: linear-gradient(to right, #decba4, #3e5151);
   border-radius: 22px;
   padding: 8px 8px;
   display: flex;
@@ -21,10 +20,12 @@
 }
 
 .search-container:hover > .search-input {
+  font-size: 22px;
   width: 400px;
 }
 
 .search-input:focus {
+  font-size: 22px;
   width: 400px;
 }
 
@@ -34,8 +35,8 @@
   outline: none;
   width: 0px;
   font-weight: 500;
-  font-size: 16px;
-  transition: 0.8s;
+  font-size: 18px;
+  transition: all 0.7s ease-in-out;
   color: white;
 }
 

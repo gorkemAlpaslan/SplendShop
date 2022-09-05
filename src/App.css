@@ -3,8 +3,7 @@ html {
 }
 
 * {
-  font-family: "Tw Cen MT";
-  font-weight: 800;
+  font-family: "Perpetua";
 }
 
 .Page-Navbar-Wrapper {
@@ -15,14 +14,33 @@ html {
   justify-content: center;
   box-shadow: #cfd2cf 0px 1px 3px 0px, #cfd2cf 0px 0px 0px 1px;
 
-  background-color: #f5eddce7;
+  background: rgb(245, 237, 220);
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
 }
 
 .Body-Wraper {
-  margin-top: 24px;
   width: 100%;
   display: flex;
   justify-content: center;
+}
+
+.BodyContainer {
+  position: relative;
+  z-index: 1;
+}
+
+.Body-Wraper::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+  z-index: -1;
+  background-image: url("https://img.freepik.com/free-vector/pattern-about-shopping_1061-495.jpg?w=826&t=st=1662381889~exp=1662382489~hmac=904bf60534225e15cac3de649420ef43cd686aead5eed7291f11da39ff259ceb");
 }
 
 .Navbar {
@@ -39,20 +57,35 @@ html {
 }
 
 .Login-Wrapper {
-  margin-top: 120px;
-  box-shadow: #eb1d36 0px 4px 12px;
-  border-radius: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 10px;
+}
+
+.Login-Wrapper * {
+  box-sizing: border-box;
 }
 
 .Sidebar-Wrapper {
   box-shadow: #cfd2cf 0px 2px 4px 0px, #cfd2cf 0px 0px 0px 2px;
-
+  margin-top: 40px;
   border-radius: 22px;
   width: 280px;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
 }
 
 .Purchase-Wrapper {
   display: flex;
   justify-content: center;
-  margin: 10px;
+  height: auto;
+  min-height: 848px;
+}
+
+.ProductPageWraper {
+  width: 100%;
+  height: 830px;
+  padding: 1px 1px;
+  background-image: linear-gradient(to right, #f5eddcb6, #3e5151);
 }

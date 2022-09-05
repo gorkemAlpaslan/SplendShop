@@ -27,12 +27,12 @@ const PrePurchaseProduct = (props) => {
           <div className="Product_Purchase_Card_Name">{props.title}</div>
           <div className="Purchase_Item_Count">
             <ImMinus
-              className="Button_Add Count_Button"
+              className="Button_Cut Count_Button"
               onClick={SubCount}
             ></ImMinus>
             <div className="Count">{props.Count}</div>
             <ImPlus
-              className="Button_Cut Count_Button"
+              className="Button_Add Count_Button"
               onClick={AddCount}
             ></ImPlus>
           </div>

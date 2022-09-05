@@ -31,7 +31,7 @@ const Navbar = (props) => {
             onClick={profilePage}
           >
             <CgProfile></CgProfile>
-            <p>Profile</p>
+            <p>Sign In</p>
           </a>
           <a
             href="#"

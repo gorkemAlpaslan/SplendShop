@@ -1,18 +1,14 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import "./InputForm.css";
 import { GrSearch } from "react-icons/gr";
 import SearchButton from "./SearchButton.png";
 
 const InputForm = (props) => {
-  const [ItemSearched, SetItemSearched] = useState("");
-
-  const OnChangeHandler = (event) => {
-    SetItemSearched(event.target.value);
-  };
+  const SearchRef = useRef();
 
   const SearchHandler = (event) => {
     if (event.key === "Enter" || event.type === "click") {
-      props.SearchedItem(ItemSearched);
+      props.SearchedItem(SearchRef.current.value);
     }
   };
 
@@ -24,8 +20,8 @@ const InputForm = (props) => {
           name="search"
           placeholder="Search..."
           className="search-input"
-          onChange={OnChangeHandler}
           onKeyDown={SearchHandler}
+          ref={SearchRef}
         ></input>
         <a href="#" className="search-btn">
           <img

@@ -43,16 +43,16 @@ const Purchase = (props) => {
   const PurchaseCancle = (PItem) => {
     let NewPurchaseItemTitles = PuchasedItemsArray;
     let NewPurchaseItems = [];
-    for (let i = 0; i < NewPurchaseItemTitles.length; i++) {
+    for (let i = 0; i < 99; i++) {
       const index = NewPurchaseItemTitles.indexOf(PItem);
       if (index > -1) {
         NewPurchaseItemTitles.splice(index, 1);
       }
-      localStorage.setItem(
-        "purchaseProducts",
-        JSON.stringify(NewPurchaseItemTitles)
-      );
     }
+    localStorage.setItem(
+      "purchaseProducts",
+      JSON.stringify(NewPurchaseItemTitles)
+    );
 
     for (let Item of PurchasedItems) {
       if (PItem === Item.title) {

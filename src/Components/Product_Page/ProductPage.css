@@ -2,8 +2,9 @@
   max-width: 1200px;
   width: 100%;
   margin: 100px auto;
-  box-shadow: #eb1d36 0px 2px 4px, #eb1d36 0px 7px 13px -3px,
-    #eb1d36 0px -3px 0px inset;
+
+  background-color: white;
+  box-shadow: #f5eddc 0px 10px 36px 0px, rgba(0, 0, 0, 0.377) 0px 0px 0px 1px;
 }
 
 .details {
@@ -85,12 +86,14 @@
 
 .thumb img.active {
   opacity: 1;
-  box-shadow: #eb1d36 0px 0px 0px 3px;
+
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px, black 0px 0px 0px 1px;
 }
 
 .box .card {
-  background-color: #eb1d36;
-  color: white;
+  background-color: black;
+  color: #f5eddc;
   outline: none;
   border: none;
   cursor: pointer;
@@ -99,13 +102,15 @@
 }
 
 .card {
-  font-size: 18px;
-  box-shadow: #eb1d36 0px 0px 0px 1px, #eb1d36 0px 0px 0px 1px inset;
+  font-size: 22px;
+  box-shadow: #f5eddc 0px 0px 0px 1px, #f5eddc 0px 0px 0px 1px inset;
 }
 
 .card:hover {
-  color: #eb1d36;
-  background-color: white;
+  color: black;
+  background-color: #f5eddc;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
 @media (max-width: 500px) {

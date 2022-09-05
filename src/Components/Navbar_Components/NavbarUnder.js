@@ -225,7 +225,7 @@ const NavbarUnder = (props) => {
     <ul className="Nav-Items">
       {NavbarUnderItems.map((item) => {
         return (
-          <div class="Dropwdown-Wrapper">
+          <div className="Dropwdown-Wrapper">
             <li href="#" className={item.cName}>
               <p>{item.name}</p>
               <div className="Dropdown-Menu">
