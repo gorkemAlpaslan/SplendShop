@@ -46,19 +46,25 @@ const Sidebar = (props) => {
 
   return (
     <div className="Sidebar-Inner-Wrapper">
+      <h2 className="Filter-Title">Filter</h2>
       <div className="unwrap select-top">
+        <h3>Filter-Option :</h3>
         <Select options={Genders} />
       </div>
       <div className="unwrap">
+        <h3>Filter-Option :</h3>
         <Select options={Category} />
       </div>
       <div className="unwrap">
+        <h3>Filter-Option :</h3>
         <Select options={Size} />
       </div>
       <div className="unwrap">
+        <h3>Filter-Option :</h3>
         <Select options={ProductRating} />
       </div>
       <div className="unwrap">
+        <h3>Filter-Option :</h3>
         <Select options={Price} />
       </div>
     </div>

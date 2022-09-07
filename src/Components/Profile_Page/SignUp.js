@@ -147,9 +147,9 @@ const SignUp = () => {
               </button>
             </div>
             <div className="overlay-panel overlay-right">
-              <h1>Hello, Friend!</h1>
+              <h1>Hello!</h1>
               <p className="PForRegister">
-                Enter your personal details and start journey with us
+                Enter your personal details and start Shoping with us
               </p>
               <button
                 className="ButtonForRegister"

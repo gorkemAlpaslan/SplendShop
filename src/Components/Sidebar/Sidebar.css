@@ -4,10 +4,17 @@
   width: 100%;
 }
 
+.Filter-Title {
+  display: flex;
+  justify-content: center;
+  color: #212121;
+}
+
 .unwrap {
+  height: auto;
   justify-content: center;
   margin: 20px 20px;
-  border-bottom: 1px solid #cfd2cf;
+  border-bottom: 2px solid #14ffec;
   padding-bottom: 40px;
 }
 

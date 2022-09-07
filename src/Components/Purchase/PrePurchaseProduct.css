@@ -60,7 +60,7 @@
 .Button_Add {
   background-color: green;
   color: wheat;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
 .Button_Add:hover {
@@ -72,7 +72,7 @@
 .Button_Cut {
   color: wheat;
   background-color: #eb1d36;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 .Button_Cut:hover {
   -webkit-transform: scale(0.8);

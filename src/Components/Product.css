@@ -1,82 +1,141 @@
-.boutique-product {
-  background-image: linear-gradient(to right, #434343 0%, black 100%);
-  opacity: 0.1;
-
-  background-color: #cfd2cf;
-  position: relative;
-  width: 240px;
-  margin: 20px 20px;
-  transition: all 0.1s linear;
-  cursor: pointer;
-  overflow: hidden;
-  box-sizing: border-box;
-  display: block;
-  padding-top: 20px;
-  opacity: 0.95;
-  box-shadow: #cfd2cf 0px 1px 3px 0px, #cfd2cf 0px 0px 0px 1px;
-  border-radius: 30px;
-}
-
-.boutique-product:hover {
-  box-shadow: #cfd2cf 0px 2px 4px 0px, #cfd2cf 0px 0px 0px 3px;
-  opacity: 1;
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
-}
-
-.boutique-product a {
-  display: block;
-}
-
-.image-container {
-  overflow: hidden;
-  display: block;
+.product-grid {
+  font-family: "Poppins", sans-serif;
   text-align: center;
-}
-
-.p-card-img {
-  box-sizing: border-box;
-  width: 224px px;
-  height: 334px;
-  border: 1px solid #f5f4f4;
-  transition: transform 0.5s ease;
-  vertical-align: middle;
-  border-radius: 22px;
-  padding: 10px;
   background-color: white;
 }
-
-.description,
-.fixed-elements {
-  color: #ffffff;
-  font-weight: 900;
+.product-grid .product-image {
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+.product-grid .product-image a.image {
+  display: block;
+}
+.product-grid .product-image img {
+  width: 100%;
+  height: auto;
+}
+.product-grid .product-discount-label {
+  color: #fff;
+  background-image: linear-gradient(to right, #434343 0%, #14ffec 100%);
   font-size: 18px;
-  padding-bottom: 10px;
+  font-weight: 600;
+  line-height: 25px;
+  padding: 0 20px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+.product-grid .product-links {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: absolute;
+  top: 10px;
+  right: -50px;
+  transition: all 0.5s ease 0s;
+}
+.product-grid:hover .product-links {
+  right: 10px;
+}
+.product-grid .product-links li a {
+  color: #fff;
+  background: transparent;
+  font-size: 17px;
+  line-height: 38px;
+  width: 38px;
+  height: 38px;
+  border: 1px solid #333;
+  border-bottom: none;
   display: flex;
-  flex-direction: column;
-  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.1s ease-in-out;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
 }
-
-.product-brand-description,
-.two-line-text {
-  height: 80px;
-  overflow: hidden;
+.product-grid .product-links li:last-child a {
+  border-bottom: 1px solid #333;
 }
-
-.brand {
-  margin-right: 4px;
-  color: #ddf5dc;
+.product-grid .product-links li a:hover {
+  color: #333;
+  background: #fff;
+}
+.product-grid .add-to-cart {
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  color: #fff;
   font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  width: 100%;
+  padding: 10px 10px;
+  position: absolute;
+  left: 0;
+  bottom: -60px;
+  transition: all 0.1s ease 0s;
 }
-.name {
-  white-space: normal;
-  overflow: hidden;
-  max-width: 100%;
-  width: 10px;
-  word-break: normal;
+.product-grid:hover .add-to-cart {
+  bottom: 0;
+}
+.product-grid .add-to-cart:hover {
+  background-image: linear-gradient(to right, #0d7377 0%, #14ffec 100%);
+  color: black;
+  text-shadow: 4px 4px rgba(0, 0, 0, 0.2);
+}
+.product-grid .product-content {
+  background: #fff;
+  padding: 15px;
+  border-top: #212121 5px solid;
+}
+.product-grid:hover .product-content {
+  border-top: #14ffec 5px solid;
+}
+.product-grid .title {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin: 0 0 7px;
+  max-width: 224px;
+  height: 40px;
+}
+.product-grid .title a {
+  color: #777;
+  transition: all 0.3s ease 0s;
+}
+.product-grid .title a:hover {
+  color: #cfd2cf;
+}
+.product-grid .price {
+  color: #0d0d0d;
+  font-size: 14px;
+  font-weight: 600;
+}
+.product-grid .price span {
+  color: #888;
+  font-size: 13px;
+  font-weight: 400;
+  text-decoration: line-through;
+}
+@media screen and (max-width: 990px) {
+  .product-grid {
+    margin-bottom: 30px;
+  }
 }
 
-.price-box {
-  font-weight: 800;
+.image {
+  width: 224px;
+  height: 334px;
+  margin: 20px;
+}
+
+.col-sm-6 {
+  padding: 5px;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  margin: 20px 10px;
+  transition: all 0.1s ease-in-out;
+}
+
+.col-sm-6:hover {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
 }

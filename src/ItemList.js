@@ -16,7 +16,7 @@ const ItemList = [
     content: "Shoes",
     price: 140,
     colors: ["green", "black", "crimson", "teal"],
-    count: 1,
+    discount: 0.24,
   },
 
   {
@@ -36,6 +36,7 @@ const ItemList = [
     content: "Shoes",
     price: 92,
     colors: ["green", "black", "crimson", "teal"],
+    discount: 0,
   },
   {
     id: "3",
@@ -54,7 +55,7 @@ const ItemList = [
     content: "Bag",
     price: 25,
     colors: ["green", "black", "crimson", "teal"],
-    count: 1,
+    discount: 0.12,
   },
 
   {
@@ -74,7 +75,7 @@ const ItemList = [
     content: "T-shirt",
     price: 20,
     colors: ["green", "black", "crimson", "teal"],
-    count: 1,
+    discount: 0,
   },
   {
     id: "5",
@@ -93,7 +94,7 @@ const ItemList = [
     content: "Dress",
     price: 43,
     colors: ["green", "black", "crimson", "teal"],
-    count: 1,
+    discount: 0,
   },
   {
     id: "6",
@@ -112,7 +113,7 @@ const ItemList = [
     content: "Jewels",
     price: 43,
     colors: ["green", "black", "crimson", "teal"],
-    count: 1,
+    discount: 0.5,
   },
   {
     id: "7",
@@ -131,7 +132,7 @@ const ItemList = [
     content: "Shoes",
     price: 43,
     colors: ["green", "black", "crimson", "teal"],
-    count: 1,
+    discount: 0,
   },
   {
     id: "8",
@@ -150,7 +151,7 @@ const ItemList = [
     content: "Shoes",
     price: 99,
     colors: ["green", "black", "crimson", "teal"],
-    count: 1,
+    discount: 0,
   },
   {
     id: "9",
@@ -169,7 +170,7 @@ const ItemList = [
     content: "Bluetooth Headset",
     price: 149,
     colors: ["green", "black", "crimson", "teal"],
-    count: 1,
+    discount: 0.7,
   },
   {
     id: "10",
@@ -186,7 +187,7 @@ const ItemList = [
     content: "Smart Watch",
     price: 40.5,
     colors: ["green", "black", "crimson", "teal"],
-    count: 1,
+    discount: 0,
   },
   {
     id: "11",
@@ -205,6 +206,7 @@ const ItemList = [
     content: "Bluetooth Speaker",
     price: 40,
     colors: ["red", "black", "orange", "green"],
+    discount: 0.11,
   },
 
   {
@@ -224,7 +226,7 @@ const ItemList = [
     content: "Hoodie",
     price: 140,
     colors: ["green", "black", "crimson", "teal"],
-    count: 1,
+    discount: 0.05,
   },
   {
     id: "13",
@@ -243,7 +245,7 @@ const ItemList = [
     content: "Hoodie",
     price: 140,
     colors: ["green", "black", "crimson", "teal"],
-    count: 1,
+    discount: 0,
   },
   {
     id: "14",
@@ -262,7 +264,7 @@ const ItemList = [
     content: "Hoodie",
     price: 140,
     colors: ["green", "black", "crimson", "teal"],
-    count: 1,
+    discount: 0,
   },
   {
     id: "15",
@@ -281,7 +283,7 @@ const ItemList = [
     content: "Hoodie",
     price: 140,
     colors: ["green", "black", "crimson", "teal"],
-    count: 1,
+    discount: 0,
   },
   {
     id: "16",
@@ -300,7 +302,7 @@ const ItemList = [
     content: "Coat",
     price: 140,
     colors: ["green", "black", "crimson", "teal"],
-    count: 1,
+    discount: 0,
   },
   {
     id: "17",
@@ -319,7 +321,7 @@ const ItemList = [
     content: "Bag",
     price: 140,
     colors: ["green", "black", "crimson", "teal"],
-    count: 1,
+    discount: 0.5,
   },
   {
     id: "18",
@@ -338,7 +340,7 @@ const ItemList = [
     content: "Bag",
     price: 140,
     colors: ["green", "black", "crimson", "teal"],
-    count: 1,
+    discount: 0,
   },
 ];
 

@@ -1,24 +1,27 @@
 .Nav-Items {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  margin-bottom: 8px;
 }
 
 .Navbar-Under-Item {
   list-style: none;
   font-size: 16px;
-  color: #f5eddc;
-  padding: 1px 20px;
-  transition: all 0.8s ease-in-out;
+  color: white;
+  padding: 1px 40px;
+  transition: all 0.1s ease-in-out;
   position: relative;
   cursor: pointer;
   z-index: 10000000000;
+  margin: 1px 0px;
 }
 
 .Navbar-Under-Item:hover {
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
-  color: #ffffff;
+  color: #14ffeb;
+  box-shadow: #14ffeb 0px 25px 0px -20px;
 }
 
 .Dropdown-Menu {
@@ -27,7 +30,9 @@
   top: 80px;
   left: 0px;
   z-index: 100;
-  box-shadow: #cfd2cfef 0px 2px 8px 0px;
+  box-shadow: #000000a4 0px 0px 5px 0px, #000000a4 0px 2px 2px 0px;
+
+  border-radius: 22px;
 }
 
 .Triangle-Top {
@@ -36,8 +41,8 @@
   position: absolute;
   left: 24px;
   margin-top: -8px;
-  background-color: #f5eddce7;
   transform: rotate(45deg);
+  background-color: white;
 }
 
 .Top-Hover-Holder {
@@ -56,7 +61,8 @@
 }
 
 .Dropdown-Menu-Child {
-  background-color: #f5eddce7;
+  border-radius: 22px;
+  background: white;
   padding: 10px;
   display: flex;
   align-items: baseline;
@@ -86,5 +92,5 @@
 }
 
 .slink-each:hover {
-  color: #eb1d36;
+  color: #14ffec;
 }

@@ -24,19 +24,21 @@ html {
   justify-content: center;
 }
 
-.BodyContainer {
+.BodyContainer,
+.Purchase-Wrapper {
   position: relative;
   z-index: 1;
 }
 
-.Body-Wraper::before {
+.Body-Wraper::before,
+.Purchase-Wrapper::before {
   content: " ";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.4;
+  opacity: 0.35;
   filter: blur(2px);
   -webkit-filter: blur(2px);
   z-index: -1;
@@ -44,7 +46,7 @@ html {
 }
 
 .Navbar {
-  width: 1600px;
+  width: 1800px;
 }
 
 .Items-List {
@@ -69,11 +71,15 @@ html {
 }
 
 .Sidebar-Wrapper {
-  box-shadow: #cfd2cf 0px 2px 4px 0px, #cfd2cf 0px 0px 0px 2px;
-  margin-top: 40px;
-  border-radius: 22px;
+  box-shadow: #000000 0px 0px 3px 3px, #14ffec 0px 0px 4px 2px;
+
   width: 280px;
-  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  background: white;
+  height: auto;
+  margin: 40px 0px;
+  position: sticky;
+  top: 20px;
+  align-self: flex-start;
 }
 
 .Purchase-Wrapper {

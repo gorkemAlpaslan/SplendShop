@@ -17,8 +17,8 @@
 
 .ButtonForRegister {
   border-radius: 20px;
-  border: 1px solid #ff4b2b;
-  background-color: #ff4b2b;
+  border: 1px solid #14ffec;
+  background-color: #14ffec;
   color: #ffffff;
   font-size: 12px;
   font-weight: bold;
@@ -58,7 +58,8 @@
 .container {
   background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset,
+    rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
   position: relative;
   overflow: hidden;
   width: 968px;

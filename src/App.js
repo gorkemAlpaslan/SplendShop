@@ -72,12 +72,14 @@ function App() {
             <div className="Items-List">
               {ItemListFiltered.map((Item) => (
                 <Product
+                  ProductDetails={Item}
                   title={Item.title}
                   price={Item.price}
                   description={Item.content}
                   key={Item.id}
                   image={Item.minisrc}
                   refNum={Item.id}
+                  discount={Item.discount}
                 ></Product>
               ))}
             </div>
@@ -112,7 +114,6 @@ function App() {
           <Purchase />
         </div>
       </Route>
-
       {ItemsList.map((Item) => (
         <Route path={`/ProductPage/${Item.id}`}>
           <div className="Page-Navbar-Wrapper">

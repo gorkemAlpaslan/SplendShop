@@ -45,7 +45,8 @@ const Navbar = (props) => {
             className="Navbar-Purchases-Bar-Profile Navbar-Profile-Bar"
           >
             <AiOutlineShoppingCart></AiOutlineShoppingCart>
-            <p>Purchases</p>
+            <p className="Total-Count-Rel">Purchases</p>
+            <div className="Total-Count">223123</div>
           </a>
         </div>
       </div>

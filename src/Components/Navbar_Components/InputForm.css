@@ -1,5 +1,6 @@
 .search-container {
-  background-image: linear-gradient(to right, #decba4, #3e5151);
+  background: #323232;
+
   border-radius: 22px;
   padding: 8px 8px;
   display: flex;
@@ -7,8 +8,7 @@
   align-items: center;
   cursor: pointer;
   transition: 0.8s;
-  box-shadow: 4px 4px 6px 0 rgba(0, 0, 0, 0.3),
-    -4px -4px 6px 0 rgba(53, 53, 53, 0.2);
+  box-shadow: #0d747744 0px 0px 0px 1px inset, #14ffebc7 0px 0px 0px 1px;
 }
 
 .search-input::placeholder {
