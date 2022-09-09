@@ -3,9 +3,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
-    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-  border-radius: 4px;
+  box-shadow: #212121 0px 1px 3px 0px, #212121 0px 0px 0px 1px;
   padding: 10px;
   margin: 10px;
 
@@ -41,25 +39,19 @@
 .Purchase_Item_Count {
   display: flex;
   width: 120px;
-  justify-content: space-between;
+  justify-content: space-evenly;
   text-align: center;
   align-items: center;
 }
 
 .Count_Button {
-  padding: 8px;
-  border-radius: 22px;
+  padding: 6px;
   cursor: pointer;
-}
-
-.Count_Button:hover {
-  box-shadow: rgba(0, 0, 0, 0.644) 0px 1px 3px 0px,
-    rgba(240, 240, 240, 0.692) 0px 0px 0px 1px;
 }
 
 .Button_Add {
   background-color: green;
-  color: wheat;
+  color: white;
   transition: all 0.1s ease-in-out;
 }
 
@@ -70,8 +62,8 @@
 }
 
 .Button_Cut {
-  color: wheat;
-  background-color: #eb1d36;
+  color: white;
+  background-color: #eb4747;
   transition: all 0.1s ease-in-out;
 }
 .Button_Cut:hover {
@@ -81,8 +73,11 @@
 }
 
 .Count {
-  padding: 10px 12px;
-  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
     rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
   font-size: medium;
@@ -100,14 +95,13 @@
   position: absolute;
   top: 10px;
   right: 10px;
-  border-radius: 999px;
   cursor: pointer;
-  transition: all 1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  opacity: 0.5;
 }
 .Product_Purchase_Card_Button:hover {
-  opacity: 0.5;
-  border-radius: 50%;
-  background-color: #eb1d36;
+  opacity: 1;
+  background-color: #eb4747;
   -webkit-transform: rotateZ(-270deg);
   -ms-transform: rotateZ(-270deg);
   transform: rotateZ(-270deg);

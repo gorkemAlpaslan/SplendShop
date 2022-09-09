@@ -14,10 +14,6 @@
   height: auto;
   justify-content: center;
   margin: 20px 20px;
-  border-bottom: 2px solid #14ffec;
+  border-bottom: 2px solid #212121;
   padding-bottom: 40px;
-}
-
-.select-top {
-  padding-top: 20px;
 }

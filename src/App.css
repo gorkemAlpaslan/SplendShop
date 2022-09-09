@@ -54,7 +54,6 @@ html {
   display: flex;
   flex-wrap: wrap;
   margin-left: 40px;
-  border-radius: 22px;
   padding: 20px;
 }
 
@@ -71,8 +70,7 @@ html {
 }
 
 .Sidebar-Wrapper {
-  box-shadow: #000000 0px 0px 3px 3px, #14ffec 0px 0px 4px 2px;
-
+  box-shadow: #212121 0px 6px 2px 0px, #212121 0px 0px 0px 1px;
   width: 280px;
   background: white;
   height: auto;

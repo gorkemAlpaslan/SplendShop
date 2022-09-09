@@ -3,6 +3,7 @@ import { render } from "react-dom";
 import "./ProductPage.css";
 import Colors from "./Colors";
 import DetailsThumb from "./DetailsThumb";
+import AddToCary from "../Functions/AddToCary";
 
 class ProductPage extends React.Component {
   state = {
@@ -27,34 +28,13 @@ class ProductPage extends React.Component {
 
   render() {
     const { index } = this.state;
-    const { ProductDetails } = this.props;
-    const productDetailsArray = [];
-    productDetailsArray.push(ProductDetails);
+    const { ProductDetails, Count } = this.props;
+    const productDetailsArray = [ProductDetails];
 
-    const uniqueIdForProduct = productDetailsArray[0].title;
-    const localStorageProductIds = [productDetailsArray[0].title];
-
-    const addToCary = () => {
-      localStorage.setItem(
-        uniqueIdForProduct,
-        JSON.stringify(productDetailsArray[0])
-      );
-
-      if (!localStorage.getItem("purchaseProducts")) {
-        localStorage.setItem(
-          "purchaseProducts",
-          JSON.stringify(localStorageProductIds)
-        );
-      } else {
-        let purchaseProducts = JSON.parse(
-          localStorage.getItem("purchaseProducts")
-        );
-        purchaseProducts.push(uniqueIdForProduct);
-        localStorage.setItem(
-          "purchaseProducts",
-          JSON.stringify(purchaseProducts)
-        );
-      }
+    const AddItemToPurchase = () => {
+      AddToCary(ProductDetails);
+      let numberofItems = JSON.parse(localStorage.getItem("purchaseProducts"));
+      Count(numberofItems);
     };
 
     return (
@@ -78,7 +58,7 @@ class ProductPage extends React.Component {
                 tab={this.handleTab}
                 myRef={this.myRef}
               ></DetailsThumb>
-              <button className="card" onClick={addToCary}>
+              <button className="card" onClick={AddItemToPurchase}>
                 Add To Card
               </button>
             </div>

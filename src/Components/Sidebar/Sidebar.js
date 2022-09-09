@@ -5,10 +5,6 @@ import Select from "react-select";
 const Sidebar = (props) => {
   const [FilterList, SetFilterList] = useState();
 
-  const ColorHandler = (colors) => {
-    console.log(colors);
-  };
-
   const Genders = [
     { value: "all", label: "Any" },
     { value: "male", label: "Male" },
@@ -47,7 +43,7 @@ const Sidebar = (props) => {
   return (
     <div className="Sidebar-Inner-Wrapper">
       <h2 className="Filter-Title">Filter</h2>
-      <div className="unwrap select-top">
+      <div className="unwrap">
         <h3>Filter-Option :</h3>
         <Select options={Genders} />
       </div>

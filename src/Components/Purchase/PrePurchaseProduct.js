@@ -6,13 +6,19 @@ import { ImPlus, ImMinus } from "react-icons/im";
 const PrePurchaseProduct = (props) => {
   const PurchaseCancle = () => {
     props.PurchaseCancle(props.title);
+    let numberofItems = JSON.parse(localStorage.getItem("purchaseProducts"));
+    props.NumberOfItemsHandler(numberofItems);
   };
 
   const AddCount = () => {
     props.AddCount(props.title);
+    let numberofItems = JSON.parse(localStorage.getItem("purchaseProducts"));
+    props.NumberOfItemsHandler(numberofItems);
   };
   const SubCount = () => {
     props.SubCount(props.title);
+    let numberofItems = JSON.parse(localStorage.getItem("purchaseProducts"));
+    props.NumberOfItemsHandler(numberofItems);
   };
 
   return (

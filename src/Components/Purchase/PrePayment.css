@@ -44,32 +44,23 @@
   margin: 20px;
   width: 100px;
   height: 40px;
-  border-radius: 333px;
-
-  background-color: black;
+  background-color: #abc9ff;
   border: none;
   color: white;
-  font-size: 20px;
+  font-size: 30px;
   transition: all 0.2s ease-in-out;
+  cursor: pointer;
 }
 
 .Payment_Button:hover {
-  background-image: linear-gradient(
-    to right bottom,
-    #323232,
-    #393b43,
-    #3a4754,
-    #335364,
-    #266170,
-    #1d727f,
-    #0f838b,
-    #029495,
-    #00aeab,
-    #00c8c2,
-    #00e3d7,
-    #14ffec
+  color: #212121;
+  background: rgb(171, 201, 255);
+  background: linear-gradient(
+    308deg,
+    rgba(171, 201, 255, 1) 0%,
+    rgba(255, 222, 222, 0.5102415966386555) 100%
   );
-  box-shadow: 1px 1px #00c8c2, 2px 2px #00e3d7, 3px 3px #14ffec;
+  box-shadow: 1px 1px #abc9ff, 2px 2px #abc9ff, 3px 3px #abc9ff;
   -webkit-transform: translateX(-3px);
   transform: translateX(-3px);
 }

@@ -22,7 +22,7 @@ a {
   -webkit-transform: scale(1.4);
   -ms-transform: scale(1.1);
   transform: scale(1.3);
-  color: #14ffeb;
+  color: #abc9ff;
 }
 
 .Navbar-Profile-Bar-Wrapper {
@@ -49,7 +49,7 @@ a {
   -webkit-transform: scale(1.3);
   -ms-transform: scale(1.3);
   transform: scale(1.3);
-  color: #14ffeb;
+  color: #abc9ff;
   opacity: 1;
 }
 

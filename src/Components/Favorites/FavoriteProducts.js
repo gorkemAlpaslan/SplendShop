@@ -1,9 +1,9 @@
-import "./Product.css";
-import { useState } from "react";
-import { FaSearch, FaShare, FaHeart } from "react-icons/fa";
-import AddToCary from "./Functions/AddToCary";
+import { React, useState } from "react";
+import "./FavoriteProducts.css";
+import { FaTimes } from "react-icons/fa";
+import AddToCary from "../Functions/AddToCary";
 
-const Product = (props) => {
+const FavoriteProducts = (props) => {
   let discountHandler = false;
 
   if (props.discount > 0) {
@@ -11,31 +11,15 @@ const Product = (props) => {
   }
 
   const productDetailsArray = props.ProductDetails;
+
   const AddItemToPurchase = () => {
     AddToCary(productDetailsArray);
     let numberofItems = JSON.parse(localStorage.getItem("purchaseProducts"));
     props.NumberOfItemsHandler(numberofItems);
   };
 
-  const AddFavororitesHandler = () => {
-    localStorage.setItem(
-      productDetailsArray.title,
-      JSON.stringify(productDetailsArray)
-    );
-
-    if (!localStorage.getItem("FavoriteProducts")) {
-      localStorage.setItem(
-        "FavoriteProducts",
-        JSON.stringify([productDetailsArray.title])
-      );
-    } else {
-      let FavoriteProducts = JSON.parse(
-        localStorage.getItem("FavoriteProducts")
-      );
-      FavoriteProducts.push(productDetailsArray.title);
-      let asdvsda = [...new Set(FavoriteProducts)];
-      localStorage.setItem("FavoriteProducts", JSON.stringify(asdvsda));
-    }
+  const FavItemDeleteHandler = () => {
+    props.FavItemDeleteHandler(props.title);
   };
 
   return (
@@ -51,8 +35,8 @@ const Product = (props) => {
             </span>
             <ul class="product-links">
               <li>
-                <a onClick={AddFavororitesHandler}>
-                  <FaHeart></FaHeart>
+                <a onClick={FavItemDeleteHandler}>
+                  <FaTimes></FaTimes>
                 </a>
               </li>
             </ul>
@@ -77,4 +61,4 @@ const Product = (props) => {
   );
 };
 
-export default Product;
+export default FavoriteProducts;

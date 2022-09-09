@@ -4,16 +4,10 @@ import "./PrePurchaseProduct";
 import PrePurchaseProduct from "./PrePurchaseProduct";
 import PrePayment from "./PrePayment";
 
-// Notes for myself:
-// Fıx the issues that couse user can't load the products page without any localstorage data
-//fix the issue that when item deleted from the purchases, localstorage still keeps the data as count of 1 (i need to delete the data or set teh count to 0 not 1)
-
 let PurchasedItemsListOfObj = [];
 
 let PuchasedItemsArray = JSON.parse(localStorage.getItem("purchaseProducts"));
-if (PuchasedItemsArray) {
-  JSON.parse(localStorage.getItem("purchaseProducts"));
-} else {
+if (!PuchasedItemsArray) {
   PuchasedItemsArray = [];
 }
 
@@ -41,9 +35,11 @@ const Purchase = (props) => {
   const [PurchasedItems, SetPurchasedItems] = useState(unique);
 
   const PurchaseCancle = (PItem) => {
+    const NumberOfitemsForLoop = PuchasedItemsArray.length;
     let NewPurchaseItemTitles = PuchasedItemsArray;
     let NewPurchaseItems = [];
-    for (let i = 0; i < 99; i++) {
+
+    for (let i = 0; i < NumberOfitemsForLoop; i++) {
       const index = NewPurchaseItemTitles.indexOf(PItem);
       if (index > -1) {
         NewPurchaseItemTitles.splice(index, 1);
@@ -56,7 +52,9 @@ const Purchase = (props) => {
 
     for (let Item of PurchasedItems) {
       if (PItem === Item.title) {
-        localStorage.removeItem(Item.title);
+        let DummyItem = Item;
+        DummyItem.count = 0;
+        localStorage.setItem(Item.title, JSON.stringify(DummyItem));
         continue;
       } else {
         NewPurchaseItems.push(Item);
@@ -70,7 +68,7 @@ const Purchase = (props) => {
     const newState = PurchasedItems.map((obj) => {
       if (obj.title === title) {
         let PItem = { ...obj, count: obj.count + 1 };
-        localStorage.setItem(obj.title, JSON.stringify(obj));
+        localStorage.setItem(obj.title, JSON.stringify(PItem));
         return PItem;
       }
       return obj;
@@ -85,17 +83,11 @@ const Purchase = (props) => {
     SetPurchasedItems(newState);
   };
 
-  // Notes for myself:
-  // - fix the count 0 problem
   const SubCount = (title) => {
     const newState = PurchasedItems.map((obj) => {
       if (obj.title === title && obj.count > 0) {
         let PItem = { ...obj, count: obj.count - 1 };
-        if (PItem.count === 0) {
-          localStorage.removeItem(PItem.title);
-        } else {
-          localStorage.setItem(obj.title, JSON.stringify(PItem));
-        }
+        localStorage.setItem(obj.title, JSON.stringify(PItem));
         return PItem;
       }
       return obj;
@@ -113,11 +105,15 @@ const Purchase = (props) => {
     SetPurchasedItems(newState);
   };
 
+  const NumberOfItemsHandler = (CountHandler) => {
+    props.Count(CountHandler);
+  };
+
   return (
     <div className="Purchase_Page">
       <div className="Purchase_Page_Wrapper">
         <div className="Purchase_Items">
-          <h4>Products</h4>
+          <h2>Products</h2>
           <div className="Pre_Purchase_Wrapper">
             {PurchasedItems.map((PurchaseItem) => (
               <PrePurchaseProduct
@@ -131,10 +127,11 @@ const Purchase = (props) => {
                 PurchaseCancle={PurchaseCancle}
                 AddCount={AddCount}
                 SubCount={SubCount}
+                NumberOfItemsHandler={NumberOfItemsHandler}
               />
             ))}
           </div>
-          <div className="Purchase_Favs"></div>
+          <div className="Purchase_Favs">favs gonna be here</div>
         </div>
       </div>
       <div className="Payment_Wrapper">

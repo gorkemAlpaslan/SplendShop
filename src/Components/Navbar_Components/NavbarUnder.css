@@ -7,6 +7,8 @@
 .Navbar-Under-Item {
   list-style: none;
   font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 3px;
   color: white;
   padding: 1px 40px;
   transition: all 0.1s ease-in-out;
@@ -20,8 +22,8 @@
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
-  color: #14ffeb;
-  box-shadow: #14ffeb 0px 25px 0px -20px;
+  color: #abc9ff;
+  box-shadow: #abc9ff 0px 25px 0px -20px;
 }
 
 .Dropdown-Menu {
@@ -31,8 +33,6 @@
   left: 0px;
   z-index: 100;
   box-shadow: #000000a4 0px 0px 5px 0px, #000000a4 0px 2px 2px 0px;
-
-  border-radius: 22px;
 }
 
 .Triangle-Top {
@@ -61,7 +61,6 @@
 }
 
 .Dropdown-Menu-Child {
-  border-radius: 22px;
   background: white;
   padding: 10px;
   display: flex;
@@ -82,9 +81,11 @@
   font-weight: 800;
   cursor: pointer;
   padding: 10px 80px;
+  letter-spacing: 0px;
 }
 
 .slink-each {
+  letter-spacing: 0px;
   cursor: pointer;
   border-radius: 30px;
   margin: 2px 10px;
@@ -92,5 +93,8 @@
 }
 
 .slink-each:hover {
-  color: #14ffec;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  color: #abc9ff;
 }

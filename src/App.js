@@ -10,6 +10,8 @@ import ProductPage from "./Components/Product_Page/ProductPage";
 import Purchase from "./Components/Purchase/Purchase";
 import { components } from "react-select";
 import ItemList from "./ItemList";
+import Favorites from "./Components/Favorites/Favorites";
+import FavoriteItems from "./Components/Favorites/FavoriteItems";
 
 function App() {
   ///// WAS GOING TO USE FAKE SHOP API BUT I DECITE TO CREATE MY OWN ITEM LIST /////////
@@ -27,10 +29,17 @@ function App() {
   // //   ItemListData();
   // // }, []);
 
-  const [profilePage, SetProfilePage] = useState(false);
+  let PuchasedItemsArray = JSON.parse(localStorage.getItem("purchaseProducts"));
+  if (!PuchasedItemsArray) {
+    PuchasedItemsArray = [];
+  }
 
-  const profilePageLoader = () => {
-    SetProfilePage(true);
+  const [purchasedItemNumber, SetPurchasedItemNumber] = useState(
+    PuchasedItemsArray.length
+  );
+
+  const NumberOfItemsHandler = (ItemCounter) => {
+    SetPurchasedItemNumber(ItemCounter.length);
   };
 
   const ItemsList = ItemList;
@@ -56,8 +65,8 @@ function App() {
         <div className="Page-Navbar-Wrapper">
           <div className="Navbar">
             <Navbar
-              profilePageLoad={profilePageLoader}
               SearchedItem={SearchedItem}
+              Count={purchasedItemNumber}
             ></Navbar>
             <div>
               <NavbarUnder></NavbarUnder>
@@ -80,6 +89,7 @@ function App() {
                   image={Item.minisrc}
                   refNum={Item.id}
                   discount={Item.discount}
+                  NumberOfItemsHandler={NumberOfItemsHandler}
                 ></Product>
               ))}
             </div>
@@ -90,8 +100,8 @@ function App() {
         <div className="Page-Navbar-Wrapper">
           <div className="Navbar">
             <Navbar
-              profilePageLoad={profilePageLoader}
               SearchedItem={SearchedItem}
+              Count={purchasedItemNumber}
             ></Navbar>
           </div>
         </div>
@@ -101,17 +111,32 @@ function App() {
           </div>
         </div>
       </Route>
+      <Route path="/Favorites">
+        <div className="Page-Navbar-Wrapper">
+          <div className="Navbar">
+            <Navbar
+              SearchedItem={SearchedItem}
+              Count={purchasedItemNumber}
+            ></Navbar>
+          </div>
+        </div>
+        <div className="BodyContainer">
+          <div className="Body-Wraper">
+            <Favorites></Favorites>
+          </div>
+        </div>
+      </Route>
       <Route path="/Purchase">
         <div className="Page-Navbar-Wrapper">
           <div className="Navbar">
             <Navbar
-              profilePageLoad={profilePageLoader}
               SearchedItem={SearchedItem}
+              Count={purchasedItemNumber}
             ></Navbar>
           </div>
         </div>
         <div className="Purchase-Wrapper">
-          <Purchase />
+          <Purchase Count={NumberOfItemsHandler} />
         </div>
       </Route>
       {ItemsList.map((Item) => (
@@ -119,13 +144,16 @@ function App() {
           <div className="Page-Navbar-Wrapper">
             <div className="Navbar">
               <Navbar
-                profilePageLoad={profilePageLoader}
                 SearchedItem={SearchedItem}
+                Count={purchasedItemNumber}
               ></Navbar>
             </div>
           </div>
           <div className="ProductPageWraper">
-            <ProductPage ProductDetails={Item}></ProductPage>
+            <ProductPage
+              ProductDetails={Item}
+              Count={NumberOfItemsHandler}
+            ></ProductPage>
           </div>
         </Route>
       ))}

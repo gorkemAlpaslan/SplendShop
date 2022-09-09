@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import "./Navbar.css";
 
 import InputForm from "./InputForm";
@@ -7,13 +7,11 @@ import { CgProfile } from "react-icons/cg";
 import { AiOutlineHeart, AiOutlineShoppingCart } from "react-icons/ai";
 
 const Navbar = (props) => {
-  const profilePage = () => {
-    props.profilePageLoad();
-  };
-
   const SearchedItem = (event) => {
     props.SearchedItem(event);
   };
+
+  console.log(props.countHider);
 
   return (
     <div className="Navbar-Main-Wrapper">
@@ -28,13 +26,12 @@ const Navbar = (props) => {
           <a
             href="/profile"
             className="Navbar-Profile-Bar-Profile Navbar-Profile-Bar"
-            onClick={profilePage}
           >
             <CgProfile></CgProfile>
             <p>Sign In</p>
           </a>
           <a
-            href="#"
+            href="/Favorites"
             className="Navbar-Favorites-Bar-Profile Navbar-Profile-Bar"
           >
             <AiOutlineHeart></AiOutlineHeart>
@@ -46,7 +43,9 @@ const Navbar = (props) => {
           >
             <AiOutlineShoppingCart></AiOutlineShoppingCart>
             <p className="Total-Count-Rel">Purchases</p>
-            <div className="Total-Count">223123</div>
+            {props.Count > 0 && (
+              <div className="Total-Count">{props.Count}</div>
+            )}
           </a>
         </div>
       </div>
