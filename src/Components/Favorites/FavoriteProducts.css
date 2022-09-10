@@ -1,24 +1,50 @@
-.product-grid {
+.Fav-Wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.FavContainer {
+  padding: 2px;
+  background-color: #212121;
+  margin: 20px 10px;
+  transition: all 0.1s ease-in-out;
+  max-width: 150px;
+}
+
+.FavContainer:hover {
+  background-color: #abc9ff;
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.FavInnerContainer {
   font-family: "Poppins", sans-serif;
   text-align: center;
   background-color: white;
 }
-.product-grid .product-image {
-  overflow: hidden;
+
+.FavInnerContainer .fav-product-image {
   position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 1;
 }
-.product-grid .product-image a.image {
-  display: block;
+.FavInnerContainer .fav-product-image a.fav-image {
+  height: auto;
 }
-.product-grid .product-image img {
+.FavInnerContainer .fav-product-image img {
   width: 100%;
   height: auto;
 }
-.product-grid .product-discount-label {
+.FavInnerContainer .fav-product-discount-label {
   color: #fff;
   background-color: #abc9ff;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 600;
   line-height: 25px;
   padding: 0 20px;
@@ -26,7 +52,7 @@
   top: 10px;
   left: 0;
 }
-.product-grid .product-links {
+.FavInnerContainer .fav-product-links {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -35,16 +61,16 @@
   right: -50px;
   transition: all 0.5s ease 0s;
 }
-.product-grid:hover .product-links {
+.FavInnerContainer:hover .fav-product-links {
   right: 10px;
 }
-.product-grid .product-links li a {
+.FavInnerContainer .fav-product-links li a {
   color: white;
   background: transparent;
-  font-size: 17px;
+  font-size: 11px;
   line-height: 38px;
-  width: 38px;
-  height: 38px;
+  width: 26px;
+  height: 26px;
   border: 1px solid #333;
   border-bottom: none;
   display: flex;
@@ -53,92 +79,72 @@
   transition: all 0.1s ease-in-out;
   background-image: linear-gradient(to right, #212121 0%, black 100%);
 }
-.product-grid .product-links li:last-child a {
+.FavInnerContainer .fav-product-links li:last-child a {
   border-bottom: 1px solid #333;
 }
-.product-grid .product-links li a:hover {
+.FavInnerContainer .fav-product-links li a:hover {
   color: #abc9ff;
   background: white;
 }
-.product-grid .add-to-cart {
+.FavInnerContainer .fav-add-to-cart {
   background-image: linear-gradient(to right, #434343 0%, black 100%);
   color: #fff;
-  font-size: 18px;
+  font-size: 11px;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 2px;
   width: 100%;
-  padding: 10px 00px;
+  padding: 6px 00px;
   position: absolute;
   left: 0;
   bottom: -60px;
   transition: all 0.1s ease 0s;
 }
-.product-grid:hover .add-to-cart {
+.FavInnerContainer:hover .fav-add-to-cart {
   bottom: 0;
 }
-.product-grid .add-to-cart:hover {
+.FavInnerContainer .fav-add-to-cart:hover {
   background-image: none;
   background-color: #abc9ff;
   color: rgb(255, 255, 255);
 }
-.product-grid .product-content {
+.FavInnerContainer .fav-product-content {
   background: #fff;
   padding: 15px;
 
   border-top: #212121 2px solid;
 }
-.product-grid:hover .product-content {
+.FavInnerContainer:hover .fav-product-content {
   border-top: #abc9ff 2px solid;
 }
-.product-grid .title {
-  font-size: 20px;
+.FavInnerContainer .fav-title {
+  font-size: 14px;
   font-weight: 600;
   text-transform: capitalize;
   margin: 0 0 7px;
   max-width: 224px;
   height: 40px;
 }
-.product-grid .title a {
+.FavInnerContainer .fav-title a {
   color: #777;
   transition: all 0.3s ease 0s;
 }
-.product-grid .title a:hover {
+.FavInnerContainer .fav-title a:hover {
   color: #cfd2cf;
 }
-.product-grid .price {
+.FavInnerContainer .price {
   color: #0d0d0d;
   font-size: 14px;
   font-weight: 600;
 }
-.product-grid .price span {
+.FavInnerContainer .price span {
   color: #888;
   font-size: 13px;
   font-weight: 400;
   text-decoration: line-through;
 }
 @media screen and (max-width: 990px) {
-  .product-grid {
+  .FavInnerContainer {
     margin-bottom: 30px;
   }
-}
-
-.image {
-  width: 224px;
-  height: 334px;
-  margin: 20px;
-}
-
-.col-sm-6 {
-  padding: 2px;
-  background-color: #212121;
-  margin: 20px 10px;
-  transition: all 0.1s ease-in-out;
-}
-
-.col-sm-6:hover {
-  background-color: #abc9ff;
-  -webkit-transform: scale(1.05);
-  -ms-transform: scale(1.05);
-  transform: scale(1.05);
 }

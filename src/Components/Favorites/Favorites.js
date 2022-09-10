@@ -36,7 +36,8 @@ const Favorites = (props) => {
   };
 
   return (
-    <div>
+    <div className="Fav-Wrapper">
+      <h1 className="Fav-title">Favorites</h1>
       <div className="Favorites">
         {FavoriteItemsList.map((Item) => (
           <FavoriteProducts

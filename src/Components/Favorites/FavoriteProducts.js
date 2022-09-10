@@ -24,28 +24,28 @@ const FavoriteProducts = (props) => {
 
   return (
     <div class="row">
-      <div class="col-md-3 col-sm-6">
-        <div class="product-grid">
-          <div class="product-image">
-            <a href={`/ProductPage/${props.refNum}`} class="image">
+      <div class="FavContainer">
+        <div class="FavInnerContainer">
+          <div class="fav-product-image">
+            <a href={`/ProductPage/${props.refNum}`} class="fav-image">
               <img src={props.image}></img>
             </a>
-            <span class="product-discount-label">
+            <span class="fav-product-discount-label">
               {discountHandler && `-${props.discount * 100}%`}
             </span>
-            <ul class="product-links">
+            <ul class="fav-product-links">
               <li>
                 <a onClick={FavItemDeleteHandler}>
                   <FaTimes></FaTimes>
                 </a>
               </li>
             </ul>
-            <a class="add-to-cart" onClick={AddItemToPurchase}>
+            <a class="fav-add-to-cart" onClick={AddItemToPurchase}>
               Add to Cart
             </a>
           </div>
-          <div class="product-content">
-            <h3 class="title">
+          <div class="fav-product-content">
+            <h3 class="fav-title">
               <a href={`/ProductPage/${props.refNum}`}>{props.title}</a>
             </h3>
             <div class="price">

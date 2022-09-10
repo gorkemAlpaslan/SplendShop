@@ -1,6 +1,12 @@
 .Favorites {
-  width: 1440px;
+  width: 1640px;
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   min-height: 848px;
+}
+
+.Fav-title {
+  padding: 30px;
+  letter-spacing: 3px;
 }
