@@ -223,3 +223,11 @@
 .ErrorBorders {
   border: 2px solid red;
 }
+
+.ErrorBorders::placeholder {
+  color: red;
+}
+
+.error {
+  color: #070102;
+}

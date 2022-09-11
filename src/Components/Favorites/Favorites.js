@@ -35,6 +35,10 @@ const Favorites = (props) => {
     SetFavoriteItemsList(NewFavItems);
   };
 
+  const NumberOfItemsHandler = (count) => {
+    props.NumberOfItemsHandler(count);
+  };
+
   return (
     <div className="Fav-Wrapper">
       <h1 className="Fav-title">Favorites</h1>
@@ -50,6 +54,7 @@ const Favorites = (props) => {
             refNum={Item.id}
             discount={Item.discount}
             FavItemDeleteHandler={FavItemDeleteHandler}
+            NumberOfItemsHandler={NumberOfItemsHandler}
           ></FavoriteProducts>
         ))}
       </div>

@@ -1,17 +1,16 @@
 import { useState, useRef } from "react";
 import "./Navbar.css";
-
+import { useUserContext } from "../context/userContext";
 import InputForm from "./InputForm";
-
 import { CgProfile } from "react-icons/cg";
 import { AiOutlineHeart, AiOutlineShoppingCart } from "react-icons/ai";
 
 const Navbar = (props) => {
+  const { user } = useUserContext();
+
   const SearchedItem = (event) => {
     props.SearchedItem(event);
   };
-
-  console.log(props.countHider);
 
   return (
     <div className="Navbar-Main-Wrapper">
@@ -24,11 +23,11 @@ const Navbar = (props) => {
         </div>
         <div className="Navbar-Profile-Bar-Wrapper">
           <a
-            href="/profile"
+            href={user ? "/profile" : "/signup"}
             className="Navbar-Profile-Bar-Profile Navbar-Profile-Bar"
           >
             <CgProfile></CgProfile>
-            <p>Sign In</p>
+            {user ? <p>{user.displayName}</p> : <p>SignIn</p>}
           </a>
           <a
             href="/Favorites"

@@ -96,7 +96,7 @@ function App() {
           </div>
         </div>
       </Route>
-      <Route path="/profile">
+      <Route path="/signup">
         <div className="Page-Navbar-Wrapper">
           <div className="Navbar">
             <Navbar
@@ -122,7 +122,7 @@ function App() {
         </div>
         <div className="BodyContainer">
           <div className="Body-Wraper">
-            <Favorites></Favorites>
+            <Favorites NumberOfItemsHandler={NumberOfItemsHandler}></Favorites>
           </div>
         </div>
       </Route>
