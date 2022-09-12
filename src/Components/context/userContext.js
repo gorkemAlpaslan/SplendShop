@@ -32,10 +32,10 @@ export const UserContextProvider = ({ children }) => {
   const registerUser = (email, name, password) => {
     SetLoading(true);
     createUserWithEmailAndPassword(auth, email, password)
-      .then(() => {
-        return updateProfile(auth.currentUser, { displayName: name });
+      .then((cred) => {
+        SetUser({ ...cred.user, displayName: name });
+        updateProfile(auth.currentUser, { displayName: name });
       })
-      .then((res) => console.log(res))
       .catch((err) => SetError(err.message))
       .finally(() => {
         SetLoading(false);

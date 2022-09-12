@@ -12,22 +12,11 @@ import { components } from "react-select";
 import ItemList from "./ItemList";
 import Favorites from "./Components/Favorites/Favorites";
 import FavoriteItems from "./Components/Favorites/FavoriteItems";
+import { useUserContext } from "./Components/context/userContext";
+import Profile from "./Components/Profile_Page/Profile";
 
 function App() {
-  ///// WAS GOING TO USE FAKE SHOP API BUT I DECITE TO CREATE MY OWN ITEM LIST /////////
-  // // const [ItemListTaker, SetItemListTaker] = useState([]);
-  // // const ItemListData = async () => {
-  // //   const tempList = await fetch("https://api.escuelajs.co/api/v1/products")
-  // //     .then((res) => res.json())
-  // //     .then((json) => {
-  // //       return json;
-  // //     });
-  // //   SetItemListTaker(tempList);
-  // // };
-
-  // // useEffect(() => {
-  // //   ItemListData();
-  // // }, []);
+  const { user } = useUserContext();
 
   let PuchasedItemsArray = JSON.parse(localStorage.getItem("purchaseProducts"));
   if (!PuchasedItemsArray) {
@@ -61,13 +50,17 @@ function App() {
 
   return (
     <div className="Card">
+      <div className="Page-Navbar-Wrapper">
+        <div className="Navbar">
+          <Navbar
+            SearchedItem={SearchedItem}
+            Count={purchasedItemNumber}
+          ></Navbar>
+        </div>
+      </div>
       <Route path={["/homepage"]}>
         <div className="Page-Navbar-Wrapper">
           <div className="Navbar">
-            <Navbar
-              SearchedItem={SearchedItem}
-              Count={purchasedItemNumber}
-            ></Navbar>
             <div>
               <NavbarUnder></NavbarUnder>
             </div>
@@ -97,29 +90,13 @@ function App() {
         </div>
       </Route>
       <Route path="/signup">
-        <div className="Page-Navbar-Wrapper">
-          <div className="Navbar">
-            <Navbar
-              SearchedItem={SearchedItem}
-              Count={purchasedItemNumber}
-            ></Navbar>
-          </div>
-        </div>
         <div className="Body-Wraper">
           <div className="Login-Wrapper">
-            <SignUp></SignUp>
+            {user ? <Profile></Profile> : <SignUp></SignUp>}
           </div>
         </div>
       </Route>
       <Route path="/Favorites">
-        <div className="Page-Navbar-Wrapper">
-          <div className="Navbar">
-            <Navbar
-              SearchedItem={SearchedItem}
-              Count={purchasedItemNumber}
-            ></Navbar>
-          </div>
-        </div>
         <div className="BodyContainer">
           <div className="Body-Wraper">
             <Favorites NumberOfItemsHandler={NumberOfItemsHandler}></Favorites>
@@ -127,28 +104,12 @@ function App() {
         </div>
       </Route>
       <Route path="/Purchase">
-        <div className="Page-Navbar-Wrapper">
-          <div className="Navbar">
-            <Navbar
-              SearchedItem={SearchedItem}
-              Count={purchasedItemNumber}
-            ></Navbar>
-          </div>
-        </div>
         <div className="Purchase-Wrapper">
           <Purchase Count={NumberOfItemsHandler} />
         </div>
       </Route>
       {ItemsList.map((Item) => (
         <Route path={`/ProductPage/${Item.id}`}>
-          <div className="Page-Navbar-Wrapper">
-            <div className="Navbar">
-              <Navbar
-                SearchedItem={SearchedItem}
-                Count={purchasedItemNumber}
-              ></Navbar>
-            </div>
-          </div>
           <div className="ProductPageWraper">
             <ProductPage
               ProductDetails={Item}

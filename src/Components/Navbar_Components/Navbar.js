@@ -4,16 +4,19 @@ import { useUserContext } from "../context/userContext";
 import InputForm from "./InputForm";
 import { CgProfile } from "react-icons/cg";
 import { AiOutlineHeart, AiOutlineShoppingCart } from "react-icons/ai";
+import { auth } from "../Firebase/index";
 
 const Navbar = (props) => {
-  const { user } = useUserContext();
-
   const SearchedItem = (event) => {
     props.SearchedItem(event);
   };
 
+  const { user } = useUserContext();
+
   return (
     <div className="Navbar-Main-Wrapper">
+      {console.log("currentuser", user)}
+
       <div className="Navbar-Wrapper">
         <a href="/homepage" className="Navbar-Icon-Wrapper">
           SplendShop
@@ -23,7 +26,7 @@ const Navbar = (props) => {
         </div>
         <div className="Navbar-Profile-Bar-Wrapper">
           <a
-            href={user ? "/profile" : "/signup"}
+            href="/signup"
             className="Navbar-Profile-Bar-Profile Navbar-Profile-Bar"
           >
             <CgProfile></CgProfile>

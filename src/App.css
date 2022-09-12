@@ -12,9 +12,6 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: #cfd2cf 0px 1px 3px 0px, #cfd2cf 0px 0px 0px 1px;
-
-  background: rgb(245, 237, 220);
   background-image: linear-gradient(to right, #434343 0%, black 100%);
 }
 
