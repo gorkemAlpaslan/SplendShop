@@ -88,6 +88,10 @@ const Purchase = (props) => {
       if (obj.title === title && obj.count > 0) {
         let PItem = { ...obj, count: obj.count - 1 };
         localStorage.setItem(obj.title, JSON.stringify(PItem));
+        if (obj.count === 1) {
+          sessionStorage.setItem("reloading", "true");
+          window.location.reload(false);
+        }
         return PItem;
       }
       return obj;
@@ -135,7 +139,10 @@ const Purchase = (props) => {
         </div>
       </div>
       <div className="Payment_Wrapper">
-        <PrePayment ProductList={PurchasedItems}></PrePayment>
+        <PrePayment
+          ProductList={PurchasedItems}
+          PurchasePageHandlerWhenOrderComplate={PurchaseCancle}
+        ></PrePayment>
       </div>
     </div>
   );

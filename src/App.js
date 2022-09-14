@@ -90,7 +90,7 @@ function App() {
         </div>
       </Route>
       <Route path="/signup">
-        <div className="Body-Wraper">
+        <div className="BodyContainer">
           <div className="Login-Wrapper">
             {user ? <Profile></Profile> : <SignUp></SignUp>}
           </div>

@@ -1,0 +1,70 @@
+.OrderWraper * {
+  font-size: 18px;
+}
+
+.OrderWraper {
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.808);
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  margin: 10px;
+  width: 60%;
+}
+
+.OrderItemHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+
+.OrderItemDetails {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 20px;
+}
+
+.OrderItemDetails p {
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.OrderItemBody {
+  margin: 20px;
+
+  display: flex;
+}
+
+.Price {
+  font-size: 38px;
+  font-weight: 800;
+  color: #eb4747;
+}
+
+.miniImage {
+  width: 67.2px;
+  height: 100.5px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  margin-right: 10px;
+}
+
+.OrderImages {
+  display: flex;
+}
+
+.OrderImagesWithPcs {
+  width: fit-content;
+  position: relative;
+}
+
+.AmountOfItems {
+  color: #eb4747;
+  font-weight: 800;
+  top: 2px;
+  right: 15px;
+  position: absolute;
+  z-index: 1;
+}

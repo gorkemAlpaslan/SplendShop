@@ -15,8 +15,6 @@ const Navbar = (props) => {
 
   return (
     <div className="Navbar-Main-Wrapper">
-      {console.log("currentuser", user)}
-
       <div className="Navbar-Wrapper">
         <a href="/homepage" className="Navbar-Icon-Wrapper">
           SplendShop

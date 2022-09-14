@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { useUserContext } from "../context/userContext";
 import "./SignUp.css";
-import Profile from "./Profile";
+import ProfilePage from "./Profile";
 
 const SignUp = () => {
   const {
@@ -94,88 +94,86 @@ const SignUp = () => {
   };
 
   return (
-    <div>
-      <div className="RegisterWraper">
-        <div className="container " id="container" ref={CssRef}>
-          <div className="form-container sign-up-container">
-            <form className="FormForRegister" onSubmit={SignUp}>
-              <h1>Create Account</h1>
-              <span>or use your email for registration</span>
-              <input
-                type="text"
-                placeholder="Name"
-                className="InputForRegister"
-                ref={NameRef}
-              />
+    <div className="RegisterWraper">
+      <div className="container " id="container" ref={CssRef}>
+        <div className="form-container sign-up-container">
+          <form className="FormForRegister" onSubmit={SignUp}>
+            <h1>Create Account</h1>
+            <span>or use your email for registration</span>
+            <input
+              type="text"
+              placeholder="Name"
+              className="InputForRegister"
+              ref={NameRef}
+            />
 
-              <input
-                type="email"
-                placeholder="Email"
-                className="InputForRegister"
-                ref={EMailRef}
-              />
-              <input
-                type="password"
-                placeholder="Password"
-                className="InputForRegister"
-                ref={PasswordRef}
-              />
-              <button className="ButtonForRegister">Sign Up</button>
-            </form>
-          </div>
-          <div className="form-container sign-in-container">
-            <form action="#" className="FormForRegister" onSubmit={SignIn}>
-              <h1>Sign in</h1>
-              <span>or use your account</span>
-              {
-                //note for myself
-                // edit the error message display
-              }
-              {error && <p>{error.slice(22).slice(0, -2)}</p>}
-              <input
-                type="email"
-                placeholder="Email"
-                className="InputForRegister"
-                ref={LoginMail}
-              />
-              <input
-                type="password"
-                placeholder="Password"
-                className="InputForRegister"
-                ref={LoginPassword}
-              />
-              <a className="AnchorForRegister">Forgot your password?</a>
-              <button className="ButtonForRegister">Sign In</button>
-            </form>
-          </div>
-          <div className="overlay-container">
-            <div className="overlay">
-              <div className="overlay-panel overlay-left">
-                <h1>Welcome Back!</h1>
-                <p className="PForRegister">
-                  To keep connected with us please login with your personal info
-                </p>
-                <button
-                  className="ButtonForRegister"
-                  id="signIn"
-                  onClick={SignInClicked}
-                >
-                  Sign In
-                </button>
-              </div>
-              <div className="overlay-panel overlay-right">
-                <h1>Hello!</h1>
-                <p className="PForRegister">
-                  Enter your personal details and start Shoping with us
-                </p>
-                <button
-                  className="ButtonForRegister"
-                  id="signUp"
-                  onClick={SignUpClicked}
-                >
-                  Sign Up
-                </button>
-              </div>
+            <input
+              type="email"
+              placeholder="Email"
+              className="InputForRegister"
+              ref={EMailRef}
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              className="InputForRegister"
+              ref={PasswordRef}
+            />
+            <button className="ButtonForRegister">Sign Up</button>
+          </form>
+        </div>
+        <div className="form-container sign-in-container">
+          <form action="#" className="FormForRegister" onSubmit={SignIn}>
+            <h1>Sign in</h1>
+            <span>or use your account</span>
+            {
+              //note for myself
+              // edit the error message display
+            }
+            {error && <p>{error.slice(22).slice(0, -2)}</p>}
+            <input
+              type="email"
+              placeholder="Email"
+              className="InputForRegister"
+              ref={LoginMail}
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              className="InputForRegister"
+              ref={LoginPassword}
+            />
+            <a className="AnchorForRegister">Forgot your password?</a>
+            <button className="ButtonForRegister">Sign In</button>
+          </form>
+        </div>
+        <div className="overlay-container">
+          <div className="overlay">
+            <div className="overlay-panel overlay-left">
+              <h1>Welcome Back!</h1>
+              <p className="PForRegister">
+                To keep connected with us please login with your personal info
+              </p>
+              <button
+                className="ButtonForRegister"
+                id="signIn"
+                onClick={SignInClicked}
+              >
+                Sign In
+              </button>
+            </div>
+            <div className="overlay-panel overlay-right">
+              <h1>Hello!</h1>
+              <p className="PForRegister">
+                Enter your personal details and start Shoping with us
+              </p>
+              <button
+                className="ButtonForRegister"
+                id="signUp"
+                onClick={SignUpClicked}
+              >
+                Sign Up
+              </button>
             </div>
           </div>
         </div>

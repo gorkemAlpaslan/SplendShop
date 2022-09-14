@@ -86,31 +86,25 @@
 
 .thumb img.active {
   opacity: 1;
-
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
-    rgba(0, 0, 0, 0.22) 0px 10px 10px, black 0px 0px 0px 1px;
+  box-shadow: #abc9ff 0px 1px 3px 2px, #abc9ff 0px 2px 0px 1px;
 }
 
 .box .card {
   background-color: black;
-  color: #f5eddc;
+  color: white;
   outline: none;
   border: none;
   cursor: pointer;
   padding: 10px 25px;
   margin-top: 15px;
-}
-
-.card {
   font-size: 22px;
   box-shadow: #f5eddc 0px 0px 0px 1px, #f5eddc 0px 0px 0px 1px inset;
 }
 
 .card:hover {
   color: black;
-  background-color: #f5eddc;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
-    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  background-color: #abc9ff;
+  box-shadow: rgba(255, 255, 255, 0.35) 0px -50px 36px -28px inset;
 }
 
 @media (max-width: 500px) {

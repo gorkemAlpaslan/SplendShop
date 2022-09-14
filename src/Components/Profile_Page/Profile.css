@@ -1,0 +1,114 @@
+.Profile {
+  display: flex;
+  justify-content: space-around;
+  width: 1700px;
+  min-height: 730px;
+}
+
+.AccountInformation * {
+  color: white;
+  font-size: 18px;
+}
+
+.ProfileNav {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 160px;
+  height: 480px;
+  color: white;
+  position: sticky;
+  top: 50px;
+  background-color: rgba(255, 255, 255, 0.425);
+}
+
+.ProfileNav button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin: 10px;
+  font-size: 22px;
+  box-shadow: rgba(0, 0, 0, 0.658) 0px 0px 0px 1px;
+  padding: 5px 10px;
+}
+
+.ProfileNav button:hover {
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 1px;
+  background-color: #abc8ff49;
+}
+
+.ProfileNav button::content {
+  background-color: #abc9ff;
+}
+
+.OrderedItems {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1400px;
+}
+
+.AccountInformation {
+  position: relative;
+  width: 1400px;
+  background-color: rgba(255, 255, 255, 0.219);
+
+  box-shadow: rgb(0, 0, 0) 0px 0px 0px 1px;
+}
+
+.AccountInformation div {
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+
+.AccountInformation input {
+  background-color: #abc8ffc0;
+  border: none;
+  border-radius: 4px;
+}
+
+.AccountInformation h4 {
+  margin-right: 4px;
+  margin-left: 22px;
+}
+
+.AccountInformation .buttons {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.AccountInformation .buttons button {
+  border: 1px solid white;
+  background-color: #212121;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+  margin-right: 8px;
+}
+
+.AccountInformation .buttons button:active {
+  transform: scale(0.95);
+}
+
+.AccountInformation select {
+  border: none;
+  background-color: #abc8ffc0;
+}
+
+.AccountInformation select option {
+  color: #212121;
+}
+
+.UnSelected {
+  color: white;
+}
+
+.Selected {
+  color: #abc9ff;
+}
