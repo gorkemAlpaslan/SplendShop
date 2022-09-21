@@ -92,7 +92,7 @@ function App() {
       <Route path="/signup">
         <div className="BodyContainer">
           <div className="Login-Wrapper">
-            {user ? <Profile></Profile> : <SignUp></SignUp>}
+            <div>{user ? <Profile></Profile> : <SignUp></SignUp>}</div>
           </div>
         </div>
       </Route>

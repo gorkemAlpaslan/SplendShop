@@ -57,10 +57,9 @@ html {
 .Login-Wrapper {
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 50px 0px;
   width: 100%;
+  min-height: 900px;
+  padding-top: 70px;
 }
 
 .Login-Wrapper::before {

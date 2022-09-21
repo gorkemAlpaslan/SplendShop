@@ -6,10 +6,9 @@
   border-radius: 4px;
   display: flex;
   flex-direction: column;
-  background-color: rgba(255, 255, 255, 0.808);
+  background-color: rgb(255, 255, 255);
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
   margin: 10px;
-  width: 60%;
 }
 
 .OrderItemHead {
@@ -33,8 +32,6 @@
 }
 
 .OrderItemBody {
-  margin: 20px;
-
   display: flex;
 }
 

@@ -24,11 +24,13 @@ const PrePurchaseProduct = (props) => {
   return (
     <div className="Product_Purchase_Wrapper">
       <div className="Product_Purchase_Card">
-        <img
-          src={props.image}
-          alt="product"
-          className="Product_Purchase_Image"
-        ></img>
+        <a href={`/ProductPage/${props.refNum}`}>
+          <img
+            src={props.image}
+            alt="product"
+            className="Product_Purchase_Image"
+          ></img>
+        </a>
         <div className="Product_Purchase_Card_Info">
           <div className="Product_Purchase_Card_Name">{props.title}</div>
           <div className="Purchase_Item_Count">

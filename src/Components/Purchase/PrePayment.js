@@ -9,6 +9,10 @@ const PrePayment = (props) => {
     Total += Price.count * Price.price;
   }
 
+  if (!JSON.parse(localStorage.getItem("purchaseProducts"))) {
+    localStorage.setItem("purchaseProducts", JSON.stringify([]));
+  }
+
   const [orderEmptyError, SetorderEmptyError] = useState(false);
 
   const ItemPurchaseHandler = () => {

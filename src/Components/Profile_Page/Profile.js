@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import "./Profile.css";
 import { useUserContext } from "../context/userContext";
 import Orders from "./Orders";
+import Button from "react-bootstrap/Button";
 
 const Profile = (props) => {
   const { logoutUser, user } = useUserContext();
@@ -22,80 +23,66 @@ const Profile = (props) => {
 
   return (
     <div className="Profile">
-      <div className="ProfileNav">
-        <h1>Account</h1>
-        <button
-          onClick={() => {
-            SetNavControl("profile");
-            Profile.current.className = "Selected";
-            Order.current.className = "UnSelected";
-          }}
-          ref={Profile}
-          className="Selected"
-        >
-          My Profile
-        </button>
-        <button
-          className="UnSelected"
-          onClick={() => {
-            SetNavControl("orders");
-            Order.current.className = "Selected";
-            Profile.current.className = "UnSelected";
-          }}
-          ref={Order}
-        >
-          My Orders
-        </button>
-        <button className="UnSelected">My Assessments</button>
-        <button className="UnSelected">My Seller Messages</button>
-        <button className="UnSelected">Coupons</button>
-        <button className="UnSelected">Help</button>
-      </div>
-      {navControl == "orders" && (
-        <div className="OrderedItems">
-          {OrderList.map((Item) => {
-            return <Orders OrderedInfo={Item}></Orders>;
-          })}
-        </div>
-      )}
       {navControl == "profile" && (
         <div className="AccountInformation">
-          <div>
-            <div>
-              <h4>Name:</h4>
-              <input value={user.displayName}></input>
+          <div className="main-profile-info">
+            <img
+              src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"
+              className="profile-image"
+            ></img>
+            <p>Profile Name</p>
+            <p>E-Mail</p>
+            <button onClick={logOut}>Log Out</button>
+          </div>
+          <div className="profile-settings">
+            <p>Profile Setting</p>
+            <div className="double-input">
+              <div>
+                <div>Name</div>
+                <input></input>
+              </div>
+              <div>
+                <div>Surname</div>
+                <input></input>
+              </div>
             </div>
-            <div>
-              <h4>Surname:</h4>
-              <input value={""}></input>
+            <div className="bar">
+              <div>Mobile Number</div>
+              <input></input>
+            </div>
+            <div className="bar">
+              <div>Address Line 1</div>
+              <input></input>
+            </div>
+            <div className="bar">
+              <div>Address Line 2</div>
+              <input></input>
+            </div>
+            <div className="bar">
+              <div>Postcode</div>
+              <input></input>
+            </div>
+
+            <div className="double-input">
+              <div>
+                <div>Country</div>
+                <input></input>
+              </div>
+              <div>
+                <div>State/Region</div>
+                <input></input>
+              </div>
+            </div>
+            <div className="bar">
+              <Button variant="success">Save</Button>
             </div>
           </div>
-          <div>
-            <h4>E-mail:</h4>
-            <input value={user.email}></input>
-          </div>
-          <div>
-            <h4>Phone Number:</h4>
-            <input></input>
-          </div>
-          <div>
-            <h4>Birth Day:</h4>
-            <input type="date"></input>
-          </div>
-          <div>
-            <h4>Gender:</h4>
-            <select>
-              <option>Male</option>
-              <option>Female</option>
-            </select>
-          </div>
-          <div>
-            <h4>Orders:</h4>
-            <p>0</p>
-          </div>
-          <div className="buttons">
-            <button> SAVE </button>
-            <button onClick={logOut}>LOG OUT</button>
+          <div className="prev.orders">
+            <div className="OrderedItems">
+              {OrderList.map((Item) => {
+                return <Orders OrderedInfo={Item}></Orders>;
+              })}
+            </div>
           </div>
         </div>
       )}
