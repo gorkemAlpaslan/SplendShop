@@ -8,7 +8,6 @@ import {
   sendPasswordResetEmail,
 } from "firebase/auth";
 import { auth } from "../Firebase";
-import { setSelectionRange } from "@testing-library/user-event/dist/utils";
 
 const UserContext = createContext({});
 

@@ -40,10 +40,10 @@ const Product = (props) => {
 
   return (
     <div class="row">
-      <div class="col-md-3 col-sm-6">
+      <div class="PerItemWrapper">
         <div class="product-grid">
           <div class="product-image">
-            <a href={`/ProductPage/${props.refNum}`} class="image">
+            <a href={`/ProductPage/${props.refNum}`} className="image">
               <img src={props.image}></img>
             </a>
             <span class="product-discount-label">

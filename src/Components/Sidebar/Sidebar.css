@@ -1,3 +1,9 @@
+.Side-Card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .Sidebar-Inner-Wrapper {
   display: flex;
   flex-direction: column;
@@ -7,13 +13,28 @@
 .Filter-Title {
   display: flex;
   justify-content: center;
-  color: #212121;
 }
 
 .unwrap {
+  width: 343px;
   height: auto;
   justify-content: center;
-  margin: 20px 20px;
-  border-bottom: 2px solid #212121;
-  padding-bottom: 40px;
+  border-top: 1px solid #212121;
+  padding-bottom: 20px;
+}
+
+.dropdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+.button {
+  margin: 10px;
+}
+
+.addThird {
+  margin-top: 100px;
+  width: 280px;
 }

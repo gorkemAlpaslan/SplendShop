@@ -1,18 +1,9 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import { useUserContext } from "../context/userContext";
 import "./SignUp.css";
-import ProfilePage from "./Profile";
 
 const SignUp = () => {
-  const {
-    user,
-    registerUser,
-    signInUser,
-    forgotPassword,
-    error,
-    Loading,
-    logoutUser,
-  } = useUserContext();
+  const { registerUser, signInUser, error } = useUserContext();
 
   const CssRef = useRef();
   const NameRef = useRef();
@@ -143,7 +134,9 @@ const SignUp = () => {
               className="InputForRegister"
               ref={LoginPassword}
             />
-            <a className="AnchorForRegister">Forgot your password?</a>
+            <a href="/" className="AnchorForRegister">
+              Forgot your password?
+            </a>
             <button className="ButtonForRegister">Sign In</button>
           </form>
         </div>

@@ -100,6 +100,7 @@
   height: 40px;
 }
 .product-grid .title a {
+  font-size: 16px;
   color: #777;
   transition: all 0.3s ease 0s;
 }
@@ -129,15 +130,15 @@
   margin: 20px;
 }
 
-.col-sm-6 {
-  padding: 2px;
+.PerItemWrapper {
+  border: 2px solid black;
   background-color: #212121;
-  margin: 20px 10px;
+  margin: 10px 10px;
   transition: all 0.1s ease-in-out;
 }
 
-.col-sm-6:hover {
-  background-color: #abc9ff;
+.PerItemWrapper:hover {
+  border: 2px solid #abc9ff;
   -webkit-transform: scale(1.05);
   -ms-transform: scale(1.05);
   transform: scale(1.05);
