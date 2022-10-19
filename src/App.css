@@ -53,6 +53,14 @@ html {
   margin-top: -10px;
 }
 
+.PaginationWraper {
+  width: 100%;
+  padding: 30px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .Login-Wrapper {
   display: flex;
   justify-content: center;
@@ -70,52 +78,12 @@ html {
   height: 100%;
   opacity: 1;
   z-index: -1;
+  background-image: url(./login_background.jpg);
+  background-size: cover;
 }
 
 .Login-Wrapper * {
   box-sizing: border-box;
-}
-
-.AddsWrapper {
-  width: 1550px;
-  margin-top: 20px;
-  margin-bottom: 50px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.swiper {
-  margin-left: 0px !important;
-  margin-right: 54px !important;
-}
-
-.addGif {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 1130px;
-  border-radius: 22px;
-}
-
-.gif-photo {
-  position: absolute;
-}
-
-.addTwo {
-  width: 343px;
-  height: 343px;
-  border-radius: 22px;
-  margin-left: 0px;
-}
-
-.addTwoPngs {
-  width: 343px;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-  color: rgb(0, 0, 0) !important;
 }
 
 .Sidebar-Wrapper {

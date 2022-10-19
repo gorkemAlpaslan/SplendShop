@@ -1,5 +1,5 @@
 .OrderWraper * {
-  font-size: 18px;
+  font-size: 14px;
 }
 
 .OrderWraper {
@@ -21,7 +21,7 @@
 .OrderItemDetails {
   display: flex;
   flex-direction: column;
-  margin: 0px 20px;
+  padding: 10px;
 }
 
 .OrderItemDetails p {
@@ -36,32 +36,40 @@
 }
 
 .Price {
-  font-size: 38px;
+  font-size: 24px;
   font-weight: 800;
-  color: #eb4747;
+  color: #abc9ff;
 }
 
 .miniImage {
   width: 67.2px;
   height: 100.5px;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  box-shadow: #abc9ff 0px 0px 0px 1px;
   margin-right: 10px;
 }
 
 .OrderImages {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .OrderImagesWithPcs {
   width: fit-content;
   position: relative;
+  padding: 12px;
+  margin: 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+.OrderImagesWithPcs:hover {
+  transform: scale(1.2);
 }
 
 .AmountOfItems {
-  color: #eb4747;
-  font-weight: 800;
-  top: 2px;
-  right: 15px;
+  color: #abc9ff;
+  font-weight: bolder;
+  font-size: 14px;
+  bottom: -2px;
   position: absolute;
   z-index: 1;
 }

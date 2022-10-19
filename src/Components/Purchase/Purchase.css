@@ -1,7 +1,7 @@
 .Purchase_Page {
   display: flex;
   flex-direction: row;
-  width: 70%;
+  width: 1500px;
   justify-content: space-evenly;
   margin: 30px;
 }

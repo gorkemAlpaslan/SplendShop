@@ -1,8 +1,14 @@
 .Profile {
   display: flex;
-  justify-content: space-around;
-  width: 1700px;
+  flex-direction: column;
+  width: 1400px;
   min-height: 730px;
+}
+
+.Profile_Navigation {
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  background-color: rgb(255, 255, 255);
 }
 
 .Profile button {
@@ -16,6 +22,9 @@
   text-transform: uppercase;
   transition: transform 80ms ease-in;
 }
+.IsSelected {
+  color: #abc9ff !important;
+}
 
 .Profile button:active {
   transform: scale(0.95);
@@ -26,15 +35,17 @@
 }
 
 .AccountInformation {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  background-color: rgb(255, 255, 255);
+  margin-top: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  width: 1500px;
-  font-size: 22px;
+  width: 1400px;
 }
 
 .main-profile-info {
-  width: 30%;
+  width: 400px;
   align-items: center;
   justify-content: center;
   height: 300px;
@@ -44,8 +55,8 @@
 .profile-settings {
   display: flex;
   flex-direction: column;
-  background-color: rgb(255, 255, 255);
-  border-right: 1px solid black;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  font-size: 12px;
   margin: 10px;
 }
 
@@ -75,9 +86,8 @@
   border-radius: 2px;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
     rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-  background-color: #eee;
   border: none;
-  padding: 12px 15px;
+  padding: 6px 8px;
   margin: 8px 0;
   width: 100%;
 }

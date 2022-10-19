@@ -2,12 +2,9 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-  box-shadow: #212121 0px 1px 3px 0px, #212121 0px 0px 0px 1px;
-  padding: 10px;
-  margin: 10px;
-
   position: relative;
+  border-bottom: 0.5px solid black;
+  padding: 10px;
 }
 
 .Product_Purchase_Card {
@@ -19,15 +16,16 @@
 
 .Product_Purchase_Image {
   height: 100px;
-
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
   margin: 0px 10px;
 }
 
 .Product_Purchase_Card_Info {
-  width: 80%;
+  width: 500px;
   margin-left: 10px;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -35,10 +33,14 @@
   font-size: large;
   font-weight: bold;
 }
+.Product_Purchase_Info {
+  font-size: 14px;
+}
 
 .Purchase_Item_Count {
   display: flex;
   width: 120px;
+
   justify-content: space-evenly;
   text-align: center;
   align-items: center;
@@ -74,9 +76,10 @@
 
 .Count {
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: 28px;
+  justify-content: center;
+  width: 36px;
+  padding: 0px 2px;
   height: 28px;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
     rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
@@ -87,7 +90,16 @@
 .Product_Purchase_Card_Price {
   font-size: 25px;
   font-weight: 700;
-  align-self: flex-end;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.each {
+  font-size: 13px;
+  padding: 0px;
+  margin-bottom: 6px;
 }
 
 .Product_Purchase_Card_Button {

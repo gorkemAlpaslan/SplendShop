@@ -24,7 +24,6 @@ const Orders = (props) => {
           <h2>Order Date:</h2>
           <p>{props.OrderedInfo[0].OrderTime}</p>
         </div>
-
         <div className="OrderItemDetails">
           <h2>Delivery to:</h2>
           <p>Adress will be here </p>
@@ -44,7 +43,7 @@ const Orders = (props) => {
             return (
               <a href={`/ProductPage/${e.id}`} className="OrderImagesWithPcs">
                 <img src={e.minisrc[0]} className="miniImage"></img>
-                <div className="AmountOfItems">{e.count}</div>
+                <div className="AmountOfItems">x{e.count}</div>
               </a>
             );
           })}

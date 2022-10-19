@@ -39,26 +39,21 @@
   right: 10px;
 }
 .product-grid .product-links li a {
-  color: white;
-  background: transparent;
+  color: black;
+
   font-size: 17px;
   line-height: 38px;
   width: 38px;
   height: 38px;
-  border: 1px solid #333;
-  border-bottom: none;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.1s ease-in-out;
-  background-image: linear-gradient(to right, #212121 0%, black 100%);
 }
-.product-grid .product-links li:last-child a {
-  border-bottom: 1px solid #333;
-}
+
 .product-grid .product-links li a:hover {
   color: #abc9ff;
-  background: white;
+  transform: scale(1.5);
 }
 .product-grid .add-to-cart {
   background-image: linear-gradient(to right, #434343 0%, black 100%);
@@ -72,24 +67,31 @@
   position: absolute;
   left: 0;
   bottom: -60px;
-  transition: all 0.1s ease 0s;
+  transition: all 0.1s ease-in-out;
+  transition: background-image 2s ease-out 100ms;
+  border-top: 2px solid rgb(0, 0, 0);
 }
 .product-grid:hover .add-to-cart {
   bottom: 0;
 }
 .product-grid .add-to-cart:hover {
-  background-image: none;
-  background-color: #abc9ff;
-  color: rgb(255, 255, 255);
+  background-image: linear-gradient(
+    to right,
+    #abc9ff 0%,
+    rgb(255, 255, 255) 100%
+  );
+  color: #000000;
+  border-top: 2px solid rgb(0, 0, 0);
 }
+
 .product-grid .product-content {
   background: #fff;
   padding: 15px;
 
-  border-top: #212121 2px solid;
+  border-top: #abc9ff 2px solid;
 }
 .product-grid:hover .product-content {
-  border-top: #abc9ff 2px solid;
+  border-top: #000000 2px solid;
 }
 .product-grid .title {
   font-size: 20px;
@@ -101,20 +103,20 @@
 }
 .product-grid .title a {
   font-size: 16px;
-  color: #777;
+  color: #000000;
   transition: all 0.3s ease 0s;
 }
 .product-grid .title a:hover {
   color: #cfd2cf;
 }
 .product-grid .price {
-  color: #0d0d0d;
-  font-size: 14px;
+  color: #abc9ff;
+  font-size: 21px;
   font-weight: 600;
 }
 .product-grid .price span {
-  color: #888;
-  font-size: 13px;
+  color: #abc9ff;
+  font-size: 16px;
   font-weight: 400;
   text-decoration: line-through;
 }
@@ -131,14 +133,14 @@
 }
 
 .PerItemWrapper {
-  border: 2px solid black;
+  border: 2px solid #abc9ff;
   background-color: #212121;
   margin: 10px 10px;
   transition: all 0.1s ease-in-out;
 }
 
 .PerItemWrapper:hover {
-  border: 2px solid #abc9ff;
+  border: 2px solid #000000;
   -webkit-transform: scale(1.05);
   -ms-transform: scale(1.05);
   transform: scale(1.05);

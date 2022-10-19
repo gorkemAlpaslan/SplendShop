@@ -41,8 +41,14 @@ a {
   margin-right: 1rem;
   font-size: 16px;
   align-items: center;
+  justify-content: center;
   opacity: 0.95;
   position: relative;
+  min-width: 100px;
+}
+
+.Navbar-Profile-Bar p {
+  margin-left: 2px;
 }
 
 .Navbar-Profile-Bar:hover {
@@ -54,16 +60,15 @@ a {
 }
 
 .Total-Count {
-  font-size: 12px;
+  font-size: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
   border-radius: 99px;
   position: absolute;
   top: -2px;
-  left: -2px;
-  border: #ffffff 0.5px solid;
+  left: 5px;
   color: #ffffff;
 }

@@ -3,13 +3,15 @@ import "./Profile.css";
 import { useUserContext } from "../context/userContext";
 import Orders from "./Orders";
 import Button from "react-bootstrap/Button";
+import Favorites from "./Favorites/Favorites";
 
 const Profile = (props) => {
   const { logoutUser, user } = useUserContext();
 
-  const [navControl, SetNavControl] = useState("profile");
-  const Order = useRef();
-  const Profile = useRef();
+  const [navControl, SetNavControl] = useState("profileSection");
+  const OrderRef = useRef();
+  const ProfileRef = useRef();
+  const FavoritesRef = useRef();
 
   const logOut = () => {
     logoutUser();
@@ -21,17 +23,67 @@ const Profile = (props) => {
     OrderList = [];
   }
 
+  let PuchasedItemsArray = JSON.parse(localStorage.getItem("purchaseProducts"));
+  if (!PuchasedItemsArray) {
+    PuchasedItemsArray = [];
+  }
+
+  const [purchasedItemNumber, SetPurchasedItemNumber] = useState(
+    PuchasedItemsArray.length
+  );
+
+  const NumberOfItemsHandler = (ItemCounter) => {
+    SetPurchasedItemNumber(ItemCounter.length);
+  };
+
   return (
     <div className="Profile">
-      {navControl == "profile" && (
+      <div className="Profile_Navigation">
+        <button
+          ref={ProfileRef}
+          className="IsSelected"
+          onClick={() => {
+            SetNavControl("profileSection");
+            ProfileRef.current.className = "IsSelected";
+            FavoritesRef.current.className = "";
+            OrderRef.current.className = "";
+          }}
+        >
+          USER SETTINGS
+        </button>
+        <button
+          ref={FavoritesRef}
+          onClick={() => {
+            SetNavControl("favoritesSection");
+            ProfileRef.current.className = "";
+            FavoritesRef.current.className = "IsSelected";
+            OrderRef.current.className = "";
+          }}
+        >
+          Favorites
+        </button>
+        <button
+          ref={OrderRef}
+          onClick={() => {
+            SetNavControl("ordersSection");
+            ProfileRef.current.className = "";
+            FavoritesRef.current.className = "";
+            OrderRef.current.className = "IsSelected";
+          }}
+        >
+          ORDERS
+        </button>
+      </div>
+      {navControl === "profileSection" && (
         <div className="AccountInformation">
           <div className="main-profile-info">
             <img
               src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"
+              alt="profilePhoto"
               className="profile-image"
             ></img>
-            <p>Profile Name</p>
-            <p>E-Mail</p>
+            <p>{user.displayName}</p>
+            <p>{user.email}</p>
             <button onClick={logOut}>Log Out</button>
           </div>
           <div className="profile-settings">
@@ -39,7 +91,7 @@ const Profile = (props) => {
             <div className="double-input">
               <div>
                 <div>Name</div>
-                <input></input>
+                <input value={user.displayName}></input>
               </div>
               <div>
                 <div>Surname</div>
@@ -77,14 +129,19 @@ const Profile = (props) => {
               <Button variant="success">Save</Button>
             </div>
           </div>
-          <div className="prev.orders">
-            <div className="OrderedItems">
-              {OrderList.map((Item) => {
-                return <Orders OrderedInfo={Item}></Orders>;
-              })}
-            </div>
+        </div>
+      )}
+      {navControl === "ordersSection" && (
+        <div className="prev.orders">
+          <div className="OrderedItems">
+            {OrderList.map((Item) => {
+              return <Orders OrderedInfo={Item}></Orders>;
+            })}
           </div>
         </div>
+      )}
+      {navControl === "favoritesSection" && (
+        <Favorites NumberOfItemsHandler={NumberOfItemsHandler}></Favorites>
       )}
     </div>
   );

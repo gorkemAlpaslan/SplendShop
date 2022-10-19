@@ -1,7 +1,7 @@
 import { React, useState } from "react";
 import "./Favorites.css";
 import { FaTimes } from "react-icons/fa";
-import AddToCary from "../Functions/AddToCary";
+import AddToCary from "../../Functions/AddToCary";
 import FavoriteItems from "./FavoriteItems";
 import FavoriteProducts from "./FavoriteProducts";
 
@@ -41,7 +41,6 @@ const Favorites = (props) => {
 
   return (
     <div className="Fav-Wrapper">
-      <h1 className="Fav-title">Favorites</h1>
       <div className="Favorites">
         {FavoriteItemsList.map((Item) => (
           <FavoriteProducts

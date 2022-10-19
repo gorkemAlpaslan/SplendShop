@@ -6,11 +6,10 @@
 }
 
 .FavContainer {
-  padding: 2px;
-  background-color: #212121;
-  margin: 20px 10px;
+  border: 1px solid black;
+  margin: 20px 16.5px;
   transition: all 0.1s ease-in-out;
-  max-width: 150px;
+  max-width: 200px;
 }
 
 .FavContainer:hover {

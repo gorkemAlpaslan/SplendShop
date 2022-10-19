@@ -1,6 +1,6 @@
 const ItemList = [
   {
-    id: "1",
+    id: "0",
     title: "Nike Air Jordan 1",
     minisrc: [
       "https://cdn.dsmcdn.com/ty255/product/media/images/20211127/19/176317/323944429/2/2_org_zoom.jpg",
@@ -20,9 +20,8 @@ const ItemList = [
     category: "category-1",
     gender: "unisex",
   },
-
   {
-    id: "2",
+    id: "1",
     title: "Nike Shoes",
     minisrc: [
       "https://cdn.dsmcdn.com/ty80/product/media/images/20210304/19/68765723/141042520/1/1_org_zoom.jpg",
@@ -43,7 +42,7 @@ const ItemList = [
     gender: "male",
   },
   {
-    id: "3",
+    id: "2",
     title: "Nike Nk Acdmy Team M Duff Unisex",
     minisrc: [
       "https://cdn.dsmcdn.com/ty105/product/media/images/20210426/13/83091765/147900303/6/6_org_zoom.jpg",
@@ -65,7 +64,7 @@ const ItemList = [
   },
 
   {
-    id: "4",
+    id: "3",
     title: "Avva Erkek T-shirt",
     minisrc: [
       "https://cdn.dsmcdn.com/ty465/product/media/images/20220630/21/133230640/510828545/1/1_org_zoom.jpg",
@@ -86,7 +85,7 @@ const ItemList = [
     gender: "male",
   },
   {
-    id: "5",
+    id: "4",
     title: "Mini Dress",
     minisrc: [
       "https://cdn.dsmcdn.com/ty109/product/media/images/20210502/5/84541651/169488363/0/0_org_zoom.jpg",
@@ -107,7 +106,7 @@ const ItemList = [
     gender: "female",
   },
   {
-    id: "6",
+    id: "5",
     title: "Valori Jewels",
     minisrc: [
       "https://cdn.dsmcdn.com/ty148/product/media/images/20210726/16/112686705/90103564/1/1_org_zoom.jpg",
@@ -128,7 +127,7 @@ const ItemList = [
     gender: "female",
   },
   {
-    id: "7",
+    id: "6",
     title: "Nike Legend Essential 2",
     minisrc: [
       "https://cdn.dsmcdn.com/ty126/product/media/images/20210610/21/98683101/125546722/3/3_org_zoom.jpg",
@@ -149,7 +148,7 @@ const ItemList = [
     gender: "male",
   },
   {
-    id: "8",
+    id: "7",
     title: "Nike Unisex Spor Ayakkabı Court Borough",
     minisrc: [
       "https://cdn.dsmcdn.com/ty4/product/media/images/20200602/9/2086646/72555906/4/4_org_zoom.jpg",
@@ -170,7 +169,7 @@ const ItemList = [
     gender: "unisex",
   },
   {
-    id: "9",
+    id: "8",
     title: "JBL T500BT",
     minisrc: [
       "https://cdn.dsmcdn.com/ty327/product/media/images/20220209/14/47510212/16168822/3/3_org_zoom.jpg",
@@ -191,7 +190,7 @@ const ItemList = [
     gender: "unisex",
   },
   {
-    id: "10",
+    id: "9",
     title: "Technodia T500 Akıllı Saat",
     minisrc: [
       "https://cdn.dsmcdn.com/ty263/product/media/images/20211205/20/5242366/328469465/2/2_org_zoom.jpg",
@@ -210,7 +209,7 @@ const ItemList = [
     gender: "unisex",
   },
   {
-    id: "11",
+    id: "10",
     title: "JBL Go 3",
     minisrc: [
       "https://cdn.dsmcdn.com/ty380/product/media/images/20220401/12/80332534/122033970/1/1_org_zoom.jpg",
@@ -232,8 +231,8 @@ const ItemList = [
   },
 
   {
-    id: "12",
-    title: "Jack&Jones Hoodie",
+    id: "11",
+    title: "Jack&Jones Hoodie 1",
     minisrc: [
       "https://cdn.dsmcdn.com/mnresize/1200/1800/ty488/product/media/images/20220721/19/147223340/525165353/1/1_org_zoom.jpg",
     ],
@@ -253,8 +252,8 @@ const ItemList = [
     gender: "male",
   },
   {
-    id: "13",
-    title: "Jack&Jones Hoodie",
+    id: "12",
+    title: "Jack&Jones Hoodie 2",
     minisrc: [
       "https://cdn.dsmcdn.com/mnresize/1200/1800/ty249/product/media/images/20211120/10/997018/221457493/1/1_org_zoom.jpg",
     ],
@@ -274,8 +273,8 @@ const ItemList = [
     gender: "unisex",
   },
   {
-    id: "14",
-    title: "Jack&Jones Hoodie",
+    id: "13",
+    title: "Jack&Jones Hoodie 3",
     minisrc: [
       "https://cdn.dsmcdn.com/mnresize/1200/1800/ty194/product/media/images/20211011/1/144613200/257201169/1/1_org_zoom.jpg",
     ],
@@ -295,8 +294,8 @@ const ItemList = [
     gender: "male",
   },
   {
-    id: "15",
-    title: "Jack&Jones Hoodie",
+    id: "14",
+    title: "Jack&Jones Hoodie 4",
     minisrc: [
       "https://cdn.dsmcdn.com/mnresize/1200/1800/ty254/product/media/images/20211122/22/810707/321003250/1/1_org_zoom.jpg",
     ],
@@ -316,7 +315,7 @@ const ItemList = [
     gender: "male",
   },
   {
-    id: "16",
+    id: "15",
     title: "Stradivarius",
     minisrc: [
       "https://cdn.dsmcdn.com/mnresize/1200/1800/ty222/product/media/images/20211103/15/164952322/253314078/1/1_org_zoom.jpg",
@@ -337,8 +336,8 @@ const ItemList = [
     gender: "female",
   },
   {
-    id: "17",
-    title: "Bershka bag",
+    id: "16",
+    title: "Bershka bag 1",
     minisrc: [
       "https://cdn.dsmcdn.com/mnresize/1200/1800/ty271/product/media/images/20211215/19/11656911/338757489/1/1_org_zoom.jpg",
     ],
@@ -358,8 +357,8 @@ const ItemList = [
     gender: "female",
   },
   {
-    id: "18",
-    title: "Bershka bag",
+    id: "17",
+    title: "Bershka bag 2",
     minisrc: [
       "https://cdn.dsmcdn.com/mnresize/1200/1800/ty34/product/media/images/20201210/15/37091023/118132482/2/2_org_zoom.jpg",
     ],

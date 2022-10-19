@@ -205,19 +205,6 @@
   z-index: 999;
 }
 
-.FooterForRegister p {
-  margin: 10px 0;
-}
-
-.FooterForRegister i {
-  color: red;
-}
-
-.FooterForRegister a {
-  color: #3c97bf;
-  text-decoration: none;
-}
-
 .ErrorBorders {
   border: 2px solid red;
 }

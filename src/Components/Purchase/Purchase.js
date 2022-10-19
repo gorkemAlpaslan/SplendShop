@@ -128,6 +128,8 @@ const Purchase = (props) => {
                 image={PurchaseItem.minisrc}
                 refNum={PurchaseItem.id}
                 Count={PurchaseItem.count}
+                Category={PurchaseItem.category}
+                Gender={PurchaseItem.gender}
                 PurchaseCancle={PurchaseCancle}
                 AddCount={AddCount}
                 SubCount={SubCount}
@@ -135,7 +137,6 @@ const Purchase = (props) => {
               />
             ))}
           </div>
-          <div className="Purchase_Favs">favs gonna be here</div>
         </div>
       </div>
       <div className="Payment_Wrapper">
