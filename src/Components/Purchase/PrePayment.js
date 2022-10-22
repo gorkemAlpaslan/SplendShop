@@ -35,6 +35,7 @@ const PrePayment = (props) => {
     const result = OrderedItemList.map((obj) => {
       let time = moment().format("YYYY-MM-DD hh:mm:ss");
       obj["OrderTime"] = time;
+      obj["OrderAdress"] = props.DeliveryAdress;
       obj["OrderID"] = Math.random() * 10000000000000000;
       localStorage.setItem(obj.title, JSON.stringify(obj));
       return obj;
@@ -59,28 +60,32 @@ const PrePayment = (props) => {
   };
 
   return (
-    <div className="Payment_Page_Wrapper">
-      <h3 className="Payment_Summary_Title">Summary</h3>
-      <div className="Product_Total_Prices">
-        {props.ProductList.map((PurchaseItem) => (
-          <div className="Each_Item_Wraper">
-            <div className="Each_Item_Title">{PurchaseItem.title}</div>
-            <div className="Each_Item_Prices">
-              ${PurchaseItem.count * PurchaseItem.price}
-            </div>
+    <div>
+      {props.AdressIsSelected !== undefined && (
+        <div className="Payment_Page_Wrapper">
+          <h3 className="Payment_Summary_Title">Summary</h3>
+          <div className="Product_Total_Prices">
+            {props.ProductList.map((PurchaseItem) => (
+              <div className="Each_Item_Wraper">
+                <div className="Each_Item_Title">{PurchaseItem.title}</div>
+                <div className="Each_Item_Prices">
+                  ${PurchaseItem.count * PurchaseItem.price}
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
-      <div className="Total_Price_Wrapper">
-        <div className="Total">Total</div>
-        <div className="Total_Price">${Total}</div>
-      </div>
-      {orderEmptyError && (
-        <p className="OrderErrorMessage">There is not any item at card</p>
+          <div className="Total_Price_Wrapper">
+            <div className="Total">Total</div>
+            <div className="Total_Price">${Total}</div>
+          </div>
+          {orderEmptyError && (
+            <p className="OrderErrorMessage">There is not any item at card</p>
+          )}
+          <button className="Payment_Button" onClick={ItemPurchaseHandler}>
+            Pay
+          </button>
+        </div>
       )}
-      <button className="Payment_Button" onClick={ItemPurchaseHandler}>
-        Pay
-      </button>
     </div>
   );
 };

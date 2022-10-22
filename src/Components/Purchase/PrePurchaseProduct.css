@@ -3,8 +3,16 @@
   flex-direction: row;
   justify-content: space-between;
   position: relative;
-  border-bottom: 0.5px solid black;
-  padding: 10px;
+  padding: 30px;
+  margin-bottom: 60px;
+  background-color: rgb(231, 231, 231);
+  transition: all 0.2s ease-in-out;
+  box-shadow: #abc9ff 0px 20px 20px -20px;
+}
+
+.Product_Purchase_Wrapper:hover {
+  box-shadow: #abc9ff 2.4px 2.4px 3.2px;
+  transform: scale(1.05);
 }
 
 .Product_Purchase_Card {
@@ -18,29 +26,31 @@
   height: 100px;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
     rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-  margin: 0px 10px;
 }
 
 .Product_Purchase_Card_Info {
-  width: 500px;
+  width: 600px;
   margin-left: 10px;
+
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
 .Product_Purchase_Card_Name {
-  font-size: large;
+  font-size: 16px;
   font-weight: bold;
 }
 .Product_Purchase_Info {
-  font-size: 14px;
+  font-size: 16px;
+  color: rgb(77, 77, 77);
+  font-weight: 800;
 }
 
 .Purchase_Item_Count {
   display: flex;
-  width: 120px;
-
+  width: 220px;
+  transform: scale(1.2);
   justify-content: space-evenly;
   text-align: center;
   align-items: center;
@@ -52,9 +62,8 @@
 }
 
 .Button_Add {
-  background-color: green;
-  color: white;
-  transition: all 0.1s ease-in-out;
+  color: #abc9ff;
+  transition: all 0.2s ease-in-out;
 }
 
 .Button_Add:hover {
@@ -64,9 +73,8 @@
 }
 
 .Button_Cut {
-  color: white;
-  background-color: #eb4747;
-  transition: all 0.1s ease-in-out;
+  color: rgb(85, 85, 85);
+  transition: all 0.2s ease-in-out;
 }
 .Button_Cut:hover {
   -webkit-transform: scale(0.8);
@@ -83,23 +91,24 @@
   height: 28px;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
     rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-  font-size: medium;
+  font-size: 12px;
   font-weight: 600;
 }
 
 .Product_Purchase_Card_Price {
-  font-size: 25px;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 900;
   align-self: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #abc9ff;
 }
 
 .each {
   font-size: 13px;
   padding: 0px;
-  margin-bottom: 6px;
+  margin-bottom: 10px;
 }
 
 .Product_Purchase_Card_Button {
@@ -109,12 +118,9 @@
   right: 10px;
   cursor: pointer;
   transition: all 0.1s ease-in-out;
-  opacity: 0.5;
 }
+
 .Product_Purchase_Card_Button:hover {
-  opacity: 1;
-  background-color: #eb4747;
-  -webkit-transform: rotateZ(-270deg);
-  -ms-transform: rotateZ(-270deg);
-  transform: rotateZ(-270deg);
+  transform: scale(1.6);
+  color: red;
 }

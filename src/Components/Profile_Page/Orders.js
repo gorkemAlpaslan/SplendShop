@@ -26,7 +26,7 @@ const Orders = (props) => {
         </div>
         <div className="OrderItemDetails">
           <h2>Delivery to:</h2>
-          <p>Adress will be here </p>
+          <p>{props.OrderedInfo[0].OrderAdress.AdressName}</p>
         </div>
         <div className="OrderItemDetails">
           <h2>Amount of Items:</h2>

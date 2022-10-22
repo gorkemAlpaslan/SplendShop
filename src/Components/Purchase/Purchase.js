@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import "./Purchase.css";
 import "./PrePurchaseProduct";
 import PrePurchaseProduct from "./PrePurchaseProduct";
+import Checkbox from "@mui/material/Checkbox";
+import { red } from "@mui/material/colors";
 import PrePayment from "./PrePayment";
+import Button from "@mui/material/Button";
+import { MdClose } from "react-icons/md";
 
 let PurchasedItemsListOfObj = [];
 
@@ -113,34 +117,140 @@ const Purchase = (props) => {
     props.Count(CountHandler);
   };
 
+  const Adresses = [
+    {
+      id: 0,
+      AdressName: "Adress 1",
+      DeliveryAdress:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac lectus id nulla dictum efficitur. Donec malesuada libero et nulla convallis",
+    },
+  ];
+  const [SavedAdresses, SetSavedAdresses] = useState(Adresses);
+  const [SelectedAdress, SetSelectedAdress] = useState();
+
+  const AddAdress = useRef();
+  const AddAdressAdressName = useRef();
+  const AddAdressDeliveryAdress = useRef();
+
+  const handleAdressChange = (Adressid) => {
+    SetSelectedAdress(Adressid);
+  };
+  const AddAdressHandler = () => {
+    if (
+      AddAdressAdressName.current.value !== "" &&
+      AddAdressDeliveryAdress.current.value !== ""
+    ) {
+      let NewAddressTemp = {
+        id: SavedAdresses.length,
+        AdressName: AddAdressAdressName.current.value,
+        DeliveryAdress: AddAdressDeliveryAdress.current.value,
+      };
+      SetSavedAdresses((prev) => {
+        return [...prev, NewAddressTemp];
+      });
+      AddAdressAdressName.current.value = "";
+      AddAdressDeliveryAdress.current.value = "";
+      AddAdress.current.className = "AddAdressHolder";
+    }
+  };
+
   return (
     <div className="Purchase_Page">
       <div className="Purchase_Page_Wrapper">
         <div className="Purchase_Items">
-          <h2>Products</h2>
-          <div className="Pre_Purchase_Wrapper">
-            {PurchasedItems.map((PurchaseItem) => (
-              <PrePurchaseProduct
-                title={PurchaseItem.title}
-                price={PurchaseItem.price}
-                description={PurchaseItem.description}
-                key={PurchaseItem.id}
-                image={PurchaseItem.minisrc}
-                refNum={PurchaseItem.id}
-                Count={PurchaseItem.count}
-                Category={PurchaseItem.category}
-                Gender={PurchaseItem.gender}
-                PurchaseCancle={PurchaseCancle}
-                AddCount={AddCount}
-                SubCount={SubCount}
-                NumberOfItemsHandler={NumberOfItemsHandler}
-              />
-            ))}
+          <div className="Title TitleAdress">
+            <h2>Delivery Adress </h2>
+            <p> (Add & Select Delivery Adress)</p>
+          </div>
+          <div className="Adresses">
+            <div className="Add_New_Adresses">
+              <div
+                className="AddAdressHolder"
+                ref={AddAdress}
+                onClick={() => {
+                  AddAdress.current.className = "AddAdressHide";
+                }}
+              >
+                <h4>Add New Adress</h4>
+              </div>
+              <input
+                className="Adress_Title_Input"
+                ref={AddAdressAdressName}
+                placeholder="Adress Name"
+              ></input>
+              <MdClose
+                className="CancleAddAdress"
+                onClick={() => {
+                  AddAdress.current.className = "AddAdressHolder";
+                }}
+              ></MdClose>
+              <textarea
+                className="Adress_Input"
+                ref={AddAdressDeliveryAdress}
+                placeholder="Adress"
+              ></textarea>
+              <Button variant="outlined" onClick={AddAdressHandler}>
+                Add New Adress
+              </Button>
+            </div>
+            {SavedAdresses.map((Adress) => {
+              return (
+                <div
+                  id={Adress.id}
+                  className="Saved_Adresses"
+                  onClick={() => {
+                    handleAdressChange(Adress.id);
+                  }}
+                >
+                  <h5>{Adress.AdressName}</h5>
+                  <p>{Adress.DeliveryAdress}</p>
+                  <Checkbox
+                    checked={SelectedAdress === Adress.id}
+                    className="Checkbox"
+                    sx={{
+                      color: red[800],
+                      "&.Mui-checked": {
+                        color: red[400],
+                      },
+                    }}
+                  />
+                </div>
+              );
+            })}
           </div>
         </div>
+        {SelectedAdress !== undefined && (
+          <div className="Purchase_Items">
+            <div className="Title TitleProduct">
+              <h2>Products </h2>
+              <p>(Add & Remove Product)</p>
+            </div>
+            <div className="Pre_Purchase_Wrapper">
+              {PurchasedItems.map((PurchaseItem) => (
+                <PrePurchaseProduct
+                  title={PurchaseItem.title}
+                  price={PurchaseItem.price}
+                  description={PurchaseItem.description}
+                  key={PurchaseItem.id}
+                  image={PurchaseItem.minisrc}
+                  refNum={PurchaseItem.id}
+                  Count={PurchaseItem.count}
+                  Category={PurchaseItem.category}
+                  Gender={PurchaseItem.gender}
+                  PurchaseCancle={PurchaseCancle}
+                  AddCount={AddCount}
+                  SubCount={SubCount}
+                  NumberOfItemsHandler={NumberOfItemsHandler}
+                />
+              ))}
+            </div>
+          </div>
+        )}
       </div>
       <div className="Payment_Wrapper">
         <PrePayment
+          AdressIsSelected={SelectedAdress}
+          DeliveryAdress={SavedAdresses[SelectedAdress]}
           ProductList={PurchasedItems}
           PurchasePageHandlerWhenOrderComplate={PurchaseCancle}
         ></PrePayment>

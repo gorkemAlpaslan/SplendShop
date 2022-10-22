@@ -14,14 +14,22 @@
   margin: 0px 14px;
   margin-bottom: 20px;
   padding: 8px;
-  box-shadow: black 0px 3px;
+  box-shadow: black 0px 1px;
 }
 
 .Each_Item_Wraper {
-  margin: 30px 0px;
+  margin: 20px 0px;
   display: flex;
   justify-content: space-between;
-  box-shadow: black 0px 1px;
+  align-items: center;
+}
+
+.Each_Item_Title {
+  max-width: 200px;
+}
+
+.Each_Item_Prices {
+  font-weight: 600;
 }
 
 .Total_Price_Wrapper {
@@ -37,6 +45,9 @@
 
 .Total_Price {
   margin-right: 20px;
+  font-weight: 800;
+  font-size: large;
+  color: #abc9ff;
 }
 
 .OrderErrorMessage {
@@ -46,25 +57,22 @@
 .Payment_Button {
   align-self: flex-end;
   margin: 20px;
-  width: 100px;
+  width: 80px;
   height: 40px;
-  background-color: #abc9ff;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+
+  transition: all 0.2s ease-in-out;
   border: none;
   color: white;
-  font-size: 30px;
-  transition: all 0.2s ease-in-out;
+  font-size: 20px;
+
   cursor: pointer;
 }
 
 .Payment_Button:hover {
-  color: #212121;
-  background: rgb(171, 201, 255);
-  background: linear-gradient(
-    308deg,
-    rgba(171, 201, 255, 1) 0%,
-    rgba(255, 222, 222, 0.5102415966386555) 100%
+  background-image: linear-gradient(
+    to right,
+    #434343 0%,
+    rgba(0, 0, 0, 0.815) 100%
   );
-  box-shadow: 1px 1px #abc9ff, 2px 2px #abc9ff, 3px 3px #abc9ff;
-  -webkit-transform: translateX(-3px);
-  transform: translateX(-3px);
 }

@@ -1,30 +1,192 @@
 .Purchase_Page {
   display: flex;
   flex-direction: row;
-  width: 1500px;
+  width: 1800px;
+  min-height: 900px;
   justify-content: space-evenly;
   margin: 30px;
 }
 
 .Purchase_Page_Wrapper {
-  width: 60%;
-  height: auto;
-  background-color: rgb(255, 255, 255);
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  width: 70%;
+  padding-right: 50px;
+  border-right: 2px solid black;
 }
 
 .Purchase_Items {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 90%;
-  padding: 0px 20px;
+  width: 100%;
+}
+
+.Title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+  margin-bottom: 50px;
+}
+
+.TitleAdress {
+  box-shadow: #b20a2c 0px 20px 10px -20px;
+}
+
+.TitleProduct {
+  box-shadow: #abc9ff 0px 20px 20px -20px;
+}
+
+.Title h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-right: 10px;
 }
 
 .Pre_Purchase_Wrapper {
   width: 100%;
+
   height: auto;
+}
+
+.Add_New_Adresses {
+  width: 360px;
+  height: 160px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.1s ease-in-out;
+  position: relative;
+  border: 1px dashed #b20a2c;
+  background-color: white;
+}
+
+.AddAdressHolder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  opacity: 1;
+  width: 360px;
+  height: 160px;
+  background-color: white;
+  cursor: pointer;
+}
+.AddAdressHolder:hover {
+  color: white;
+  background-image: linear-gradient(to right, #b20a2c, #fffbd5);
+}
+
+.AddAdressHide {
+  display: none;
+}
+
+.Add_New_Adresses .Adress_Title_Input {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 20px;
+  border: none;
+  box-shadow: #b20a2c5b 0px 1px 3px 0px, #b20a2c56 0px 0px 0px 1px;
+  color: #b20a2c;
+}
+.Add_New_Adresses .Adress_Title_Input:focus {
+  outline: none;
+  background-color: #b9b9b918;
+
+  box-shadow: #b20a2c9f 0px 1px 3px 0px, #b20a2c98 0px 0px 0px 1px;
+}
+
+.CancleAddAdress {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.CancleAddAdress:hover {
+  transform: scale(1.1);
+  color: #b20a2c;
+}
+.Add_New_Adresses .Adress_Input {
+  width: 330px;
+  height: 60px;
+  position: absolute;
+  left: 10px;
+  top: 40px;
+  color: #b20a2c;
+  border: none;
+  resize: none;
+  word-wrap: break-word;
+
+  box-shadow: #b20a2c5b 0px 1px 3px 0px, #b20a2c56 0px 0px 0px 1px;
+}
+.Add_New_Adresses .Adress_Input:focus {
+  background-color: #b9b9b918;
+  outline: none;
+  box-shadow: #b20a2c9f 0px 1px 3px 0px, #b20a2c98 0px 0px 0px 1px;
+}
+
+.Add_New_Adresses button {
+  position: absolute;
+  bottom: 8px;
+  color: #b20a2c;
+  font-size: 11px;
+  border-color: #b20a2c;
+  background-color: #ffffff;
+}
+
+.Add_New_Adresses button:hover {
+  border-color: #ffffff;
+  color: #ffffff;
+  background-color: #b20a2c;
+}
+
+.Adresses {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.Saved_Adresses {
+  width: 360px;
+  height: 160px;
+  margin: 20px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  color: #000000;
+  background-color: rgb(231, 231, 231);
+  box-shadow: #b20a2c 0px 20px 20px -20px;
+}
+
+.Saved_Adresses:hover {
+  box-shadow: #b20a2c 2.4px 2.4px 3.2px;
+  transform: scale(1.05);
+}
+
+.Saved_Adresses h5 {
+  margin-top: 6px;
+  padding: 0px 10px;
+}
+
+.Saved_Adresses p {
+  width: 330px;
+  height: 70px;
+  font-size: 14px;
+  padding: 8px;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+.Saved_Adresses .Checkbox {
+  position: absolute;
+  top: 0px;
+  right: 0px;
 }
 
 .Purchase_Favs {
@@ -36,8 +198,11 @@
 .Payment_Wrapper {
   width: 20%;
   height: auto;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
-    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
   margin: 0px 10px;
   position: sticky;
   top: 20px;
