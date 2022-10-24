@@ -19,6 +19,7 @@ const ItemList = [
     discount: 0,
     category: "category-1",
     gender: "unisex",
+    itemRate: 4,
   },
   {
     id: "1",
@@ -40,6 +41,7 @@ const ItemList = [
     discount: 0.5,
     category: "category-1",
     gender: "male",
+    itemRate: 3,
   },
   {
     id: "2",
@@ -61,6 +63,7 @@ const ItemList = [
     discount: 0,
     category: "category-1",
     gender: "unisex",
+    itemRate: 5,
   },
 
   {
@@ -83,6 +86,7 @@ const ItemList = [
     discount: 0,
     category: "category-1",
     gender: "male",
+    itemRate: 3,
   },
   {
     id: "4",
@@ -104,6 +108,7 @@ const ItemList = [
     discount: 0,
     category: "category-2",
     gender: "female",
+    itemRate: 4.4,
   },
   {
     id: "5",
@@ -125,6 +130,7 @@ const ItemList = [
     discount: 0,
     category: "category-2",
     gender: "female",
+    itemRate: 3.6,
   },
   {
     id: "6",
@@ -146,6 +152,7 @@ const ItemList = [
     discount: 0,
     category: "category-2",
     gender: "male",
+    itemRate: 4.6,
   },
   {
     id: "7",
@@ -167,6 +174,7 @@ const ItemList = [
     discount: 0,
     category: "category-3",
     gender: "unisex",
+    itemRate: 4.2,
   },
   {
     id: "8",
@@ -188,6 +196,7 @@ const ItemList = [
     discount: 0.5,
     category: "category-3",
     gender: "unisex",
+    itemRate: 4.1,
   },
   {
     id: "9",
@@ -207,6 +216,7 @@ const ItemList = [
     discount: 0,
     category: "category-3",
     gender: "unisex",
+    itemRate: 5,
   },
   {
     id: "10",
@@ -228,6 +238,7 @@ const ItemList = [
     discount: 0,
     category: "category-3",
     gender: "unisex",
+    itemRate: 2.2,
   },
 
   {
@@ -250,6 +261,7 @@ const ItemList = [
     discount: 0.5,
     category: "category-4",
     gender: "male",
+    itemRate: 1.1,
   },
   {
     id: "12",
@@ -271,6 +283,7 @@ const ItemList = [
     discount: 0,
     category: "category-4",
     gender: "unisex",
+    itemRate: 4,
   },
   {
     id: "13",
@@ -292,6 +305,7 @@ const ItemList = [
     discount: 0,
     category: "category-4",
     gender: "male",
+    itemRate: 2.7,
   },
   {
     id: "14",
@@ -313,6 +327,7 @@ const ItemList = [
     discount: 0,
     category: "category-4",
     gender: "male",
+    itemRate: 5,
   },
   {
     id: "15",
@@ -334,6 +349,7 @@ const ItemList = [
     discount: 0,
     category: "category-4",
     gender: "female",
+    itemRate: 4.7,
   },
   {
     id: "16",
@@ -355,6 +371,7 @@ const ItemList = [
     discount: 0,
     category: "category-5",
     gender: "female",
+    itemRate: 3.9,
   },
   {
     id: "17",
@@ -376,6 +393,7 @@ const ItemList = [
     discount: 0,
     category: "category-5",
     gender: "female",
+    itemRate: 3.8,
   },
 ];
 

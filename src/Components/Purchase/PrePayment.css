@@ -14,7 +14,7 @@
   margin: 0px 14px;
   margin-bottom: 20px;
   padding: 8px;
-  box-shadow: black 0px 1px;
+  box-shadow: #000000 0px 10px 10px -10px;
 }
 
 .Each_Item_Wraper {

@@ -139,6 +139,7 @@ function App() {
                   image={Item.minisrc}
                   refNum={Item.id}
                   discount={Item.discount}
+                  Rate={Item.itemRate}
                   NumberOfItemsHandler={NumberOfItemsHandler}
                 ></Product>
               ))}

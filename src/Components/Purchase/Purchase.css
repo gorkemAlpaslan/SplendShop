@@ -29,7 +29,7 @@
 }
 
 .TitleAdress {
-  box-shadow: #b20a2c 0px 20px 10px -20px;
+  box-shadow: #abc9ff 0px 20px 20px -20px;
 }
 
 .TitleProduct {
@@ -58,7 +58,7 @@
   align-items: center;
   transition: all 0.1s ease-in-out;
   position: relative;
-  border: 1px dashed #b20a2c;
+  border: 1px dashed #000000;
   background-color: white;
 }
 
@@ -75,7 +75,7 @@
 }
 .AddAdressHolder:hover {
   color: white;
-  background-image: linear-gradient(to right, #b20a2c, #fffbd5);
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
 }
 
 .AddAdressHide {
@@ -88,14 +88,12 @@
   left: 10px;
   height: 20px;
   border: none;
-  box-shadow: #b20a2c5b 0px 1px 3px 0px, #b20a2c56 0px 0px 0px 1px;
-  color: #b20a2c;
+  box-shadow: #abc8ffb6 0px 1px 3px 0px, #abc8ffaf 0px 0px 0px 1px;
 }
 .Add_New_Adresses .Adress_Title_Input:focus {
   outline: none;
   background-color: #b9b9b918;
-
-  box-shadow: #b20a2c9f 0px 1px 3px 0px, #b20a2c98 0px 0px 0px 1px;
+  box-shadow: #abc9ff 0px 1px 3px 0px, #abc9ff 0px 0px 0px 1px;
 }
 
 .CancleAddAdress {
@@ -110,7 +108,7 @@
 
 .CancleAddAdress:hover {
   transform: scale(1.1);
-  color: #b20a2c;
+  color: #abc9ff;
 }
 .Add_New_Adresses .Adress_Input {
   width: 330px;
@@ -118,32 +116,31 @@
   position: absolute;
   left: 10px;
   top: 40px;
-  color: #b20a2c;
   border: none;
   resize: none;
   word-wrap: break-word;
 
-  box-shadow: #b20a2c5b 0px 1px 3px 0px, #b20a2c56 0px 0px 0px 1px;
+  box-shadow: #abc8ffb6 0px 1px 3px 0px, #abc8ffaf 0px 0px 0px 1px;
 }
 .Add_New_Adresses .Adress_Input:focus {
   background-color: #b9b9b918;
   outline: none;
-  box-shadow: #b20a2c9f 0px 1px 3px 0px, #b20a2c98 0px 0px 0px 1px;
+  box-shadow: #abc9ff 0px 1px 3px 0px, #abc9ff 0px 0px 0px 1px;
 }
 
 .Add_New_Adresses button {
   position: absolute;
   bottom: 8px;
-  color: #b20a2c;
+  color: #abc9ff;
   font-size: 11px;
-  border-color: #b20a2c;
+  border-color: #abc9ff;
   background-color: #ffffff;
 }
 
 .Add_New_Adresses button:hover {
   border-color: #ffffff;
   color: #ffffff;
-  background-color: #b20a2c;
+  background-color: #abc9ff;
 }
 
 .Adresses {
@@ -161,11 +158,11 @@
   transition: all 0.2s ease-in-out;
   color: #000000;
   background-color: rgb(231, 231, 231);
-  box-shadow: #b20a2c 0px 20px 20px -20px;
+  box-shadow: #abc9ff 0px 20px 20px -20px;
 }
 
 .Saved_Adresses:hover {
-  box-shadow: #b20a2c 2.4px 2.4px 3.2px;
+  box-shadow: #abc9ff 2.4px 2.4px 3.2px;
   transform: scale(1.05);
 }
 

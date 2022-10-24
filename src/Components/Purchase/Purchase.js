@@ -3,7 +3,7 @@ import "./Purchase.css";
 import "./PrePurchaseProduct";
 import PrePurchaseProduct from "./PrePurchaseProduct";
 import Checkbox from "@mui/material/Checkbox";
-import { red } from "@mui/material/colors";
+import { blue } from "@mui/material/colors";
 import PrePayment from "./PrePayment";
 import Button from "@mui/material/Button";
 import { MdClose } from "react-icons/md";
@@ -208,9 +208,9 @@ const Purchase = (props) => {
                     checked={SelectedAdress === Adress.id}
                     className="Checkbox"
                     sx={{
-                      color: red[800],
+                      color: blue[800],
                       "&.Mui-checked": {
-                        color: red[400],
+                        color: blue[400],
                       },
                     }}
                   />

@@ -2,6 +2,7 @@ import "./Product.css";
 import { useState } from "react";
 import { FaSearch, FaShare, FaHeart } from "react-icons/fa";
 import AddToCary from "./Functions/AddToCary";
+import Rating from "@mui/material/Rating";
 
 const Product = (props) => {
   let discountHandler = false;
@@ -61,9 +62,17 @@ const Product = (props) => {
             </a>
           </div>
           <div class="product-content">
+            <Rating
+              name="read-only"
+              value={props.Rate}
+              readOnly
+              precision={0.5}
+              size="small"
+            />
             <h3 class="title">
               <a href={`/ProductPage/${props.refNum}`}>{props.title}</a>
             </h3>
+
             <div class="price">
               {`$${props.price - props.price * props.discount} `}
               {discountHandler && (
