@@ -88,7 +88,7 @@ function App() {
         (item) => item.size === Filtered.size
       );
     }
-    if (Filtered.colors !== "Any") {
+    if (Filtered.colors.length > 0) {
       FilteredItemsList = FilteredItemsList.filter((item) => {
         for (let i = 0; i < Filtered.colors.length; i++) {
           if (item.colors.includes(Filtered.colors[i])) {

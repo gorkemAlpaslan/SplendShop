@@ -10,7 +10,7 @@ const Sidebar = (props) => {
   const [Category, SetCategory] = useState("Any");
   const [Gender, SetGender] = useState("Any");
   const [Size, SetSize] = useState("Any");
-  const [color, SetColor] = useState("Any");
+  const [color, SetColor] = useState([]);
 
   const [isCategoryActive, SetIsCategoryActive] = useState(false);
   const [isGenderActive, SetIsGenderActive] = useState(false);
@@ -228,6 +228,12 @@ const Sidebar = (props) => {
           color="success"
           onClick={() => {
             props.FilterItem({
+              category: Category,
+              colors: color,
+              gender: Gender,
+              size: Size,
+            });
+            console.log({
               category: Category,
               colors: color,
               gender: Gender,
