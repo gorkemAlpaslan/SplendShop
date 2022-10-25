@@ -24,17 +24,17 @@ const Adds = () => {
         className="addTwo"
       >
         <SwiperSlide>
-          <a href="/ProductPage/9">
+          <a href="/ProductPage/8">
             <img src={AddTwo} alt="AddTwo" className="addTwoPngs"></img>
           </a>
         </SwiperSlide>
         <SwiperSlide>
-          <a href="/ProductPage/2">
+          <a href="/ProductPage/1">
             <img src={AddOne} alt="AddOne" className="addTwoPngs"></img>
           </a>
         </SwiperSlide>
         <SwiperSlide>
-          <a href="/ProductPage/12">
+          <a href="/ProductPage/11">
             <img src={AddThree} alt="AddThree" className="addTwoPngs"></img>
           </a>
         </SwiperSlide>
