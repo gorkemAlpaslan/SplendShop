@@ -1,4 +1,4 @@
-import { React, useEffect, useState } from "react";
+import { React } from "react";
 import "./FavoriteProducts.css";
 import { FaTimes } from "react-icons/fa";
 import AddToCary from "../../Functions/AddToCary";

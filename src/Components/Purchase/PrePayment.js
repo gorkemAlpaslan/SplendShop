@@ -1,5 +1,4 @@
-import { useSSRSafeId } from "@react-aria/ssr";
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import "./PrePayment.css";
 import moment from "moment";
 
