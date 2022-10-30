@@ -27,7 +27,6 @@ function App() {
     SetPurchasedItemNumber(ItemCounter.length);
   };
 
-  const ItemsList = ItemList;
   const [IsLoading, setIsLoading] = useState(false);
   const [currentPage, SetcurrentPage] = useState(1);
   const [ItemListFiltered, SetItemListFiltered] = useState(ItemList);
@@ -170,7 +169,7 @@ function App() {
         </div>
       </Route>
       {ItemList.map((Item) => (
-        <Route path={`/ProductPage/${Item.id}`}>
+        <Route path={`/ProductPage/${Item.id}`} key={Item.id}>
           <div className="ProductPageWraper">
             <ProductPage
               ProductDetails={Item}

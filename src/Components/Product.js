@@ -40,28 +40,28 @@ const Product = (props) => {
   };
 
   return (
-    <div class="row">
-      <div class="PerItemWrapper">
-        <div class="product-grid">
-          <div class="product-image">
+    <div className="row">
+      <div className="PerItemWrapper">
+        <div className="product-grid">
+          <div className="product-image">
             <a href={`/ProductPage/${props.refNum}`} className="image">
               <img src={props.image}></img>
             </a>
-            <span class="product-discount-label">
+            <span className="product-discount-label">
               {discountHandler && `-${props.discount * 100}%`}
             </span>
-            <ul class="product-links">
+            <ul className="product-links">
               <li>
                 <a onClick={AddFavororitesHandler}>
                   <FaHeart></FaHeart>
                 </a>
               </li>
             </ul>
-            <a class="add-to-cart" onClick={AddItemToPurchase}>
+            <a className="add-to-cart" onClick={AddItemToPurchase}>
               Add to Cart
             </a>
           </div>
-          <div class="product-content">
+          <div className="product-content">
             <Rating
               name="read-only"
               value={props.Rate}
@@ -69,11 +69,11 @@ const Product = (props) => {
               precision={0.5}
               size="small"
             />
-            <h3 class="title">
+            <h3 className="title">
               <a href={`/ProductPage/${props.refNum}`}>{props.title}</a>
             </h3>
 
-            <div class="price">
+            <div className="price">
               {`$${props.price - props.price * props.discount} `}
               {discountHandler && (
                 <span className="if-discount-ol">{`$${props.price}`}</span>

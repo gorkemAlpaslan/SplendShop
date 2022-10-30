@@ -23,32 +23,32 @@ const FavoriteProducts = (props) => {
   };
 
   return (
-    <div class="row">
-      <div class="FavContainer">
-        <div class="FavInnerContainer">
-          <div class="fav-product-image">
-            <a href={`/ProductPage/${props.refNum}`} class="fav-image">
+    <div className="row">
+      <div className="FavContainer">
+        <div className="FavInnerContainer">
+          <div className="fav-product-image">
+            <a href={`/ProductPage/${props.refNum}`} className="fav-image">
               <img src={props.image}></img>
             </a>
-            <span class="fav-product-discount-label">
+            <span className="fav-product-discount-label">
               {discountHandler && `-${props.discount * 100}%`}
             </span>
-            <ul class="fav-product-links">
+            <ul className="fav-product-links">
               <li>
                 <a onClick={FavItemDeleteHandler}>
                   <FaTimes></FaTimes>
                 </a>
               </li>
             </ul>
-            <a class="fav-add-to-cart" onClick={AddItemToPurchase}>
+            <a className="fav-add-to-cart" onClick={AddItemToPurchase}>
               Add to Cart
             </a>
           </div>
-          <div class="fav-product-content">
-            <h3 class="fav-title">
+          <div className="fav-product-content">
+            <h3 className="fav-title">
               <a href={`/ProductPage/${props.refNum}`}>{props.title}</a>
             </h3>
-            <div class="price">
+            <div className="price">
               {`$${props.price - props.price * props.discount} `}
               {discountHandler && (
                 <span className="if-discount-ol">{`$${props.price}`}</span>

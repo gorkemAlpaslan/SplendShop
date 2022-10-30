@@ -17,7 +17,6 @@ const Adds = () => {
     <div className="AddsWrapper">
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
-        slidersPerView={1}
         loop
         autoplay={{ delay: 3000, disableOnInteraction: false }}
         pagination={{ clickable: true }}
