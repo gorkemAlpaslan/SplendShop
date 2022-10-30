@@ -1,5 +1,4 @@
-import React, { useState, setState } from "react";
-import { render } from "react-dom";
+import React from "react";
 import "./ProductPage.css";
 import Colors from "./Colors";
 import DetailsThumb from "./DetailsThumb";

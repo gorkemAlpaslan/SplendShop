@@ -42,7 +42,11 @@ const Orders = (props) => {
           {props.OrderedInfo.map((e) => {
             return (
               <a href={`/ProductPage/${e.id}`} className="OrderImagesWithPcs">
-                <img src={e.minisrc[0]} className="miniImage"></img>
+                <img
+                  alt="miniImage"
+                  src={e.minisrc[0]}
+                  className="miniImage"
+                ></img>
                 <div className="AmountOfItems">x{e.count}</div>
               </a>
             );

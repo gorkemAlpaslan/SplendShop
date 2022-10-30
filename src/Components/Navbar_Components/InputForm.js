@@ -1,6 +1,5 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import "./InputForm.css";
-import { GrSearch } from "react-icons/gr";
 import SearchButton from "./SearchButton.png";
 
 const InputForm = (props) => {
@@ -23,13 +22,14 @@ const InputForm = (props) => {
           onKeyDown={SearchHandler}
           ref={SearchRef}
         ></input>
-        <a href="#" className="search-btn">
+        <div href="/" className="search-btn">
           <img
+            alt="SearchButton"
             src={SearchButton}
             className="Search_Button"
             onClick={SearchHandler}
           ></img>
-        </a>
+        </div>
       </div>
     </div>
   );

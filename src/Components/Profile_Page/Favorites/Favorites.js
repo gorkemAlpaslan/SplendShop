@@ -1,7 +1,6 @@
 import { React, useState } from "react";
 import "./Favorites.css";
-import { FaTimes } from "react-icons/fa";
-import AddToCary from "../../Functions/AddToCary";
+
 import FavoriteItems from "./FavoriteItems";
 import FavoriteProducts from "./FavoriteProducts";
 
@@ -35,10 +34,6 @@ const Favorites = (props) => {
     SetFavoriteItemsList(NewFavItems);
   };
 
-  const NumberOfItemsHandler = (count) => {
-    props.NumberOfItemsHandler(count);
-  };
-
   return (
     <div className="Fav-Wrapper">
       <div className="Favorites">
@@ -53,7 +48,7 @@ const Favorites = (props) => {
             refNum={Item.id}
             discount={Item.discount}
             FavItemDeleteHandler={FavItemDeleteHandler}
-            NumberOfItemsHandler={NumberOfItemsHandler}
+            Count={props.Count}
           ></FavoriteProducts>
         ))}
       </div>

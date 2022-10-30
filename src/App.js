@@ -158,7 +158,11 @@ function App() {
         <div className="BodyContainer">
           <div className="Login-Wrapper">
             <div>
-              {user ? <Profile></Profile> : IsLoading && <SignUp></SignUp>}
+              {user ? (
+                <Profile Count={NumberOfItemsHandler}></Profile>
+              ) : (
+                IsLoading && <SignUp></SignUp>
+              )}
             </div>
           </div>
         </div>

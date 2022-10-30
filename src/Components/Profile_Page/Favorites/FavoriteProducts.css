@@ -63,7 +63,7 @@
 .FavInnerContainer:hover .fav-product-links {
   right: 10px;
 }
-.FavInnerContainer .fav-product-links li a {
+.FavInnerContainer .fav-product-links li .heartIco {
   color: white;
   background: transparent;
   font-size: 11px;
@@ -75,17 +75,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
   transition: all 0.1s ease-in-out;
   background-image: linear-gradient(to right, #212121 0%, black 100%);
 }
-.FavInnerContainer .fav-product-links li:last-child a {
+.FavInnerContainer .fav-product-links li:last-child .heartIco {
   border-bottom: 1px solid #333;
 }
-.FavInnerContainer .fav-product-links li a:hover {
+.FavInnerContainer .fav-product-links li .heartIco:hover {
   color: #abc9ff;
   background: white;
 }
 .FavInnerContainer .fav-add-to-cart {
+  cursor: pointer;
   background-image: linear-gradient(to right, #434343 0%, black 100%);
   color: #fff;
   font-size: 11px;

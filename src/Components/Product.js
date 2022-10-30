@@ -1,6 +1,5 @@
 import "./Product.css";
-import { useState } from "react";
-import { FaSearch, FaShare, FaHeart } from "react-icons/fa";
+import { FaHeart } from "react-icons/fa";
 import AddToCary from "./Functions/AddToCary";
 import Rating from "@mui/material/Rating";
 
@@ -45,21 +44,21 @@ const Product = (props) => {
         <div className="product-grid">
           <div className="product-image">
             <a href={`/ProductPage/${props.refNum}`} className="image">
-              <img src={props.image}></img>
+              <img src={props.image} alt={props.title}></img>
             </a>
             <span className="product-discount-label">
               {discountHandler && `-${props.discount * 100}%`}
             </span>
             <ul className="product-links">
               <li>
-                <a onClick={AddFavororitesHandler}>
+                <div className="heartIco" onClick={AddFavororitesHandler}>
                   <FaHeart></FaHeart>
-                </a>
+                </div>
               </li>
             </ul>
-            <a className="add-to-cart" onClick={AddItemToPurchase}>
+            <div className="add-to-cart" onClick={AddItemToPurchase}>
               Add to Cart
-            </a>
+            </div>
           </div>
           <div className="product-content">
             <Rating

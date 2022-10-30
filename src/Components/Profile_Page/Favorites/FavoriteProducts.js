@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useEffect, useState } from "react";
 import "./FavoriteProducts.css";
 import { FaTimes } from "react-icons/fa";
 import AddToCary from "../../Functions/AddToCary";
@@ -14,8 +14,14 @@ const FavoriteProducts = (props) => {
 
   const AddItemToPurchase = () => {
     AddToCary(productDetailsArray);
-    let numberofItems = JSON.parse(localStorage.getItem("purchaseProducts"));
-    props.NumberOfItemsHandler(numberofItems);
+    let PuchasedItemsArray = JSON.parse(
+      localStorage.getItem("purchaseProducts")
+    );
+    console.log(PuchasedItemsArray);
+    if (!PuchasedItemsArray) {
+      PuchasedItemsArray = [];
+    }
+    props.Count(PuchasedItemsArray);
   };
 
   const FavItemDeleteHandler = () => {
@@ -28,21 +34,21 @@ const FavoriteProducts = (props) => {
         <div className="FavInnerContainer">
           <div className="fav-product-image">
             <a href={`/ProductPage/${props.refNum}`} className="fav-image">
-              <img src={props.image}></img>
+              <img alt={props.title} src={props.image}></img>
             </a>
             <span className="fav-product-discount-label">
               {discountHandler && `-${props.discount * 100}%`}
             </span>
             <ul className="fav-product-links">
               <li>
-                <a onClick={FavItemDeleteHandler}>
+                <div className="heartIco" onClick={FavItemDeleteHandler}>
                   <FaTimes></FaTimes>
-                </a>
+                </div>
               </li>
             </ul>
-            <a className="fav-add-to-cart" onClick={AddItemToPurchase}>
+            <div className="fav-add-to-cart" onClick={AddItemToPurchase}>
               Add to Cart
-            </a>
+            </div>
           </div>
           <div className="fav-product-content">
             <h3 className="fav-title">

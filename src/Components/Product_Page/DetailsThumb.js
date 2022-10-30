@@ -7,6 +7,7 @@ class DetailsThumb extends Component {
       <div className="thumb" ref={myRef}>
         {images.map((img, index) => (
           <img
+            alt="itemImage"
             src={img}
             key={index}
             onClick={() => {

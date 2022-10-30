@@ -28,14 +28,6 @@ const Profile = (props) => {
     PuchasedItemsArray = [];
   }
 
-  const [purchasedItemNumber, SetPurchasedItemNumber] = useState(
-    PuchasedItemsArray.length
-  );
-
-  const NumberOfItemsHandler = (ItemCounter) => {
-    SetPurchasedItemNumber(ItemCounter.length);
-  };
-
   return (
     <div className="Profile">
       <div className="Profile_Navigation">
@@ -141,7 +133,7 @@ const Profile = (props) => {
         </div>
       )}
       {navControl === "favoritesSection" && (
-        <Favorites NumberOfItemsHandler={NumberOfItemsHandler}></Favorites>
+        <Favorites Count={props.Count}></Favorites>
       )}
     </div>
   );

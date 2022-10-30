@@ -38,7 +38,7 @@
 .product-grid:hover .product-links {
   right: 10px;
 }
-.product-grid .product-links li a {
+.product-grid .product-links li .heartIco {
   color: black;
 
   font-size: 17px;
@@ -49,9 +49,10 @@
   align-items: center;
   justify-content: center;
   transition: all 0.1s ease-in-out;
+  cursor: pointer;
 }
 
-.product-grid .product-links li a:hover {
+.product-grid .product-links li .heartIco:hover {
   color: #abc9ff;
   transform: scale(1.5);
 }
@@ -70,6 +71,7 @@
   transition: all 0.1s ease-in-out;
   transition: background-image 2s ease-out 100ms;
   border-top: 2px solid rgb(0, 0, 0);
+  cursor: pointer;
 }
 .product-grid:hover .add-to-cart {
   bottom: 0;
