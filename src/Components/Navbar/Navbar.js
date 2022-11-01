@@ -1,5 +1,5 @@
-import "./Navbar.css";
-import { useUserContext } from "../context/userContext";
+import "../../Styles/Home_Page/Navbar/Navbar.css";
+import { useUserContext } from "../../Context/userContext";
 import InputForm from "./InputForm";
 import { CgProfile } from "react-icons/cg";
 import { AiOutlineShoppingCart } from "react-icons/ai";

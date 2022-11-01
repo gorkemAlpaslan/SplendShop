@@ -1,5 +1,5 @@
 import React from "react";
-import "./NavbarUnder.css";
+import "../../Styles/Home_Page/Navbar/NavbarUnder.css";
 
 const NavbarUnder = (props) => {
   const NavbarUnderItems = [

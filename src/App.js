@@ -1,16 +1,16 @@
 import { useState, useEffect } from "react";
-import Navbar from "./Components/Navbar_Components/Navbar";
 import "./App.css";
-import Product from "./Components/Product";
-import NavbarUnder from "./Components/Navbar_Components/NavbarUnder";
-import SignUp from "./Components/Profile_Page/SignUp";
+import Navbar from "./Components/Navbar/Navbar";
+import NavbarUnder from "./Components/Navbar/NavbarUnder";
+import Product from "./Components/Product_Card/Product";
+import SignUp from "./Pages/Profile/SignUp/SignUp";
+import ProductPage from "./Pages/Product_Page/ProductPage";
+import Purchase from "./Pages/Purchase/Purchase";
+import { useUserContext } from "./Context/userContext";
+import Profile from "./Pages/Profile/Profile/Profile";
 import { Route } from "react-router-dom";
 import Sidebar from "./Components/Sidebar/Sidebar";
-import ProductPage from "./Components/Product_Page/ProductPage";
-import Purchase from "./Components/Purchase/Purchase";
 import ItemList from "./ItemList";
-import { useUserContext } from "./Components/context/userContext";
-import Profile from "./Components/Profile_Page/Profile";
 import Adds from "./Components/Adds/Adds";
 import { Pagination, Stack } from "@mui/material";
 function App() {

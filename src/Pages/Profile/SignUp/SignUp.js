@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
-import { useUserContext } from "../context/userContext";
-import "./SignUp.css";
+import { useUserContext } from "../../../Context/userContext";
+import "../../../Styles/Profile_Page/SignUp.css";
 
 const SignUp = () => {
   const { registerUser, signInUser, error } = useUserContext();

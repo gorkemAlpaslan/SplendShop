@@ -1,8 +1,8 @@
 import React from "react";
-import "./ProductPage.css";
-import Colors from "./Colors";
-import DetailsThumb from "./DetailsThumb";
-import AddToCary from "../Functions/AddToCary";
+import "../../Styles/Product_Page/ProductPage.css";
+import Colors from "../../Components/Product_Page/Colors";
+import DetailsThumb from "../../Components/Product_Page/DetailsThumb";
+import AddToCary from "../../Components/Functions/AddToCary";
 
 class ProductPage extends React.Component {
   state = {

@@ -1,12 +1,12 @@
 import React from "react";
-import GifAdd from "../../gif_one_splendshop.gif";
-import AddOne from "../../AddTwoOne.jpg";
-import AddTwo from "../../AddTwoTwo.jpg";
-import AddThree from "../../AddTwoThree.jpg";
-import itemsforGif from "../../itemsforGif.png";
+import GifAdd from "../../Images/gif_one_splendshop.gif";
+import AddOne from "../../Images/AddTwoOne.jpg";
+import AddTwo from "../../Images/AddTwoTwo.jpg";
+import AddThree from "../../Images/AddTwoThree.jpg";
+import itemsforGif from "../../Images/itemsforGif.png";
 import { Navigation, Pagination, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "./Adds.css";
+import "../../Styles/Home_Page/Adds/Adds.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";

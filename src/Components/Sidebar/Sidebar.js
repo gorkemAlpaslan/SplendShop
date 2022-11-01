@@ -1,4 +1,4 @@
-import "./Sidebar.css";
+import "../.././Styles/Home_Page/Sidebar/Sidebar.css";
 import React, { useState } from "react";
 import Select from "react-select";
 import chroma from "chroma-js";

@@ -1,5 +1,5 @@
 import React from "react";
-import "./Orders.css";
+import "../../../Styles/Profile_Page/Orders/Orders.css";
 
 const Orders = (props) => {
   console.log(props.OrderedInfo);

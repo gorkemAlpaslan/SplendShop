@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./PrePayment.css";
+import "../.././Styles/Purchase_Page/PrePayment.css";
 import moment from "moment";
 
 const PrePayment = (props) => {

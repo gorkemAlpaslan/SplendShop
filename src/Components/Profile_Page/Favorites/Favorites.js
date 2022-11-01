@@ -1,5 +1,5 @@
 import { React, useState } from "react";
-import "./Favorites.css";
+import "../../../Styles/Profile_Page/Favorites/Favorites.css";
 
 import FavoriteItems from "./FavoriteItems";
 import FavoriteProducts from "./FavoriteProducts";

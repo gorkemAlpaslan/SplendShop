@@ -1,6 +1,6 @@
-import "./Product.css";
+import "../../Styles/Home_Page/Product/Product.css";
 import { FaHeart } from "react-icons/fa";
-import AddToCary from "./Functions/AddToCary";
+import AddToCary from "../Functions/AddToCary";
 import Rating from "@mui/material/Rating";
 
 const Product = (props) => {

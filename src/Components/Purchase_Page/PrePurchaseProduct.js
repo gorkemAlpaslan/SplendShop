@@ -1,5 +1,5 @@
 import React from "react";
-import "./PrePurchaseProduct.css";
+import "../.././Styles/Purchase_Page/PrePurchaseProduct.css";
 import { MdClose } from "react-icons/md";
 import { ImPlus, ImMinus } from "react-icons/im";
 

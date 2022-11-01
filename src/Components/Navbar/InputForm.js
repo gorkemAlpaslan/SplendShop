@@ -1,6 +1,6 @@
 import { useRef } from "react";
-import "./InputForm.css";
-import SearchButton from "./SearchButton.png";
+import "../../Styles/Home_Page/Navbar/InputForm.css";
+import SearchButton from "../../Images/SearchButton.png";
 
 const InputForm = (props) => {
   const SearchRef = useRef();

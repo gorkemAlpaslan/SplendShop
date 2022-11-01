@@ -1,9 +1,9 @@
 import React, { useRef, useState } from "react";
-import "./Profile.css";
-import { useUserContext } from "../context/userContext";
-import Orders from "./Orders";
+import "../../../Styles/Profile_Page/Profile.css";
+import { useUserContext } from "../../../Context/userContext";
+import Orders from "../../../Components/Profile_Page/Orders/Orders";
 import Button from "react-bootstrap/Button";
-import Favorites from "./Favorites/Favorites";
+import Favorites from "../../../Components/Profile_Page/Favorites/Favorites";
 
 const Profile = (props) => {
   const { logoutUser, user } = useUserContext();

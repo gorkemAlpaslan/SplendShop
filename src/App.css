@@ -78,7 +78,7 @@ html {
   height: 100%;
   opacity: 1;
   z-index: -1;
-  background-image: url(./login_background.jpg);
+  background-image: url(./Images/login_background.jpg);
   background-size: cover;
 }
 
