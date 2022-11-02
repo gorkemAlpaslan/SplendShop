@@ -39,7 +39,7 @@ const Product = (props) => {
   };
 
   return (
-    <div className="row">
+    <div>
       <div className="PerItemWrapper">
         <div className="product-grid">
           <div className="product-image">
@@ -52,7 +52,7 @@ const Product = (props) => {
             <ul className="product-links">
               <li>
                 <div className="heartIco" onClick={AddFavororitesHandler}>
-                  <FaHeart></FaHeart>
+                  <FaHeart className="hearts"></FaHeart>
                 </div>
               </li>
             </ul>
@@ -63,14 +63,20 @@ const Product = (props) => {
           <div className="product-content">
             <Rating
               name="read-only"
+              className="rateStars"
               value={props.Rate}
               readOnly
               precision={0.5}
-              size="small"
+              sx={{
+                fontSize: "2vh",
+                color: "#abc9ff",
+                margin: "0",
+                padding: "0",
+              }}
             />
-            <h3 className="title">
+            <div className="title">
               <a href={`/ProductPage/${props.refNum}`}>{props.title}</a>
-            </h3>
+            </div>
 
             <div className="price">
               {`$${props.price - props.price * props.discount} `}

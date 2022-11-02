@@ -1,5 +1,6 @@
 .search-container {
-  padding: 8px 8px;
+  height: 3vh;
+  padding: 0.8vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,7 +9,7 @@
 }
 
 .search-container:hover {
-  box-shadow: #abc9ff 0px 2px 0px;
+  box-shadow: #abc9ff 0vh 0.2vh 0vh;
 }
 
 .search-input::placeholder {
@@ -16,34 +17,34 @@
 }
 
 .search-btn {
-  padding-top: 3.5px;
+  padding-top: 0.35vh;
+  display: flex;
+  align-items: center;
 }
 
 .search-container:hover > .search-input {
-  font-size: 22px;
-  width: 400px;
+  font-size: 2.2vh;
+  width: 40vh;
 }
 
 .search-input:focus {
-  font-size: 22px;
-  width: 400px;
+  font-size: 2.2vh;
+  width: 40vh;
 }
 
 .search-input {
+  height: 3vh;
   background: transparent;
   border: none;
   outline: none;
-  width: 0px;
+  width: 0vh;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 1.8vh;
   transition: all 0.7s ease-in-out;
   color: white;
 }
 
 .Search_Button {
-  width: 21px;
-  height: 21px;
-  margin-left: -4px;
-  margin-top: -3px;
-  margin-bottom: -3px;
+  width: 2.1vh;
+  height: 2.1vh;
 }

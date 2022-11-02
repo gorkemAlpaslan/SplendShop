@@ -3,29 +3,31 @@
   flex-direction: column;
   height: 100%;
   background-color: white;
+  font-size: 2vh;
 }
 
 .Payment_Summary_Title {
-  margin: 10px;
+  margin: 0.1vh;
 }
 
 .Product_Total_Prices {
   font-size: medium;
-  margin: 0px 14px;
-  margin-bottom: 20px;
-  padding: 8px;
-  box-shadow: #000000 0px 10px 10px -10px;
+  margin: 0vh 1.4vh;
+  margin-bottom: 2vh;
+  padding: 0.8vh;
+  box-shadow: #000000 0vh 1vh 1vh -1vh;
 }
 
 .Each_Item_Wraper {
-  margin: 20px 0px;
+  margin: 2vh 0vh;
+  font-size: 1.6vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .Each_Item_Title {
-  max-width: 200px;
+  max-width: 20vh;
 }
 
 .Each_Item_Prices {
@@ -38,15 +40,15 @@
 }
 
 .Total {
-  margin: 0px 22px;
-  font-size: larger;
+  margin: 0vh 2.2vh;
+
   font-weight: 700;
 }
 
 .Total_Price {
-  margin-right: 20px;
+  margin-right: 2vh;
   font-weight: 800;
-  font-size: large;
+  font-size: 1.6vh;
   color: #abc9ff;
 }
 
@@ -56,15 +58,15 @@
 
 .Payment_Button {
   align-self: flex-end;
-  margin: 20px;
-  width: 80px;
-  height: 40px;
+  margin: 2vh;
+  width: 8vh;
+  height: 4vh;
   background-image: linear-gradient(to right, #434343 0%, black 100%);
 
   transition: all 0.2s ease-in-out;
   border: none;
   color: white;
-  font-size: 20px;
+  font-size: 2vh;
 
   cursor: pointer;
 }

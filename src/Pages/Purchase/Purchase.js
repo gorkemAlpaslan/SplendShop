@@ -189,7 +189,20 @@ const Purchase = (props) => {
                 ref={AddAdressDeliveryAdress}
                 placeholder="Adress"
               ></textarea>
-              <Button variant="outlined" onClick={AddAdressHandler}>
+
+              <Button
+                variant="outlined"
+                className="AdressAddButton"
+                onClick={AddAdressHandler}
+                style={{
+                  maxWidth: "18vh",
+                  maxHeight: "3vh",
+                  minWidth: "18vh",
+                  minHeight: "3vh",
+                  fontSize: "1.4vh",
+                  border: ".2vh solid #abc9ff",
+                }}
+              >
                 Add New Adress
               </Button>
             </div>
@@ -211,6 +224,11 @@ const Purchase = (props) => {
                       color: blue[800],
                       "&.Mui-checked": {
                         color: blue[400],
+                      },
+                      "& .MuiSvgIcon-root": {
+                        fontSize: "3vh",
+                        margin: 0,
+                        padding: 0,
                       },
                     }}
                   />

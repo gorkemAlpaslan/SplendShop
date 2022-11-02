@@ -39,11 +39,25 @@ const PrePurchaseProduct = (props) => {
           </div>
           <div className="Purchase_Item_Count">
             <ImMinus
+              style={{
+                maxWidth: "2vh",
+                maxHeight: "2vh",
+                minWidth: "2vh",
+                minHeight: "2vh",
+                fontSize: "1.4vh",
+              }}
               className="Button_Cut Count_Button"
               onClick={SubCount}
             ></ImMinus>
             <div className="Count">{props.Count}</div>
             <ImPlus
+              style={{
+                maxWidth: "2vh",
+                maxHeight: "2vh",
+                minWidth: "2vh",
+                minHeight: "2vh",
+                fontSize: "1.4vh",
+              }}
               className="Button_Add Count_Button"
               onClick={AddCount}
             ></ImPlus>
@@ -55,6 +69,13 @@ const PrePurchaseProduct = (props) => {
         <p className="each">/ea</p>
       </div>
       <MdClose
+        style={{
+          maxWidth: "2vh",
+          maxHeight: "2vh",
+          minWidth: "2vh",
+          minHeight: "2vh",
+          fontSize: "1.4vh",
+        }}
         className="Product_Purchase_Card_Button"
         onClick={PurchaseCancle}
       ></MdClose>

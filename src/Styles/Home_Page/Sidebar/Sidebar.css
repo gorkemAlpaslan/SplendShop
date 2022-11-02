@@ -16,25 +16,13 @@
 }
 
 .unwrap {
-  width: 343px;
+  width: 34.3vh;
   height: auto;
   justify-content: center;
-  border-top: 1px solid #212121;
-  padding-bottom: 20px;
-}
-
-.dropdown {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-}
-
-.button {
-  margin: 10px;
+  padding-bottom: 2vh;
 }
 
 .addThird {
-  margin-top: 100px;
-  width: 280px;
+  margin-top: 10vh;
+  width: 28vh;
 }

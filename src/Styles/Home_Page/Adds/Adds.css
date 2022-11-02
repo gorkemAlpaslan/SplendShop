@@ -1,29 +1,28 @@
 .AddsWrapper {
-  width: 1550px;
-  margin-top: 20px;
-  margin-bottom: 50px;
+  width: 155vh;
+  margin-top: 2vh;
+  margin-bottom: 5vh;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 .swiper {
-  margin-left: 0px !important;
-  margin-right: 54px !important;
+  margin-left: 0vh !important;
+  margin-right: 5.4vh !important;
 }
 .addTwo {
-  width: 343px;
-  height: 343px;
-
-  margin-left: 0px;
+  width: 34.3vh;
+  height: 34.3vh;
+  margin-left: 0vh;
 }
 .addTwoPngs {
-  width: 343px;
+  width: 34.3vh;
 }
 .addGif {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 1130px;
+  width: 113vh;
 }
 .gif-photo {
   position: absolute;

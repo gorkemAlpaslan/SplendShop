@@ -1,16 +1,16 @@
 .Purchase_Page {
   display: flex;
   flex-direction: row;
-  width: 1800px;
-  min-height: 900px;
+  width: 180vh;
+  min-height: 90vh;
   justify-content: space-evenly;
-  margin: 30px;
+  margin: 3vh;
 }
 
 .Purchase_Page_Wrapper {
   width: 70%;
-  padding-right: 50px;
-  border-right: 2px solid black;
+  padding-right: 5vh;
+  border-right: 0.2vh solid black;
 }
 
 .Purchase_Items {
@@ -25,21 +25,22 @@
   flex-direction: row;
   justify-content: center;
   align-items: baseline;
-  margin-bottom: 50px;
+  margin-bottom: 5vh;
+  font-size: 3vh;
 }
 
 .TitleAdress {
-  box-shadow: #abc9ff 0px 20px 20px -20px;
+  box-shadow: #abc9ff 0vh 2vh 2vh -2vh;
 }
 
 .TitleProduct {
-  box-shadow: #abc9ff 0px 20px 20px -20px;
+  box-shadow: #abc9ff 0vh 2vh 2vh -2vh;
 }
 
 .Title h2 {
-  font-size: 22px;
+  font-size: 2.2vh;
   font-weight: 600;
-  margin-right: 10px;
+  margin-right: 1vh;
 }
 
 .Pre_Purchase_Wrapper {
@@ -49,27 +50,28 @@
 }
 
 .Add_New_Adresses {
-  width: 360px;
-  height: 160px;
-  margin: 10px;
+  width: 36vh;
+  height: 16vh;
+  margin: 1vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   transition: all 0.1s ease-in-out;
   position: relative;
-  border: 1px dashed #000000;
+  border: 0.1vh dashed #000000;
   background-color: white;
 }
 
 .AddAdressHolder {
+  font-size: 2vh;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 2;
   opacity: 1;
-  width: 360px;
-  height: 160px;
+  width: 36vh;
+  height: 16vh;
   background-color: white;
   cursor: pointer;
 }
@@ -83,25 +85,26 @@
 }
 
 .Add_New_Adresses .Adress_Title_Input {
+  font-size: 1.5vh;
   position: absolute;
-  top: 10px;
-  left: 10px;
-  height: 20px;
+  top: 1vh;
+  left: 1vh;
+  height: 2vh;
   border: none;
-  box-shadow: #abc8ffb6 0px 1px 3px 0px, #abc8ffaf 0px 0px 0px 1px;
+  box-shadow: #abc8ffb6 0vh 0.1vh 0.3vh 0vh, #abc8ffaf 0vh 0vh 0vh 0.1vh;
 }
 .Add_New_Adresses .Adress_Title_Input:focus {
   outline: none;
   background-color: #b9b9b918;
-  box-shadow: #abc9ff 0px 1px 3px 0px, #abc9ff 0px 0px 0px 1px;
+  box-shadow: #abc9ff 0vh 0.2vh 0.4vh 0vh, #abc9ff 0vh 0vh 0vh 0.2vh;
 }
 
 .CancleAddAdress {
-  width: 20px;
-  height: 20px;
+  width: 2vh;
+  height: 2vh;
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 0.5vh;
+  right: 0.5vh;
   cursor: pointer;
   transition: all 0.1s ease-in-out;
 }
@@ -111,28 +114,29 @@
   color: #abc9ff;
 }
 .Add_New_Adresses .Adress_Input {
-  width: 330px;
-  height: 60px;
+  width: 32vh;
+  height: 6vh;
+  padding: 1vh;
+  font-size: 1.3vh;
   position: absolute;
-  left: 10px;
-  top: 40px;
+  left: 1vh;
+  top: 4vh;
   border: none;
   resize: none;
   word-wrap: break-word;
-
-  box-shadow: #abc8ffb6 0px 1px 3px 0px, #abc8ffaf 0px 0px 0px 1px;
+  box-shadow: #abc8ffb6 0vh 0.1vh 0.3vh 0vh, #abc8ffaf 0vh 0vh 0vh 0.1vh;
 }
 .Add_New_Adresses .Adress_Input:focus {
   background-color: #b9b9b918;
   outline: none;
-  box-shadow: #abc9ff 0px 1px 3px 0px, #abc9ff 0px 0px 0px 1px;
+  box-shadow: #abc9ff 0vh 0.2vh 0.4vh 0vh, #abc9ff 0vh 0vh 0vh 0.2vh;
 }
 
 .Add_New_Adresses button {
   position: absolute;
-  bottom: 8px;
+  bottom: 0.5vh;
   color: #abc9ff;
-  font-size: 11px;
+  padding: 1vh;
   border-color: #abc9ff;
   background-color: #ffffff;
 }
@@ -150,40 +154,45 @@
 }
 
 .Saved_Adresses {
-  width: 360px;
-  height: 160px;
-  margin: 20px;
+  width: 36vh;
+  height: 16vh;
+  margin: 2vh;
+  font-size: 1.5vh;
   position: relative;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   color: #000000;
   background-color: rgb(231, 231, 231);
-  box-shadow: #abc9ff 0px 20px 20px -20px;
+  box-shadow: #abc9ff 0vh 2vh 2vh -2vh;
 }
 
 .Saved_Adresses:hover {
-  box-shadow: #abc9ff 2.4px 2.4px 3.2px;
+  box-shadow: #abc9ff 0.24vh 0.24vh 0.32vh;
   transform: scale(1.05);
 }
 
 .Saved_Adresses h5 {
-  margin-top: 6px;
-  padding: 0px 10px;
+  margin-top: 0.6vh;
+  padding: 0vh 1vh;
 }
 
 .Saved_Adresses p {
-  width: 330px;
-  height: 70px;
-  font-size: 14px;
-  padding: 8px;
+  width: 33vh;
+  height: 7vh;
+  font-size: 1.4vhx;
+  padding: 0.8vh;
   word-wrap: break-word;
   overflow: hidden;
 }
 
 .Saved_Adresses .Checkbox {
+  width: 2vh;
+  height: 2vh;
+  margin: 1vh;
+  padding: 0;
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: 0vh;
+  right: 0vh;
 }
 
 .Purchase_Favs {
@@ -195,13 +204,13 @@
 .Payment_Wrapper {
   width: 20%;
   height: auto;
-  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
-    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
-    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
-    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
-    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-  margin: 0px 10px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0vh -2.3vh 2.5vh 0vh inset,
+    rgba(0, 0, 0, 0.15) 0vh -3.6vh 3vh 0vh inset,
+    rgba(0, 0, 0, 0.1) 0vh -7.9vh 4vh 0vh inset, rgba(0, 0, 0, 0.06) 0vh 2vh 1vh,
+    rgba(0, 0, 0, 0.09) 0vh 4vh 2vh, rgba(0, 0, 0, 0.09) 0vh 8vh 4vh,
+    rgba(0, 0, 0, 0.09) 0vh 1.6vh 0.8vh, rgba(0, 0, 0, 0.09) 0vh 3.2vh 1.6vh;
+  margin: 0vh 1vh;
   position: sticky;
-  top: 20px;
+  top: 2vh;
   align-self: flex-start;
 }

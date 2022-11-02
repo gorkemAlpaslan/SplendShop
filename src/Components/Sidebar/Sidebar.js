@@ -3,19 +3,12 @@ import React, { useState } from "react";
 import Select from "react-select";
 import chroma from "chroma-js";
 import Button from "@mui/material/Button";
-import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
 const Sidebar = (props) => {
   const [Category, SetCategory] = useState("Any");
   const [Gender, SetGender] = useState("Any");
   const [Size, SetSize] = useState("Any");
   const [color, SetColor] = useState([]);
-
-  const [isCategoryActive, SetIsCategoryActive] = useState(false);
-  const [isGenderActive, SetIsGenderActive] = useState(false);
-  const [isSizeActive, SetIsSizeActive] = useState(false);
-  const [isColorActive, SetIsColorActive] = useState(false);
 
   const CategoryOptions = [
     { value: "Any", label: "Any" },
@@ -54,8 +47,54 @@ const Sidebar = (props) => {
     { value: "silver", label: "Silver", color: "#666666" },
   ];
 
+  const customStyles = {
+    menu: (provided, state) => ({
+      ...provided,
+      width: "32vh",
+      fontSize: "1.3vh",
+      textAlign: "center",
+    }),
+
+    control: (_, { selectProps: { width } }) => ({
+      width: "34vh",
+      height: "2vh",
+      display: "flex",
+      alignItems: "center",
+      borderBottom: ".1vh solid black",
+      fontSize: "1.3vh",
+      padding: "0.4vh",
+    }),
+    indicatorsContainer: (provided, state) => ({
+      ...provided,
+      width: "2vh",
+      height: "2vh",
+    }),
+    dropdownIndicator: (provided, state) => ({
+      display: "none",
+    }),
+  };
+
   const colourStyles = {
-    control: (styles) => ({ ...styles, backgroundColor: "white" }),
+    menu: (provided, state) => ({
+      ...provided,
+      width: "32vh",
+      fontSize: "1.3vh",
+      textAlign: "center",
+    }),
+
+    dropdownIndicator: (provided, state) => ({
+      display: "none",
+    }),
+
+    control: (_, { selectProps: { width } }) => ({
+      width: "34vh",
+      height: "2vh",
+      display: "flex",
+      alignItems: "center",
+      borderBottom: ".1vh solid black",
+      fontSize: "1.3vh",
+      padding: "0.4vh",
+    }),
     option: (styles, { data, isDisabled, isFocused, isSelected }) => {
       const color = chroma(data.color);
       return {
@@ -111,121 +150,61 @@ const Sidebar = (props) => {
     <div className="Side-Card">
       <div className="Sidebar-Inner-Wrapper">
         <div className="unwrap">
-          <div className="dropdown">
-            <h3>Category :</h3>
-            {isCategoryActive ? (
-              <ArrowDropUpIcon
-                onClick={() => {
-                  SetIsCategoryActive(!isCategoryActive);
-                }}
-              />
-            ) : (
-              <ArrowDropDownIcon
-                onClick={() => {
-                  SetIsCategoryActive(!isCategoryActive);
-                }}
-              />
-            )}
-          </div>
-          {isCategoryActive && (
-            <Select
-              options={CategoryOptions}
-              onChange={(e) => {
-                SetCategory(e.value);
-              }}
-            />
-          )}
+          <Select
+            placeholder="Category"
+            styles={customStyles}
+            options={CategoryOptions}
+            onChange={(e) => {
+              SetCategory(e.value);
+            }}
+          />
         </div>
         <div className="unwrap">
-          <div className="dropdown">
-            <h3>Gender :</h3>
-            {isGenderActive ? (
-              <ArrowDropUpIcon
-                onClick={() => {
-                  SetIsGenderActive(!isGenderActive);
-                }}
-              />
-            ) : (
-              <ArrowDropDownIcon
-                onClick={() => {
-                  SetIsGenderActive(!isGenderActive);
-                }}
-              />
-            )}
-          </div>
-          {isGenderActive && (
-            <Select
-              options={GenderOptions}
-              onChange={(e) => {
-                SetGender(e.value);
-              }}
-            />
-          )}
+          <Select
+            placeholder="Gender"
+            styles={customStyles}
+            options={GenderOptions}
+            onChange={(e) => {
+              SetGender(e.value);
+            }}
+          />
         </div>
         <div className="unwrap">
-          <div className="dropdown">
-            <h3>Size :</h3>
-            {isSizeActive ? (
-              <ArrowDropUpIcon
-                onClick={() => {
-                  SetIsSizeActive(!isSizeActive);
-                }}
-              />
-            ) : (
-              <ArrowDropDownIcon
-                onClick={() => {
-                  SetIsSizeActive(!isSizeActive);
-                }}
-              />
-            )}
-          </div>
-          {isSizeActive && (
-            <Select
-              options={SizeOptions}
-              onChange={(e) => {
-                SetSize(e.value);
-              }}
-            />
-          )}
+          <Select
+            placeholder="Size"
+            styles={customStyles}
+            options={SizeOptions}
+            onChange={(e) => {
+              SetSize(e.value);
+            }}
+          />
         </div>
         <div className="unwrap">
-          <div className="dropdown">
-            <h3>Color :</h3>
-            {isColorActive ? (
-              <ArrowDropUpIcon
-                onClick={() => {
-                  SetIsColorActive(!isColorActive);
-                }}
-              />
-            ) : (
-              <ArrowDropDownIcon
-                onClick={() => {
-                  SetIsColorActive(!isColorActive);
-                }}
-              />
-            )}
-          </div>
-          {isColorActive && (
-            <Select
-              closeMenuOnSelect={false}
-              isMulti
-              options={ColourOptions}
-              styles={colourStyles}
-              onChange={(e) => {
-                let color = [];
-                for (let a = 0; a < e.length; a++) {
-                  color.push(e[a].value);
-                }
-                SetColor(color);
-              }}
-            />
-          )}
+          <Select
+            placeholder="Colour"
+            closeMenuOnSelect={false}
+            styles={colourStyles}
+            isMulti
+            options={ColourOptions}
+            onChange={(e) => {
+              let color = [];
+              for (let a = 0; a < e.length; a++) {
+                color.push(e[a].value);
+              }
+              SetColor(color);
+            }}
+          />
         </div>
       </div>
       <div className="button">
         <Button
           variant="contained"
           color="success"
+          sx={{
+            width: "12vh",
+            fontSize: "2vh",
+            height: "4vh",
+          }}
           onClick={() => {
             props.FilterItem({
               category: Category,
