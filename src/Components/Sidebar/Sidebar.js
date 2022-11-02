@@ -203,7 +203,7 @@ const Sidebar = (props) => {
           sx={{
             width: "12vh",
             fontSize: "2vh",
-            height: "4vh",
+            height: "3vh",
           }}
           onClick={() => {
             props.FilterItem({

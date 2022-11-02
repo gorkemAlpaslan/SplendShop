@@ -2,13 +2,16 @@ html {
   overflow-y: scroll;
 }
 
+.Card {
+  width: 188vh;
+}
+
 * {
   font-family: "Inter";
 }
 
 .Page-Navbar-Wrapper {
   width: 100%;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,15 +39,15 @@ html {
   width: 100%;
   height: 100%;
   opacity: 0.65;
-  filter: blur(1.5px);
-  -webkit-filter: blur(15px);
+  filter: blur(0.15vh);
+  -webkit-filter: blur(0.15vh);
   z-index: -1;
   background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 }
 
 .Navbar {
   width: 180vh;
-  height: 10vh;
+  height: 8vh;
 }
 
 .Items-List {
@@ -66,8 +69,8 @@ html {
   display: flex;
   justify-content: center;
   width: 100%;
-  min-height: 900px;
-  padding-top: 70px;
+  min-height: 90vh;
+  padding-top: 7vh;
 }
 
 .Login-Wrapper::before {
@@ -98,11 +101,11 @@ html {
   display: flex;
   justify-content: center;
   height: auto;
-  min-height: 848px;
+  min-height: 84.8vh;
 }
 
 .ProductPageWraper {
   width: 100%;
-  height: 830px;
-  padding: 1px 1px;
+  height: 83vh;
+  padding: 0.1vh 0.1vh;
 }

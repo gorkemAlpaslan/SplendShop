@@ -130,7 +130,7 @@
   font-weight: 400;
   text-decoration: line-through;
 }
-@media screen and (max-width: 99vh) {
+@media screen and (max-width: 990px) {
   .product-grid {
     margin-bottom: 3vh;
   }
@@ -143,6 +143,7 @@
 }
 
 .PerItemWrapper {
+  width: 26vh;
   height: 52vh;
   border: 0.2vh solid #abc9ff;
   margin: 1vh 1vh;

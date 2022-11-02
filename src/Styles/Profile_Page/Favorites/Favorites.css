@@ -1,7 +1,7 @@
 .Favorites {
-  width: 1400px;
+  width: 140vh;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  min-height: 848px;
+  min-height: 84.8vh;
 }

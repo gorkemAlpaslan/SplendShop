@@ -6,10 +6,10 @@
 }
 
 .FavContainer {
-  border: 1px solid black;
-  margin: 20px 16.5px;
+  border: 0.1vh solid black;
+  margin: 2vh 1.65vh;
   transition: all 0.1s ease-in-out;
-  max-width: 200px;
+  max-width: 20vh;
 }
 
 .FavContainer:hover {
@@ -43,12 +43,12 @@
 .FavInnerContainer .fav-product-discount-label {
   color: #fff;
   background-color: #abc9ff;
-  font-size: 17px;
+  font-size: 1.7vh;
   font-weight: 600;
-  line-height: 25px;
-  padding: 0 20px;
+  line-height: 2.5vh;
+  padding: 0vh 2vh;
   position: absolute;
-  top: 10px;
+  top: 1vh;
   left: 0;
 }
 .FavInnerContainer .fav-product-links {
@@ -56,21 +56,21 @@
   margin: 0;
   list-style: none;
   position: absolute;
-  top: 10px;
-  right: -50px;
+  top: 1vh;
+  right: -5vh;
   transition: all 0.5s ease 0s;
 }
 .FavInnerContainer:hover .fav-product-links {
-  right: 10px;
+  right: 1vh;
 }
 .FavInnerContainer .fav-product-links li .heartIco {
   color: white;
   background: transparent;
-  font-size: 11px;
-  line-height: 38px;
-  width: 26px;
-  height: 26px;
-  border: 1px solid #333;
+  font-size: 1.1vh;
+  line-height: 3.8vh;
+  width: 2.6vh;
+  height: 2.6vh;
+  border: 0.1vh solid #333;
   border-bottom: none;
   display: flex;
   align-items: center;
@@ -80,7 +80,7 @@
   background-image: linear-gradient(to right, #212121 0%, black 100%);
 }
 .FavInnerContainer .fav-product-links li:last-child .heartIco {
-  border-bottom: 1px solid #333;
+  border-bottom: 0.1vh solid #333;
 }
 .FavInnerContainer .fav-product-links li .heartIco:hover {
   color: #abc9ff;
@@ -90,19 +90,19 @@
   cursor: pointer;
   background-image: linear-gradient(to right, #434343 0%, black 100%);
   color: #fff;
-  font-size: 11px;
+  font-size: 1.1vh;
   font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 0.2vh;
   width: 100%;
-  padding: 6px 00px;
+  padding: 0.6vh 00vh;
   position: absolute;
   left: 0;
-  bottom: -60px;
+  bottom: -6vh;
   transition: all 0.1s ease 0s;
 }
 .FavInnerContainer:hover .fav-add-to-cart {
-  bottom: 0;
+  bottom: 0vh;
 }
 .FavInnerContainer .fav-add-to-cart:hover {
   background-image: none;
@@ -111,20 +111,20 @@
 }
 .FavInnerContainer .fav-product-content {
   background: #fff;
-  padding: 15px;
+  padding: 1.5vh;
 
-  border-top: #212121 2px solid;
+  border-top: #212121 0.2vh solid;
 }
 .FavInnerContainer:hover .fav-product-content {
-  border-top: #abc9ff 2px solid;
+  border-top: #abc9ff 0.2vh solid;
 }
 .FavInnerContainer .fav-title {
-  font-size: 14px;
+  font-size: 1.4vh;
   font-weight: 600;
   text-transform: capitalize;
-  margin: 0 0 7px;
-  max-width: 224px;
-  height: 40px;
+  margin: 0 0 0.7vh;
+  max-width: 22.4vh;
+  height: 4vh;
 }
 .FavInnerContainer .fav-title a {
   color: #777;
@@ -135,17 +135,17 @@
 }
 .FavInnerContainer .price {
   color: #0d0d0d;
-  font-size: 14px;
+  font-size: 1.4vh;
   font-weight: 600;
 }
 .FavInnerContainer .price span {
   color: #888;
-  font-size: 13px;
+  font-size: 1.3vh;
   font-weight: 400;
   text-decoration: line-through;
 }
 @media screen and (max-width: 990px) {
   .FavInnerContainer {
-    margin-bottom: 30px;
+    margin-bottom: 3vh;
   }
 }

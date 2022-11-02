@@ -1,27 +1,27 @@
 .OrderWraper * {
-  font-size: 14px;
+  font-size: 1.4vh;
 }
 
 .OrderWraper {
-  border-radius: 4px;
+  border-radius: 0.4vh;
   display: flex;
   flex-direction: column;
   background-color: rgb(255, 255, 255);
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
-  margin: 10px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0vh 0vh 0vh 0.1vh;
+  margin: 1vh;
 }
 
 .OrderItemHead {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0vh 0vh 0vh 0.1vh;
 }
 
 .OrderItemDetails {
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 1vh;
 }
 
 .OrderItemDetails p {
@@ -36,16 +36,16 @@
 }
 
 .Price {
-  font-size: 24px;
+  font-size: 2.4vh;
   font-weight: 800;
   color: #abc9ff;
 }
 
 .miniImage {
-  width: 67.2px;
-  height: 100.5px;
-  box-shadow: #abc9ff 0px 0px 0px 1px;
-  margin-right: 10px;
+  width: 6.72vh;
+  height: 10.05vh;
+  box-shadow: #abc9ff 0vh 0vh 0vh 0.1vh;
+  margin-right: 1vh;
 }
 
 .OrderImages {
@@ -56,8 +56,8 @@
 .OrderImagesWithPcs {
   width: fit-content;
   position: relative;
-  padding: 12px;
-  margin: 4px;
+  padding: 1.2vh;
+  margin: 0.4vh;
   transition: all 0.2s ease-in-out;
 }
 
@@ -68,8 +68,8 @@
 .AmountOfItems {
   color: #abc9ff;
   font-weight: bolder;
-  font-size: 14px;
-  bottom: -2px;
+  font-size: 1.4vh;
+  bottom: -0.2vh;
   position: absolute;
   z-index: 1;
 }

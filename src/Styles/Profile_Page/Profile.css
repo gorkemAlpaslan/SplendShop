@@ -1,24 +1,26 @@
 .Profile {
   display: flex;
   flex-direction: column;
-  width: 1400px;
-  min-height: 730px;
+  width: 140vh;
+  min-height: 73vh;
 }
 
 .Profile_Navigation {
-  padding: 20px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  padding: 2vh;
+  display: flex;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0vh 0.4vh 1.2vh;
   background-color: rgb(255, 255, 255);
 }
 
 .Profile button {
-  border: 1px solid white;
+  border: 0.1vh solid white;
   background-color: #212121;
   color: white;
-  font-size: 12px;
+  font-size: 1.2vh;
   font-weight: bold;
-  padding: 12px 45px;
-  letter-spacing: 1px;
+  padding: 1.2vh 4.5vh;
+  letter-spacing: 0.1vh;
   text-transform: uppercase;
   transition: transform 80ms ease-in;
 }
@@ -35,74 +37,75 @@
 }
 
 .AccountInformation {
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0vh 0vh 0vh 0.1vh;
   background-color: rgb(255, 255, 255);
-  margin-top: 20px;
+  margin-top: 2vh;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  width: 1400px;
+  width: 140vh;
 }
 
 .main-profile-info {
-  width: 400px;
+  width: 40vh;
   align-items: center;
   justify-content: center;
-  height: 300px;
+  height: 30vh;
 }
 
 .main-profile-info,
 .profile-settings {
   display: flex;
   flex-direction: column;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
-  font-size: 12px;
-  margin: 10px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0vh 0vh 0vh 0.1vh;
+  font-size: 1.2vh;
+  margin: 1vh;
 }
 
 .profile-image {
-  width: 80px;
+  width: 8vh;
 }
 
 .profile-settings {
   width: 85%;
-  height: 780px;
+  height: 78vh;
   justify-content: flex-start;
 }
 
 .profile-settings p {
   align-self: center;
-  padding-bottom: 20px;
+  padding-bottom: 2vh;
 }
 
 .profile-settings .bar {
   width: 90%;
   display: flex;
   flex-direction: column;
-  margin: 12px 20px;
+  margin: 1.2vh 2vh;
 }
 
 .profile-settings input {
-  border-radius: 2px;
-  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
-    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border-radius: 0.2vh;
+  box-shadow: rgba(0, 0, 0, 0.02) 0vh 0.1vh 0.3vh 0vh,
+    rgba(27, 31, 35, 0.15) 0vh 0vh 0vh 0.1vh;
   border: none;
-  padding: 6px 8px;
-  margin: 8px 0;
+  padding: 0.6vh 0.8vh;
+  margin: 0.8vh 0;
   width: 100%;
+  font-size: 2vh;
 }
 
 .profile-settings input:focus,
 .profile-settings input:active {
   outline: none;
-  box-shadow: #abc9ff 0px 1px 3px 0px, #abc9ff 0px 0px 0px 1px;
+  box-shadow: #abc9ff 0vh 0.1vh 0.3vh 0vh, #abc9ff 0vh 0vh 0vh 0.1vh;
 }
 
 .double-input {
   display: flex;
   justify-content: space-between;
   width: 70%;
-  margin: 8px 20px;
+  margin: 0.8vh 2vh;
 }
 
 .profile-settings button {

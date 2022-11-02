@@ -17,7 +17,7 @@
   position: relative;
   cursor: pointer;
   z-index: 10000000000;
-  margin: 0.1vh 0vh;
+  margin: 2vh 0vh;
 }
 
 .Navbar-Under-Item:hover {

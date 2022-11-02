@@ -45,13 +45,13 @@ class ProductPage extends React.Component {
             </div>
             <div className="box">
               <div className="row">
-                <h2>{item.title}</h2>
+                <div className="product-title">{item.title}</div>
                 <span>${item.price}</span>
               </div>
               <Colors colors={item.colors}></Colors>
 
-              <p>{item.description}</p>
-              <p>{item.content}</p>
+              <div className="product-desc">{item.description}</div>
+              <div className="product-cont">{item.content}</div>
               <DetailsThumb
                 images={item.src}
                 tab={this.handleTab}
