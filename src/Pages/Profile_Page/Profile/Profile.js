@@ -1,9 +1,9 @@
 import React, { useRef, useState } from "react";
 import "../../../Styles/Profile_Page/Profile.css";
 import { useUserContext } from "../../../Context/userContext";
-import Orders from "../../../Components/Profile_Page/Orders/Orders";
+import EachOrder from "../../../Components/Profile_Components/Orders_Component/EachOrder";
 import Button from "react-bootstrap/Button";
-import Favorites from "../../../Components/Profile_Page/Favorites/Favorites";
+import Favorites from "../../../Components/Profile_Components/Favorites/Favorites";
 
 const Profile = (props) => {
   const { logoutUser, user } = useUserContext();
@@ -127,7 +127,7 @@ const Profile = (props) => {
         <div className="prev.orders">
           <div className="OrderedItems">
             {OrderList.map((Item) => {
-              return <Orders OrderedInfo={Item}></Orders>;
+              return <EachOrder OrderedInfo={Item}></EachOrder>;
             })}
           </div>
         </div>

@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import "./App.css";
-import Navbar from "./Components/Navbar/Navbar";
-import NavbarUnder from "./Components/Navbar/NavbarUnder";
-import Product from "./Components/Product_Card/Product";
-import SignUp from "./Pages/Profile/SignUp/SignUp";
+import Navbar from "./Components/Navbar_Components/Navbar";
+import NavbarUnder from "./Components/Navbar_Components/NavbarUnder";
+import ProductCard from "./Components/Product_Card/ProductCard";
+import SignUp from "./Pages/Profile_Page/SignUp/SignUp";
 import ProductPage from "./Pages/Product_Page/ProductPage";
-import Purchase from "./Pages/Purchase/Purchase";
+import Purchase from "./Pages/Purchase_Page/Purchase";
 import { useUserContext } from "./Context/userContext";
-import Profile from "./Pages/Profile/Profile/Profile";
+import Profile from "./Pages/Profile_Page/Profile/Profile";
 import { Route } from "react-router-dom";
 import Sidebar from "./Components/Sidebar/Sidebar";
 import ItemList from "./ItemList";
@@ -129,7 +129,7 @@ function App() {
             </div>
             <div className="Items-List">
               {DisplayList.map((Item) => (
-                <Product
+                <ProductCard
                   ProductDetails={Item}
                   title={Item.title}
                   price={Item.price}
@@ -140,7 +140,7 @@ function App() {
                   discount={Item.discount}
                   Rate={Item.itemRate}
                   NumberOfItemsHandler={NumberOfItemsHandler}
-                ></Product>
+                ></ProductCard>
               ))}
             </div>
           </div>

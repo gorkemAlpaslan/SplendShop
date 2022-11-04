@@ -1,10 +1,9 @@
 import React, { useRef, useState } from "react";
 import "../../Styles/Purchase_Page/Purchase.css";
-import "../../Components/Purchase_Page/PrePurchaseProduct";
-import PrePurchaseProduct from "../../Components/Purchase_Page/PrePurchaseProduct";
+import PrePurchaseProduct from "../../Components/Purchase_Components/PrePurchaseProduct";
 import Checkbox from "@mui/material/Checkbox";
 import { blue } from "@mui/material/colors";
-import PrePayment from "../../Components/Purchase_Page/PrePayment";
+import PrePayment from "../../Components/Purchase_Components/PrePayment";
 import Button from "@mui/material/Button";
 import { MdClose } from "react-icons/md";
 

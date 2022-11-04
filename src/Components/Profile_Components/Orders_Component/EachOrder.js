@@ -1,7 +1,7 @@
 import React from "react";
 import "../../../Styles/Profile_Page/Orders/Orders.css";
 
-const Orders = (props) => {
+const EachOrder = (props) => {
   console.log(props.OrderedInfo);
 
   let ItemPcs = 0;
@@ -57,4 +57,4 @@ const Orders = (props) => {
   );
 };
 
-export default Orders;
+export default EachOrder;

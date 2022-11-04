@@ -3,7 +3,7 @@ import { FaHeart } from "react-icons/fa";
 import AddToCary from "../Functions/AddToCary";
 import Rating from "@mui/material/Rating";
 
-const Product = (props) => {
+const ProductCard = (props) => {
   let discountHandler = false;
 
   if (props.discount > 0) {
@@ -91,4 +91,4 @@ const Product = (props) => {
   );
 };
 
-export default Product;
+export default ProductCard;

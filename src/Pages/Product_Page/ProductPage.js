@@ -1,7 +1,7 @@
 import React from "react";
 import "../../Styles/Product_Page/ProductPage.css";
-import Colors from "../../Components/Product_Page/Colors";
-import DetailsThumb from "../../Components/Product_Page/DetailsThumb";
+import Colors from "../../Components/Product_Components/Colors";
+import DetailsThumb from "../../Components/Product_Components/DetailsThumb";
 import AddToCary from "../../Components/Functions/AddToCary";
 
 class ProductPage extends React.Component {
