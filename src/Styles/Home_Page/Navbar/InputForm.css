@@ -23,13 +23,13 @@
 }
 
 .search-container:hover > .search-input {
-  font-size: 2.2vh;
-  width: 40vh;
+  font-size: 2.2vw;
+  width: 20vw;
 }
 
 .search-input:focus {
-  font-size: 2.2vh;
-  width: 40vh;
+  font-size: 2.2vw;
+  width: 20vw;
 }
 
 .search-input {
@@ -37,7 +37,7 @@
   background: transparent;
   border: none;
   outline: none;
-  width: 0vh;
+  width: 0;
   font-weight: 500;
   font-size: 1.8vh;
   transition: all 0.7s ease-in-out;
@@ -45,6 +45,6 @@
 }
 
 .Search_Button {
-  width: 2.1vh;
-  height: 2.1vh;
+  width: 2.1vw;
+  height: 2.1vw;
 }

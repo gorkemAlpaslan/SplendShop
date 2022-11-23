@@ -14,7 +14,7 @@ a {
 .Navbar-Icon-Wrapper {
   color: white;
   padding: 2vh;
-  font-size: 4vh;
+  font-size: 4vw;
   font-family: "Brush Script MT", cursive !important;
 }
 
@@ -44,11 +44,11 @@ a {
   justify-content: center;
   opacity: 0.95;
   position: relative;
-  min-width: 10vh;
+  min-width: 10vw;
 }
 
 .Navbar-Profile-Bar p {
-  margin-left: 0.2vh;
+  margin-left: 0.2vw;
 }
 
 .Navbar-Profile-Bar:hover {

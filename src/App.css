@@ -24,6 +24,13 @@ html {
   justify-content: center;
 }
 
+.Body-Select {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 80vw;
+}
+
 .BodyContainer,
 .Purchase-Wrapper {
   position: relative;
@@ -47,12 +54,13 @@ html {
 
 .Navbar {
   width: 100vw;
-  height: 8vh;
+  height: 10vh;
 }
 
 .Items-List {
-  width: 56vw;
+  width: 60vw;
   display: flex;
+  justify-content: space-around;
   flex-wrap: wrap;
   margin-top: -1vh;
   margin: 0;
@@ -92,9 +100,7 @@ html {
 }
 
 .Sidebar-Wrapper {
-  margin-right: 1vw;
-  width: 24.3vw;
-  font-size: 1.3vh;
+  width: 18vw;
   align-self: flex-start;
 }
 

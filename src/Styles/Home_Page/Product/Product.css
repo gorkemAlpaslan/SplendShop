@@ -117,18 +117,18 @@
 .product-grid .price {
   color: #abc9ff;
   font-size: 1.1vw;
-  font-weight: 600;
+  font-weight: 800;
 }
 .product-grid .price span {
   color: #abc9ff;
-  font-size: 1.6vw;
+  font-size: 1vw;
   font-weight: 400;
   text-decoration: line-through;
 }
 
 .image {
-  width: 8.4vw;
-  margin: 2vh;
+  width: 28.4vw;
+  margin: 1vw;
 }
 
 .PerItemWrapper {

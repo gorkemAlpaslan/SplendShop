@@ -51,7 +51,7 @@ const Sidebar = (props) => {
     menu: (provided, state) => ({
       ...provided,
       width: "14vw",
-      fontSize: "1.3vh",
+      fontSize: "1vw",
       textAlign: "center",
     }),
 
@@ -62,12 +62,12 @@ const Sidebar = (props) => {
       display: "flex",
       alignItems: "center",
       borderBottom: ".1vh solid black",
-      fontSize: "1.3vh",
-      padding: "0.4vh",
+      fontSize: "1vw",
+      margin: "1vh",
     }),
     indicatorsContainer: (provided, state) => ({
       ...provided,
-      width: "2vh",
+      width: "2vw",
       height: "2vh",
     }),
     dropdownIndicator: (provided, state) => ({
@@ -79,7 +79,7 @@ const Sidebar = (props) => {
     menu: (provided, state) => ({
       ...provided,
       width: "14vw",
-      fontSize: "1.3vh",
+      fontSize: "wvw",
       textAlign: "center",
     }),
 
@@ -93,8 +93,8 @@ const Sidebar = (props) => {
       display: "flex",
       alignItems: "center",
       borderBottom: ".1vh solid black",
-      fontSize: "1.3vh",
-      padding: "0.4vh",
+      fontSize: "1vw",
+      margin: "1vh",
     }),
     option: (styles, { data, isDisabled, isFocused, isSelected }) => {
       const color = chroma(data.color);
@@ -150,61 +150,53 @@ const Sidebar = (props) => {
   return (
     <div className="Side-Card">
       <div className="Sidebar-Inner-Wrapper">
-        <div className="unwrap">
-          <Select
-            placeholder="Category"
-            styles={customStyles}
-            options={CategoryOptions}
-            onChange={(e) => {
-              SetCategory(e.value);
-            }}
-          />
-        </div>
-        <div className="unwrap">
-          <Select
-            placeholder="Gender"
-            styles={customStyles}
-            options={GenderOptions}
-            onChange={(e) => {
-              SetGender(e.value);
-            }}
-          />
-        </div>
-        <div className="unwrap">
-          <Select
-            placeholder="Size"
-            styles={customStyles}
-            options={SizeOptions}
-            onChange={(e) => {
-              SetSize(e.value);
-            }}
-          />
-        </div>
-        <div className="unwrap">
-          <Select
-            placeholder="Colour"
-            closeMenuOnSelect={false}
-            styles={colourStyles}
-            isMulti
-            options={ColourOptions}
-            onChange={(e) => {
-              let color = [];
-              for (let a = 0; a < e.length; a++) {
-                color.push(e[a].value);
-              }
-              SetColor(color);
-            }}
-          />
-        </div>
+        <Select
+          placeholder="Category"
+          styles={customStyles}
+          options={CategoryOptions}
+          onChange={(e) => {
+            SetCategory(e.value);
+          }}
+        />
+        <Select
+          placeholder="Gender"
+          styles={customStyles}
+          options={GenderOptions}
+          onChange={(e) => {
+            SetGender(e.value);
+          }}
+        />
+        <Select
+          placeholder="Size"
+          styles={customStyles}
+          options={SizeOptions}
+          onChange={(e) => {
+            SetSize(e.value);
+          }}
+        />
+        <Select
+          placeholder="Colour"
+          closeMenuOnSelect={false}
+          styles={colourStyles}
+          isMulti
+          options={ColourOptions}
+          onChange={(e) => {
+            let color = [];
+            for (let a = 0; a < e.length; a++) {
+              color.push(e[a].value);
+            }
+            SetColor(color);
+          }}
+        />
       </div>
       <div className="button">
         <Button
           variant="contained"
           color="success"
           sx={{
-            width: "12vh",
-            fontSize: "2vh",
-            height: "3vh",
+            width: "6vw",
+            fontSize: "1vw",
+            height: "3vw",
           }}
           onClick={() => {
             props.FilterItem({

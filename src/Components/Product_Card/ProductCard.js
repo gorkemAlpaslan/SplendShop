@@ -77,10 +77,10 @@ const ProductCard = (props) => {
             <div className="title">{props.title}</div>
 
             <div className="price">
-              {`$${props.price - props.price * props.discount} `}
               {discountHandler && (
                 <span className="if-discount-ol">{`$${props.price}`}</span>
               )}
+              {`$${props.price - props.price * props.discount} `}
             </div>
           </div>
         </div>

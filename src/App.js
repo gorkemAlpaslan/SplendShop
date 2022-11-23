@@ -124,24 +124,26 @@ function App() {
             <Adds></Adds>
           </div>
           <div className="Body-Wraper">
-            <div className="Sidebar-Wrapper">
-              <Sidebar FilterItem={FilterItem}></Sidebar>
-            </div>
-            <div className="Items-List">
-              {DisplayList.map((Item) => (
-                <ProductCard
-                  ProductDetails={Item}
-                  title={Item.title}
-                  price={Item.price}
-                  description={Item.content}
-                  key={Item.id}
-                  image={Item.minisrc}
-                  refNum={Item.id}
-                  discount={Item.discount}
-                  Rate={Item.itemRate}
-                  NumberOfItemsHandler={NumberOfItemsHandler}
-                ></ProductCard>
-              ))}
+            <div className="Body-Select">
+              <div className="Sidebar-Wrapper">
+                <Sidebar FilterItem={FilterItem}></Sidebar>
+              </div>
+              <div className="Items-List">
+                {DisplayList.map((Item) => (
+                  <ProductCard
+                    ProductDetails={Item}
+                    title={Item.title}
+                    price={Item.price}
+                    description={Item.content}
+                    key={Item.id}
+                    image={Item.minisrc}
+                    refNum={Item.id}
+                    discount={Item.discount}
+                    Rate={Item.itemRate}
+                    NumberOfItemsHandler={NumberOfItemsHandler}
+                  ></ProductCard>
+                ))}
+              </div>
             </div>
           </div>
           <Stack spacing={2} className="PaginationWraper">
