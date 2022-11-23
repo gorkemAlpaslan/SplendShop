@@ -2,7 +2,6 @@
   font-family: "Poppins", sans-serif;
   text-align: center;
   background-color: white;
-  height: auto;
 }
 .product-grid .product-image {
   overflow: hidden;
@@ -20,27 +19,30 @@
   height: auto;
 }
 .product-grid .product-discount-label {
-  font-size: 2vh;
+  width: 8%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.8vw;
   color: #fff;
   background-color: #abc9ff;
-  line-height: 2.5vh;
-  padding: 0 2vh;
+  line-height: 1vw;
+  padding: 0 2vw;
   position: absolute;
-  top: 1vh;
+  top: 7%;
   left: 0;
 }
 .product-grid .product-links {
   padding: 0;
-
   margin: 0;
   list-style: none;
   position: absolute;
   top: 2vh;
-  right: -4vh;
+  right: -4vw;
   transition: all 0.5s ease 0s;
 }
 .product-grid:hover .product-links {
-  right: 2vh;
+  right: 0.6vw;
 }
 .product-grid .product-links li .heartIco {
   color: black;
@@ -53,11 +55,11 @@
   transform: scale(1.5);
 }
 .hearts {
-  width: 2vh;
+  width: 2vw;
   height: 2vh;
 }
 .product-grid .add-to-cart {
-  font-size: 1.6vh;
+  font-size: 0.6vw;
   background-image: linear-gradient(to right, #434343 0%, black 100%);
   color: #fff;
   font-weight: 800;
@@ -67,14 +69,15 @@
   padding: 1vh 0vh;
   position: absolute;
   left: 0;
-  bottom: -6vh;
+  bottom: 0;
   transition: all 0.1s ease-in-out;
   transition: background-image 2s ease-out 100ms;
   border-top: 0.2vh solid rgb(0, 0, 0);
   cursor: pointer;
+  display: none;
 }
 .product-grid:hover .add-to-cart {
-  bottom: 0;
+  display: block;
 }
 .product-grid .add-to-cart:hover {
   background-image: linear-gradient(
@@ -90,9 +93,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 8vw;
   align-items: center;
   padding: 1.5vh;
-  height: 11.5vh;
   border-top: #abc9ff 0.2vh solid;
 }
 .product-grid:hover .product-content {
@@ -106,35 +109,21 @@
 }
 
 .product-grid .title {
-  font-weight: 900;
+  font-weight: 400;
   text-transform: capitalize;
-  margin: 0 0 0.7vh;
-  height: 4vw;
+  font-size: 1vw;
 }
-.product-grid .title a {
-  font-size: 1.5vh;
-  padding: 1vh;
-  color: #000000;
-  transition: all 0.3s ease 0s;
-}
-.product-grid .title a:hover {
-  color: #cfd2cf;
-}
+
 .product-grid .price {
   color: #abc9ff;
-  font-size: 2.1vh;
+  font-size: 1.1vw;
   font-weight: 600;
 }
 .product-grid .price span {
   color: #abc9ff;
-  font-size: 1.6vh;
+  font-size: 1.6vw;
   font-weight: 400;
   text-decoration: line-through;
-}
-@media screen and (max-width: 990px) {
-  .product-grid {
-    margin-bottom: 3vh;
-  }
 }
 
 .image {
@@ -150,7 +139,7 @@
 }
 
 .PerItemWrapper:hover {
-  border: 0.2vh solid #000000;
+  border: 0.2vw solid #000000;
   -webkit-transform: scale(1.05);
   -ms-transform: scale(1.05);
   transform: scale(1.05);

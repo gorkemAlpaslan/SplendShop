@@ -68,15 +68,13 @@ const ProductCard = (props) => {
               readOnly
               precision={0.5}
               sx={{
-                fontSize: "2vh",
+                fontSize: "1vw",
                 color: "#abc9ff",
                 margin: "0",
                 padding: "0",
               }}
             />
-            <div className="title">
-              <a href={`/ProductPage/${props.refNum}`}>{props.title}</a>
-            </div>
+            <div className="title">{props.title}</div>
 
             <div className="price">
               {`$${props.price - props.price * props.discount} `}
