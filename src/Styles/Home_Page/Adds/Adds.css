@@ -1,5 +1,5 @@
 .AddsWrapper {
-  width: 155vh;
+  width: 80vw;
   margin-top: 2vh;
   margin-bottom: 5vh;
   display: flex;
@@ -11,18 +11,16 @@
   margin-right: 5.4vh !important;
 }
 .addTwo {
-  width: 34.3vh;
-  height: 34.3vh;
-  margin-left: 0vh;
+  width: 18vw;
 }
 .addTwoPngs {
-  width: 34.3vh;
+  width: 18vw;
 }
 .addGif {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 113vh;
+  width: 60vw;
 }
 .gif-photo {
   position: absolute;

@@ -8,6 +8,9 @@
   overflow: hidden;
   position: relative;
   z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .product-grid .product-image a.image {
   display: block;
@@ -103,12 +106,10 @@
 }
 
 .product-grid .title {
-  font-size: 2vh;
   font-weight: 900;
   text-transform: capitalize;
   margin: 0 0 0.7vh;
-  max-width: 22.4vh;
-  height: 4vh;
+  height: 4vw;
 }
 .product-grid .title a {
   font-size: 1.5vh;
@@ -137,14 +138,12 @@
 }
 
 .image {
-  width: 22.4vh;
-  height: 33.4vh;
+  width: 8.4vw;
   margin: 2vh;
 }
 
 .PerItemWrapper {
-  width: 26vh;
-  height: 52vh;
+  width: 12vw;
   border: 0.2vh solid #abc9ff;
   margin: 1vh 1vh;
   transition: all 0.1s ease-in-out;

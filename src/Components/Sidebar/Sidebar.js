@@ -50,13 +50,14 @@ const Sidebar = (props) => {
   const customStyles = {
     menu: (provided, state) => ({
       ...provided,
-      width: "32vh",
+      width: "14vw",
       fontSize: "1.3vh",
       textAlign: "center",
     }),
 
     control: (_, { selectProps: { width } }) => ({
-      width: "34vh",
+      width: "14vw",
+
       height: "2vh",
       display: "flex",
       alignItems: "center",
@@ -77,7 +78,7 @@ const Sidebar = (props) => {
   const colourStyles = {
     menu: (provided, state) => ({
       ...provided,
-      width: "32vh",
+      width: "14vw",
       fontSize: "1.3vh",
       textAlign: "center",
     }),
@@ -87,7 +88,7 @@ const Sidebar = (props) => {
     }),
 
     control: (_, { selectProps: { width } }) => ({
-      width: "34vh",
+      width: "14vw",
       height: "2vh",
       display: "flex",
       alignItems: "center",

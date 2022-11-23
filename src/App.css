@@ -3,7 +3,7 @@ html {
 }
 
 .Card {
-  width: 188vh;
+  width: 100vw;
 }
 
 * {
@@ -46,15 +46,16 @@ html {
 }
 
 .Navbar {
-  width: 180vh;
+  width: 100vw;
   height: 8vh;
 }
 
 .Items-List {
-  width: 116vh;
+  width: 56vw;
   display: flex;
   flex-wrap: wrap;
   margin-top: -1vh;
+  margin: 0;
 }
 
 .PaginationWraper {
@@ -91,8 +92,8 @@ html {
 }
 
 .Sidebar-Wrapper {
-  margin-right: 4vh;
-  width: 34.3vh;
+  margin-right: 1vw;
+  width: 24.3vw;
   font-size: 1.3vh;
   align-self: flex-start;
 }

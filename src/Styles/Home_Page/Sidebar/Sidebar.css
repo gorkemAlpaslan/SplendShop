@@ -2,12 +2,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 11vw;
 }
 
 .Sidebar-Inner-Wrapper {
   display: flex;
   flex-direction: column;
-  width: 100%;
 }
 
 .Filter-Title {
@@ -16,7 +16,7 @@
 }
 
 .unwrap {
-  width: 34.3vh;
+  width: 11vw;
   height: auto;
   justify-content: center;
   padding-bottom: 2vh;
@@ -24,5 +24,5 @@
 
 .addThird {
   margin-top: 10vh;
-  width: 28vh;
+  width: 28vw;
 }
