@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# Splend-Shop
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+SplendShop is a basic e-commerce site that is designed and coded. I can tell that journey of becoming a React developer started by coding this web app.
+
+I used ContextAPI, Firebase for authentication, MUI for some components and styles, some libraries for carousel and pagination, I used Local Storage to manage purchase and favorite Items
 
 ## Available Scripts
 
