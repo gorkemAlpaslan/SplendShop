@@ -47,22 +47,24 @@
   padding: 0 5vh;
   height: 100%;
   text-align: center;
+  gap: 2vh;
 }
 
 .InputForRegister {
   background-color: #eee;
   border: none;
   padding: 1.2vh 1.5vw;
-  margin: 0.8vh 0;
+  margin: 2vh 0;
   width: 80%;
   height: 4vh;
   display: flex;
   font-size: 1.3vw;
   text-align: center;
+  border-bottom: 1px solid black;
 }
 
 .InputForRegister:focus {
-  outline: 0.2vh solid black;
+  outline: none;
 }
 
 .InputForRegister::placeholder {

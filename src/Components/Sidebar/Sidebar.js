@@ -57,7 +57,6 @@ const Sidebar = (props) => {
 
     control: (_, { selectProps: { width } }) => ({
       width: "14vw",
-
       height: "2vh",
       display: "flex",
       alignItems: "center",

@@ -59,10 +59,9 @@
   height: 2vh;
 }
 .product-grid .add-to-cart {
-  font-size: 0.6vw;
+  font-size: 0.3vw;
   background-image: linear-gradient(to right, #434343 0%, black 100%);
   color: #fff;
-  font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.3vh;
   width: 100%;
@@ -70,23 +69,16 @@
   position: absolute;
   left: 0;
   bottom: 0;
-  transition: all 0.1s ease-in-out;
-  transition: background-image 2s ease-out 100ms;
+  transition: all 0.3s ease-in-out;
   border-top: 0.2vh solid rgb(0, 0, 0);
   cursor: pointer;
-  display: none;
+  transform: translateY(70px);
 }
 .product-grid:hover .add-to-cart {
-  display: block;
+  transform: translateY(0px);
 }
 .product-grid .add-to-cart:hover {
-  background-image: linear-gradient(
-    to right,
-    #abc9ff 0%,
-    rgb(255, 255, 255) 100%
-  );
-  color: #000000;
-  border-top: 0.2vh solid rgb(0, 0, 0);
+  color: #abc9ff;
 }
 
 .product-grid .product-content {
@@ -139,8 +131,7 @@
 }
 
 .PerItemWrapper:hover {
-  border: 0.2vw solid #000000;
-  -webkit-transform: scale(1.05);
-  -ms-transform: scale(1.05);
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
   transform: scale(1.05);
 }
