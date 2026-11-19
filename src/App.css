@@ -116,3 +116,27 @@ html {
   height: 83vh;
   padding: 0.1vh 0.1vh;
 }
+
+.App-Footer {
+  width: 100%;
+  padding: 1.25rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  color: #d1d5db;
+  font-size: 0.875rem;
+  box-sizing: border-box;
+}
+
+.App-Footer a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 0.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+  transition: opacity 0.2s ease;
+}
+
+.App-Footer a:hover {
+  opacity: 0.8;
+}

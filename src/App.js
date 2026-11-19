@@ -184,6 +184,19 @@ function App() {
           </div>
         </Route>
       ))}
+      <footer className="App-Footer">
+        <span>
+          &copy; {new Date().getFullYear()} SplendShop. Built by{" "}
+          <a
+            href="https://www.gorkemalpaslan.com.tr"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Görkem Alpaslan
+          </a>
+          .
+        </span>
+      </footer>
     </div>
   );
 }
